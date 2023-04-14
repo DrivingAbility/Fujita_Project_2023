@@ -19066,7 +19066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3804955875179238519}
   m_Layer: 0
-  m_Name: Honda_Accord_Mesh
+  m_Name: Honda Accord Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

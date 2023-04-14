@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8697142260211384513}
   m_Layer: 0
-  m_Name: WheelColliders
+  m_Name: Wheel Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
