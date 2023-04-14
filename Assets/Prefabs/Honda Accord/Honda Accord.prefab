@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5295920743964697127}
   - component: {fileID: 5295920743964697124}
+  - component: {fileID: 2814373834668468805}
+  - component: {fileID: 6295067978307842765}
   m_Layer: 0
   m_Name: Honda Accord
   m_TagString: Untagged
@@ -52,6 +54,50 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2814373834668468805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5295920743964697126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac3123e100d229646b96970f4c2bab86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CarDriveType: 2
+  m_WheelColliders:
+  - {fileID: 8983005682954238352}
+  - {fileID: 8517441688989885186}
+  - {fileID: 492824664724878249}
+  - {fileID: 7015906300790912047}
+  m_WheelMeshes:
+  - {fileID: 5329284987395890603}
+  - {fileID: 3358987609287617089}
+  - {fileID: 117470507938147517}
+  - {fileID: 3936871720385986955}
+  m_CentreOfMassOffset: {x: 0, y: 0, z: 0}
+  m_MaximumSteerAngle: 0
+  m_FullTorqueOverAllWheels: 0
+  m_ReverseTorque: 0
+  m_Downforce: 100
+  m_Topspeed: 200
+  m_RevRangeBoundary: 1
+  m_BrakeTorque: 0
+  handleObj: {fileID: 0}
+--- !u!114 &6295067978307842765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5295920743964697126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88c878ad08d5cd48ab1e81fad8701ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3764788474305362876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233,6 +279,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90358d3121b1d704896b9d573966f045, type: 3}
+--- !u!1 &117470507938147517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8906122654412175244, guid: 90358d3121b1d704896b9d573966f045, type: 3}
+  m_PrefabInstance: {fileID: 8807265795235584817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3358987609287617089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6099058056462725488, guid: 90358d3121b1d704896b9d573966f045, type: 3}
+  m_PrefabInstance: {fileID: 8807265795235584817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3936871720385986955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5520043612514310842, guid: 90358d3121b1d704896b9d573966f045, type: 3}
+  m_PrefabInstance: {fileID: 8807265795235584817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5329284987395890603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3732602172101805722, guid: 90358d3121b1d704896b9d573966f045, type: 3}
+  m_PrefabInstance: {fileID: 8807265795235584817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5689271900726824774 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3804955875179238519, guid: 90358d3121b1d704896b9d573966f045, type: 3}
@@ -295,8 +361,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80b51544e16170748b1ae0b3e3f6e623, type: 3}
+--- !u!146 &492824664724878249 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 8732622631164205715, guid: 80b51544e16170748b1ae0b3e3f6e623, type: 3}
+  m_PrefabInstance: {fileID: 9216158621655525690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &528095028973562363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8697142260211384513, guid: 80b51544e16170748b1ae0b3e3f6e623, type: 3}
+  m_PrefabInstance: {fileID: 9216158621655525690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &7015906300790912047 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 2214608782166547733, guid: 80b51544e16170748b1ae0b3e3f6e623, type: 3}
+  m_PrefabInstance: {fileID: 9216158621655525690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &8517441688989885186 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 707724270233848376, guid: 80b51544e16170748b1ae0b3e3f6e623, type: 3}
+  m_PrefabInstance: {fileID: 9216158621655525690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &8983005682954238352 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 237656676656943274, guid: 80b51544e16170748b1ae0b3e3f6e623, type: 3}
   m_PrefabInstance: {fileID: 9216158621655525690}
   m_PrefabAsset: {fileID: 0}
