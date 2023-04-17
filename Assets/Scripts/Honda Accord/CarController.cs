@@ -32,7 +32,7 @@ public class CarController : MonoBehaviour
     private float m_GearFactor;
     private float m_OldRotation;
     private float m_CurrentTorque;
-    [NonSerialized]public Rigidbody m_Rigidbody;
+    [NonSerialized] public Rigidbody m_Rigidbody;
     public float BrakeInput { get; private set; }
     public float CurrentSpeed { get { return m_Rigidbody.velocity.magnitude * 2.23693629f; } }
     public float MaxSpeed { get { return m_Topspeed; } }

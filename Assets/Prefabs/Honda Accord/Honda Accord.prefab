@@ -78,13 +78,13 @@ MonoBehaviour:
   - {fileID: 117470507938147517}
   - {fileID: 3936871720385986955}
   m_CentreOfMassOffset: {x: 0, y: 0, z: 0}
-  m_MaximumSteerAngle: 0
-  m_FullTorqueOverAllWheels: 0
-  m_ReverseTorque: 0
+  m_MaximumSteerAngle: 60
+  m_FullTorqueOverAllWheels: 3000
+  m_ReverseTorque: 1000
   m_Downforce: 100
   m_Topspeed: 200
   m_RevRangeBoundary: 1
-  m_BrakeTorque: 0
+  m_BrakeTorque: 1000
   handleObj: {fileID: 0}
 --- !u!114 &6295067978307842765
 MonoBehaviour:

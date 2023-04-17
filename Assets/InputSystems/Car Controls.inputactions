@@ -6,37 +6,90 @@
             "id": "e4b1cb07-88ee-488b-be06-62b1a3642765",
             "actions": [
                 {
-                    "name": "Horizontal",
-                    "type": "Button",
+                    "name": "Vertical",
+                    "type": "Value",
                     "id": "ac6eddc9-ac94-4f75-bc3b-6f9f199c7a7c",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Horizontal",
+                    "type": "Value",
+                    "id": "b4321db9-2944-445c-8d9b-32bc371d5f89",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "ff8c0c8a-c4f2-4710-8197-34edeb901302",
-                    "path": "<Keyboard>/upArrow",
+                    "name": "1D Axis",
+                    "id": "6c67513c-0450-4950-ab4d-b3f7f45683ba",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Horizontal",
-                    "isComposite": false,
+                    "action": "Vertical",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "8681546d-b859-4e4f-a17a-c85e4b0d06cd",
+                    "name": "negative",
+                    "id": "aac39514-96c2-4a3c-8810-9b67f7820df7",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "Vertical",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "7aee59aa-dfdd-4301-9dba-36425b4878ee",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Vertical",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "518616f1-3e5a-4066-9c61-7368a038aa1a",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "5fc1449d-4b17-4e37-94a4-bc2e36b5b594",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Horizontal",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "2031c4cb-1a8f-4a05-bd28-8e40b4b6c3a4",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
