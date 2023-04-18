@@ -29,8 +29,9 @@ public class CarUserControl : MonoBehaviour
         float v = 0f;
         float b = 0f;
         steering = 0.0f;
-        float h1 = playerInput.currentActionMap["Horizontal"].ReadValue<float>();
+        var h1 = playerInput.currentActionMap["Horizontal"].ReadValue<Vector2>();
         float v1 = playerInput.currentActionMap["Vertical"].ReadValue<float>();
+        print(h1);
         if ((LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0)))
         {
             rec = LogitechGSDK.LogiGetStateUnity(0);
@@ -49,14 +50,14 @@ public class CarUserControl : MonoBehaviour
             if (!isShiftDrive && !isShiftReverse) v = 0;
             if (isShiftReverse) v *= -0.5f;
         }
-        v += v1 + v2;
+        //v += v1 + v2;
         //b = v1 + b;
-        steering = h1 + steering;
+        //steering = h1 + steering;
         if (Mathf.Abs(steering) < 0.001f) steering = 0;
         else steering = (steering - 0.01f) / 0.99f;
         //v = 1;
         //steering = 0;
-        m_Car.Move(steering, v, b);
+        m_Car.Move(steering, v1, b);
     }
     private void Update()
     {

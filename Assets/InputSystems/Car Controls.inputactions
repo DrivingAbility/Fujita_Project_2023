@@ -18,7 +18,7 @@
                     "name": "Horizontal",
                     "type": "Value",
                     "id": "b4321db9-2944-445c-8d9b-32bc371d5f89",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -59,9 +59,20 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "1D Axis",
+                    "name": "",
+                    "id": "5e33b9ea-0db4-4c9d-9a1e-54c68f612804",
+                    "path": "<HID::Logitech G29 Driving Force Racing Wheel>/z",
+                    "interactions": "",
+                    "processors": "Invert,Normalize(min=-1,max=1,zero=-1)",
+                    "groups": "",
+                    "action": "Vertical",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
                     "id": "518616f1-3e5a-4066-9c61-7368a038aa1a",
-                    "path": "1DAxis",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -70,7 +81,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
+                    "name": "Up",
                     "id": "5fc1449d-4b17-4e37-94a4-bc2e36b5b594",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
@@ -81,7 +92,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
+                    "name": "Down",
                     "id": "2031c4cb-1a8f-4a05-bd28-8e40b4b6c3a4",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
@@ -90,6 +101,39 @@
                     "action": "Horizontal",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "Left",
+                    "id": "abdf1283-6a27-4e35-b524-def9162db632",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right",
+                    "id": "6cefe00f-e66a-47f1-8b52-70b3e2501d66",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "97ba19f1-7ccb-485f-ad3a-cc20322810db",
+                    "path": "<HID::Logitech G29 Driving Force Racing Wheel>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
