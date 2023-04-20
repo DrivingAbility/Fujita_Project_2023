@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Brake",
+                    "type": "Value",
+                    "id": "edb53842-a420-4078-9d46-4045a4db1238",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -92,17 +101,6 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Down",
-                    "id": "2031c4cb-1a8f-4a05-bd28-8e40b4b6c3a4",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Horizontal",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "Left",
                     "id": "3a0ef877-049f-491e-8b4b-a055c9d8d847",
                     "path": "<Keyboard>/leftArrow",
@@ -132,6 +130,17 @@
                     "processors": "InvertVector2(invertX=false),NormalizeVector2",
                     "groups": "",
                     "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3a64ca5-2b0b-4fd9-9b57-e528665b9d48",
+                    "path": "<HID::Logitech G29 Driving Force Racing Wheel>/rz",
+                    "interactions": "",
+                    "processors": "Invert,Normalize(min=-1,max=1,zero=-1)",
+                    "groups": "",
+                    "action": "Brake",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

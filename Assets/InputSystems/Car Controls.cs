@@ -44,6 +44,15 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Brake"",
+                    ""type"": ""Value"",
+                    ""id"": ""edb53842-a420-4078-9d46-4045a4db1238"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -114,17 +123,6 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Down"",
-                    ""id"": ""2031c4cb-1a8f-4a05-bd28-8e40b4b6c3a4"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": ""Left"",
                     ""id"": ""3a0ef877-049f-491e-8b4b-a055c9d8d847"",
                     ""path"": ""<Keyboard>/leftArrow"",
@@ -156,6 +154,17 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
                     ""action"": ""Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a3a64ca5-2b0b-4fd9-9b57-e528665b9d48"",
+                    ""path"": ""<HID::Logitech G29 Driving Force Racing Wheel>/rz"",
+                    ""interactions"": """",
+                    ""processors"": ""Invert,Normalize(min=-1,max=1,zero=-1)"",
+                    ""groups"": """",
+                    ""action"": ""Brake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -166,6 +175,7 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Vertical = m_Player.FindAction("Vertical", throwIfNotFound: true);
         m_Player_Horizontal = m_Player.FindAction("Horizontal", throwIfNotFound: true);
+        m_Player_Brake = m_Player.FindAction("Brake", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -229,12 +239,14 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Vertical;
     private readonly InputAction m_Player_Horizontal;
+    private readonly InputAction m_Player_Brake;
     public struct PlayerActions
     {
         private @CarControls m_Wrapper;
         public PlayerActions(@CarControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Vertical => m_Wrapper.m_Player_Vertical;
         public InputAction @Horizontal => m_Wrapper.m_Player_Horizontal;
+        public InputAction @Brake => m_Wrapper.m_Player_Brake;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -250,6 +262,9 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
             @Horizontal.started += instance.OnHorizontal;
             @Horizontal.performed += instance.OnHorizontal;
             @Horizontal.canceled += instance.OnHorizontal;
+            @Brake.started += instance.OnBrake;
+            @Brake.performed += instance.OnBrake;
+            @Brake.canceled += instance.OnBrake;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -260,6 +275,9 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
             @Horizontal.started -= instance.OnHorizontal;
             @Horizontal.performed -= instance.OnHorizontal;
             @Horizontal.canceled -= instance.OnHorizontal;
+            @Brake.started -= instance.OnBrake;
+            @Brake.performed -= instance.OnBrake;
+            @Brake.canceled -= instance.OnBrake;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -281,5 +299,6 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
     {
         void OnVertical(InputAction.CallbackContext context);
         void OnHorizontal(InputAction.CallbackContext context);
+        void OnBrake(InputAction.CallbackContext context);
     }
 }

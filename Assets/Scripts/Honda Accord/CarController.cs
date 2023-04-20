@@ -128,7 +128,7 @@ public class CarController : MonoBehaviour
         //clamp input values
         steering = Mathf.Clamp(steering, -1, 1);
         AccelInput = accel = Mathf.Clamp(accel, -1, 1);
-        BrakeInput = footbrake = -1 * Mathf.Clamp(footbrake, -1, 0);
+        BrakeInput = footbrake = Mathf.Clamp(footbrake, 0, 1);
 
         RotateSteering(steering);
 

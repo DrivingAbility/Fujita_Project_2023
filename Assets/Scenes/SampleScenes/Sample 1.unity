@@ -184,7 +184,7 @@ Transform:
   m_GameObject: {fileID: 129853342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 1.5, z: 100}
+  m_LocalScale: {x: 0.1, y: 1.5, z: 200}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 882376797}
@@ -302,17 +302,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &777629860 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5295920743964697126, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
-  m_PrefabInstance: {fileID: 971568773}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &777629861 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6295067978307842765, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
   m_PrefabInstance: {fileID: 971568773}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777629860}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b88c878ad08d5cd48ab1e81fad8701ba, type: 3}
@@ -346,7 +341,7 @@ Transform:
   m_GameObject: {fileID: 786502798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 1.5, z: 100}
+  m_LocalScale: {x: 0.1, y: 1.5, z: 200}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 882376797}
@@ -439,7 +434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882376796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0, y: 0.75, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -596,8 +591,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005234304}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 10, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 54877104}
@@ -637,19 +632,7 @@ MonoBehaviour:
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 777629860}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_DeviceRegainedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -691,6 +674,22 @@ MonoBehaviour:
     m_ActionId: b4321db9-2944-445c-8d9b-32bc371d5f89
     m_ActionName: Player/Horizontal[/Keyboard/leftArrow,/Keyboard/rightArrow,/Logitech
       G29 Driving Force Racing Wheel/stick]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 777629861}
+        m_TargetAssemblyTypeName: CarUserControl, Assembly-CSharp
+        m_MethodName: OnBrake
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: edb53842-a420-4078-9d46-4045a4db1238
+    m_ActionName: Player/Brake[/Logitech G29 Driving Force Racing Wheel/rz]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
