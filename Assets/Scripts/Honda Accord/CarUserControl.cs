@@ -7,8 +7,10 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CarController))]
 public class CarUserControl : MonoBehaviour
 {
-    private CarController m_Car; // the car controller we want to use
-    private PlayerInput playerInput;
+    private CarController _car; // the car controller we want to use
+    private PlayerInput _playerInput;
+    private float _vertical;
+    private float _horizontal;
     [NonSerialized] public float v2;
     [NonSerialized] public float steering;
     private bool isFirstShiftDrive = false;
@@ -20,8 +22,8 @@ public class CarUserControl : MonoBehaviour
     private void Awake()
     {
         // get the car controller
-        m_Car = GetComponent<CarController>();
-        playerInput = FindObjectOfType<PlayerInput>();
+        _car = GetComponent<CarController>();
+        _playerInput = FindObjectOfType<PlayerInput>();
         LogitechGSDK.LogiSteeringInitialize(false);
     }
     private void FixedUpdate()
@@ -29,8 +31,6 @@ public class CarUserControl : MonoBehaviour
         float v = 0f;
         float b = 0f;
         steering = 0.0f;
-        var steeringVector2 = playerInput.currentActionMap["Horizontal"].ReadValue<Vector2>();
-        var h1 = Vector2.SignedAngle(steeringVector2, Vector2.up);
 
         if ((LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0)))
         {
@@ -57,12 +57,17 @@ public class CarUserControl : MonoBehaviour
         else steering = (steering - 0.01f) / 0.99f;
         //v = 1;
         //steering = 0;
-        //m_Car.Move(steering, v1, b);
+        _car.Move(_horizontal, _vertical, b);
     }
-    public void OnVertical(InputValue value)
+    public void OnVertical(InputAction.CallbackContext context)
     {
-        var v = value.Get<float>();
-        print(v);
+        var value = context.ReadValue<float>();
+        _vertical = value;
+    }
+    public void OnHorizontal(InputAction.CallbackContext context)
+    {
+        var value = context.ReadValue<Vector2>();
+        _horizontal = Vector2.SignedAngle(value, Vector2.up);
     }
     private void Update()
     {
