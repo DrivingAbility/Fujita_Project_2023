@@ -31,8 +31,7 @@ public class CarUserControl : MonoBehaviour
         steering = 0.0f;
         var steeringVector2 = playerInput.currentActionMap["Horizontal"].ReadValue<Vector2>();
         var h1 = Vector2.SignedAngle(steeringVector2, Vector2.up);
-        float v1 = playerInput.currentActionMap["Vertical"].ReadValue<float>();
-        print(v1);
+
         if ((LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0)))
         {
             rec = LogitechGSDK.LogiGetStateUnity(0);
@@ -58,21 +57,16 @@ public class CarUserControl : MonoBehaviour
         else steering = (steering - 0.01f) / 0.99f;
         //v = 1;
         //steering = 0;
-        m_Car.Move(steering, v1, b);
+        //m_Car.Move(steering, v1, b);
+    }
+    public void OnVertical(InputValue value)
+    {
+        var v = value.Get<float>();
+        print(v);
     }
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            if (LogitechGSDK.LogiIsPlaying(0, LogitechGSDK.LOGI_FORCE_SPRING))
-            {
-                LogitechGSDK.LogiStopSpringForce(0);
-            }
-            else
-            {
-                //LogitechGSDK.LogiPlaySpringForce(0, 0, 100, 100);
-            }
-        }
+
     }
     private void OnApplicationQuit()
     {
