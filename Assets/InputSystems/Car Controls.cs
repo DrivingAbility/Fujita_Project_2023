@@ -126,7 +126,7 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Left"",
-                    ""id"": ""abdf1283-6a27-4e35-b524-def9162db632"",
+                    ""id"": ""3a0ef877-049f-491e-8b4b-a055c9d8d847"",
                     ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
@@ -137,7 +137,7 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Right"",
-                    ""id"": ""6cefe00f-e66a-47f1-8b52-70b3e2501d66"",
+                    ""id"": ""5a27a0f4-9fb0-4e75-8fbf-5900a84fb851"",
                     ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
@@ -151,7 +151,7 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
                     ""id"": ""97ba19f1-7ccb-485f-ad3a-cc20322810db"",
                     ""path"": ""<HID::Logitech G29 Driving Force Racing Wheel>/stick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""InvertVector2(invertX=false),NormalizeVector2"",
                     ""groups"": """",
                     ""action"": ""Horizontal"",
                     ""isComposite"": false,

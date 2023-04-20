@@ -29,9 +29,10 @@ public class CarUserControl : MonoBehaviour
         float v = 0f;
         float b = 0f;
         steering = 0.0f;
-        var h1 = playerInput.currentActionMap["Horizontal"].ReadValue<Vector2>();
+        var steeringVector2 = playerInput.currentActionMap["Horizontal"].ReadValue<Vector2>();
+        var h1 = Vector2.SignedAngle(steeringVector2, Vector2.up);
         float v1 = playerInput.currentActionMap["Vertical"].ReadValue<float>();
-        print(h1);
+        print(v1);
         if ((LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0)))
         {
             rec = LogitechGSDK.LogiGetStateUnity(0);
