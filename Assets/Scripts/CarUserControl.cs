@@ -17,7 +17,6 @@ public class CarUserControl : MonoBehaviour
         // get the car controller
         _car = GetComponent<CarController>();
         _playerInput = FindObjectOfType<PlayerInput>();
-        LogitechGSDK.LogiSteeringInitialize(false);
     }
     private void FixedUpdate()
     {
@@ -46,7 +45,6 @@ public class CarUserControl : MonoBehaviour
     private void OnApplicationQuit()
     {
         Debug.Log("OnApplicationQuit");
-        LogitechGSDK.LogiSteeringShutdown();
     }
 }
 

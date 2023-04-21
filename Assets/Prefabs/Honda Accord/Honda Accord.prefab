@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5295920743964697127}
   - component: {fileID: 5295920743964697124}
-  - component: {fileID: 2814373834668468805}
-  - component: {fileID: 6295067978307842765}
+  - component: {fileID: 2976535543253238265}
+  - component: {fileID: 4355572256151287781}
   m_Layer: 0
   m_Name: Honda Accord
   m_TagString: Untagged
@@ -54,7 +54,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2814373834668468805
+--- !u!114 &2976535543253238265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5295920743964697126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac3123e100d229646b96970f4c2bab86, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cb268337f133fc45a8bc2b2b54a514f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_CarDriveType: 2
@@ -79,14 +79,14 @@ MonoBehaviour:
   - {fileID: 3936871720385986955}
   m_CentreOfMassOffset: {x: 0, y: 0, z: 0}
   m_MaximumSteerAngle: 60
-  m_FullTorqueOverAllWheels: 3000
-  m_ReverseTorque: 1000
+  m_FullTorqueOverAllWheels: 1000
+  m_ReverseTorque: 500
   m_Downforce: 100
   m_Topspeed: 200
   m_RevRangeBoundary: 1
-  m_BrakeTorque: 1000
+  m_BrakeTorque: 2000
   handleObj: {fileID: 0}
---- !u!114 &6295067978307842765
+--- !u!114 &4355572256151287781
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5295920743964697126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88c878ad08d5cd48ab1e81fad8701ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e06b21ea988b38449d4f7798cd85ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &3764788474305362876
