@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 3e0f32710418f914c94a178597b4e2e7, type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4355572256151287781, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CarUserControl, Assembly-CSharp
         m_MethodName: OnVertical
         m_Mode: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
       G29 Driving Force Racing Wheel/z]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4355572256151287781, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CarUserControl, Assembly-CSharp
         m_MethodName: OnHorizontal
         m_Mode: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
       G29 Driving Force Racing Wheel/stick]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4355572256151287781, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CarUserControl, Assembly-CSharp
         m_MethodName: OnBrake
         m_Mode: 0

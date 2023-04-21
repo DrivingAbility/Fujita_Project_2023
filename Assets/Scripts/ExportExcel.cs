@@ -6,103 +6,87 @@ using UnityEngine;
 
 public class ExportExcel : MonoBehaviour
 {
-    private StreamWriter sw;
-    CarController carController;
-    Vector3 carPos;
-    [NonSerialized] public static bool isExportExcel;
-    int fileNum = 0;
-    bool isFileFound = true;
-    float sdkMax = 32767f;
-    float bfSteering = 0, bfAccel = 0, bfBrake = 0, time = 0;
-    float thetaM;
+    private Transform _carTrans;
+    private CarController _car;
+    private string _path;
+    float _time;
     // Start is called before the first frame update
     void Start()
     {
-        if (!isExportExcel) return;
-        carController = FindObjectOfType<CarController>();
-        string datetimeStr = DateTime.Now.ToString("yyyy_MM_dd");
-        string path = Application.dataPath + @"\Excel\" + datetimeStr + @"\";
-        Directory.CreateDirectory(path);
-        path += @"\" + "SaveData.csv";
+        _carTrans = GameObject.FindGameObjectWithTag("Player").transform;
+        _car = _carTrans.GetComponent<CarController>();
 
-        string path2 = path;
+        string datetimeStr = DateTime.Now.ToString("yyyy_MM_dd");
+        _path = Application.dataPath + @"\Excel Data\" + datetimeStr + @"\";
+        Directory.CreateDirectory(_path);
+        _path += @"\" + "SaveData.csv";
+
+        string path1 = _path;
+        int fileNum = 0;
+        bool isFileFound = true;
         while (isFileFound)
         {
-            if (System.IO.File.Exists(path2))
+            if (System.IO.File.Exists(path1))
             {
                 fileNum++;
-                path2 = path;
-                path2 = path.Replace(".csv", fileNum.ToString() + ".csv");
+                path1 = _path;
+                path1 = _path.Replace(".csv", fileNum.ToString() + ".csv");
             }
             else
             {
                 isFileFound = false;
-                path = path2;
+                _path = path1;
             }
         }
-        sw = new StreamWriter(path, true, Encoding.GetEncoding("Shift_JIS"));
 
-        string[] s1 = new string[] { DateTime.Now.ToLongDateString(), "Time", "ΔTime", "Xpos", "Zpos", "Velocity", "RotateY", "Hit" };
-        string s2 = string.Join(",", s1);
-        sw.WriteLine(s2);
-        if ((LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0)))
+        string[] s = new string[]
         {
-            s1 = s1.Concat(new string[] { "θ" }).ToArray();
-            s1 = s1.Concat(new string[] { "Δθ" }).ToArray();
-            s1 = s1.Concat(new string[] { "ΣθΔT" }).ToArray();
-            s1 = s1.Concat(new string[] { "Accel" }).ToArray();
-            s1 = s1.Concat(new string[] { "ΔAccel" }).ToArray();
-            s1 = s1.Concat(new string[] { "Brake" }).ToArray();
-            s1 = s1.Concat(new string[] { "ΔBrake" }).ToArray();
+            DateTime.Now.ToLongDateString(),
+            "Time",
+            "ΔTime",
+            "Xpos",
+            "Zpos",
+            "Velocity",
+            "RotateY",
+            "InputValue",
+            "AcceInput",
+            "SteeringInput",
+            "BrakeInput"
+        };
+        using (StreamWriter sw = new StreamWriter(_path, false, Encoding.GetEncoding("Shift_JIS")))
+        {
+            sw.WriteLine(string.Join(",", s));
         }
-        s2 = string.Join(",", s1);
-        sw.WriteLine(s2);
     }
     public void SaveData()
     {
-        if (!isExportExcel) return;
-        LogitechGSDK.DIJOYSTATE2ENGINES rec;
-        rec = LogitechGSDK.LogiGetStateUnity(0);
-
-        carPos = carController.transform.position;
+        var carPos = _carTrans.position;
         if (carPos.z < 0.01f) return;
-        time += Time.deltaTime;
-        float rotateY = carController.transform.rotation.eulerAngles.y;
+
+        var rotateY = _carTrans.rotation.eulerAngles.y;
+        var velocity = _carTrans.GetComponent<Rigidbody>().velocity;
+        _time += Time.deltaTime;
         rotateY = (rotateY > 180) ? rotateY - 360 : rotateY;
 
-        string[] s1 = {
-            DateTime.Now.ToLongTimeString(),
-            time.ToString("f4"),
-            Time.deltaTime.ToString("f4"),
-            carPos.x.ToString("f4"),
-            carPos.z.ToString("f4"),
-            (carController.GetComponent<Rigidbody>().velocity.magnitude*3600/1000).ToString("f4"),
-            rotateY.ToString("f4")
-        };
-
-        if ((LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0)))
+        string format = "f4";
+        string[] s = new string[]
         {
-            float steering = rec.lX / sdkMax * 450;
-            s1 = s1.Concat(new string[] { (steering).ToString("f4") }).ToArray();
-            s1 = s1.Concat(new string[] { ((steering - bfSteering) / Time.deltaTime).ToString("f4") }).ToArray();
-
-            thetaM += steering * Time.deltaTime;
-            s1 = s1.Concat(new string[] { (thetaM).ToString("f4") }).ToArray();
-
-            float accel = (-1 * rec.lY / sdkMax + 1) / 2;
-            s1 = s1.Concat(new string[] { (accel).ToString("f4") }).ToArray();
-            s1 = s1.Concat(new string[] { ((accel - bfAccel) / Time.deltaTime).ToString("f4") }).ToArray();
-
-            float brake = (-1 * rec.lRz / sdkMax + 1) / 2;
-            s1 = s1.Concat(new string[] { (brake).ToString("f4") }).ToArray();
-            s1 = s1.Concat(new string[] { ((brake - bfBrake) / Time.deltaTime).ToString("f4") }).ToArray();
-
-            bfSteering = steering;
-            bfAccel = accel;
-            bfBrake = brake;
+            DateTime.Now.ToLongTimeString(),
+            _time.ToString(format),
+            Time.deltaTime.ToString(format),
+            carPos.x.ToString(format),
+            carPos.z.ToString(format),
+            (velocity.magnitude*3600/1000).ToString(format),
+            rotateY.ToString(format),
+            String.Empty,
+            _car.AccelInput.ToString(format),
+            _car.SteeringInput.ToString(format),
+            _car.BrakeInput.ToString(format)
+        };
+        using (StreamWriter sw = new StreamWriter(_path, true, Encoding.GetEncoding("Shift_JIS")))
+        {
+            sw.WriteLine(string.Join(",", s));
         }
-        string s2 = string.Join(",", s1);
-        sw.WriteLine(s2);
     }
 
     // Update is called once per frame
@@ -110,10 +94,4 @@ public class ExportExcel : MonoBehaviour
     {
         SaveData();
     }
-    private void OnApplicationQuit()
-    {
-        if (!isExportExcel) return;
-        sw.Close();
-    }
-
 }

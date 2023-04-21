@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 #pragma warning disable 649
 
@@ -38,8 +40,14 @@ public class CarController : MonoBehaviour
     public float MaxSpeed { get { return m_Topspeed; } }
     public float Revs { get; private set; }
     public float AccelInput { get; private set; }
+    public float SteeringInput { get; private set; }
 
+    private Transform _meterTf;
 
+    private void Awake()
+    {
+
+    }
     // Use this for initialization
     private void Start()
     {
@@ -56,6 +64,21 @@ public class CarController : MonoBehaviour
 
         m_Rigidbody = GetComponent<Rigidbody>();
         m_CurrentTorque = m_FullTorqueOverAllWheels;
+
+        FindMeter();
+    }
+    private void FindMeter()
+    {
+        string s = "Meter Needle";
+        List<Transform> list = GetAllChildren.GetAll(transform);
+        foreach (Transform tf in list)
+        {
+            if (tf.gameObject.name == s)
+            {
+                _meterTf = tf;
+            }
+        }
+        if (_meterTf == null) Debug.Log("Can't Find Meter Object");
     }
     private void GearChanging()
     {
@@ -126,15 +149,15 @@ public class CarController : MonoBehaviour
         }
 
         //clamp input values
-        steering = Mathf.Clamp(steering, -1, 1);
+        SteeringInput = Mathf.Clamp(steering, -1, 1);
         AccelInput = accel = Mathf.Clamp(accel, -1, 1);
         BrakeInput = footbrake = Mathf.Clamp(footbrake, 0, 1);
 
-        RotateSteering(steering);
+        RotateSteering(SteeringInput);
 
         //Set the steer on the front wheels.
         //Assuming that wheels 0 and 1 are the front wheels.
-        m_SteerAngle = steering * m_MaximumSteerAngle;
+        m_SteerAngle = SteeringInput * m_MaximumSteerAngle;
         m_WheelColliders[0].steerAngle = m_SteerAngle;
         m_WheelColliders[1].steerAngle = m_SteerAngle;
 
@@ -148,6 +171,8 @@ public class CarController : MonoBehaviour
         GearChanging();
 
         AddDownForce();
+
+        ControllMeterNeedle();
     }
 
     //速度上限制御
@@ -201,22 +226,23 @@ public class CarController : MonoBehaviour
             }
         }
     }
-
-
     // this is used to add more grip in relation to speed
     private void AddDownForce()
     {
         m_WheelColliders[0].attachedRigidbody.AddForce(-transform.up * m_Downforce *
                                                      m_WheelColliders[0].attachedRigidbody.velocity.magnitude);
     }
-
-
-
+    private void ControllMeterNeedle()
+    {
+        if (_meterTf == null) return;
+        float speed = m_Rigidbody.velocity.magnitude;
+        speed *= 3.6f;
+        _meterTf.localRotation = Quaternion.Euler(new Vector3(0, speed, 0));
+    }
     private void RotateSteering(float h)
     {
         if (handleObj == null) return;
         handleObj.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, -1 * h * 30));
-
     }
 }
 
