@@ -237,7 +237,10 @@ public class CarController : MonoBehaviour
         if (_meterTf == null) return;
         float speed = m_Rigidbody.velocity.magnitude;
         speed *= 3.6f;
-        _meterTf.localRotation = Quaternion.Euler(new Vector3(0, speed, 0));
+        Vector3 localAngle = _meterTf.eulerAngles;
+        float angleScale = -169f / 100f;
+        localAngle.z = speed * angleScale;
+        _meterTf.eulerAngles = localAngle;
     }
     private void RotateSteering(float h)
     {
