@@ -107,7 +107,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 999462044774164214, guid: d06319b3df7692a4aaa9285441039323, type: 3}
       propertyPath: m_ClearFlags
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 999462044774164214, guid: d06319b3df7692a4aaa9285441039323, type: 3}
       propertyPath: field of view
@@ -115,7 +115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 999462045869663075, guid: d06319b3df7692a4aaa9285441039323, type: 3}
       propertyPath: m_ClearFlags
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 999462045869663075, guid: d06319b3df7692a4aaa9285441039323, type: 3}
       propertyPath: field of view
@@ -170,8 +170,16 @@ PrefabInstance:
       value: Cameras
       objectReference: {fileID: 0}
     - target: {fileID: 999462045937942622, guid: d06319b3df7692a4aaa9285441039323, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 999462045937942622, guid: d06319b3df7692a4aaa9285441039323, type: 3}
       propertyPath: field of view
       value: 56.79353
+      objectReference: {fileID: 0}
+    - target: {fileID: 999462045937942622, guid: d06319b3df7692a4aaa9285441039323, type: 3}
+      propertyPath: far clip plane
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d06319b3df7692a4aaa9285441039323, type: 3}
