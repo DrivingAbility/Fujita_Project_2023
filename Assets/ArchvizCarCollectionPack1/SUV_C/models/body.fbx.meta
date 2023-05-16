@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: 01abf31bd54c7984f8553d7a28971575
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: SOCKET_FL_02
+    100004: SOCKET_FR_03
+    100006: SOCKET_RL_04
+    100008: SOCKET_RR_05
+    100010: SOCKET_FL_01
+    100012: SOCKET_FR_02
+    100014: SOCKET_RL_03
+    100016: SOCKET_RR_04
+    100018: Body
+    100020: Body 1
+    100022: Body 2
+    100024: Body 3
+    100026: Body 4
+    100028: Body 5
+    100030: LOD_0
+    100032: LOD_1
+    100034: LOD_2
+    100036: LOD_3
+    100038: LOD_4
+    100040: LOD_5
+    100042: SOCKET_FL_01 1
+    100044: SOCKET_FL_01 2
+    100046: SOCKET_FL_01 3
+    100048: SOCKET_FL_01 4
+    100050: SOCKET_FL_01 5
+    100052: SOCKET_FL_02 1
+    100054: SOCKET_FL_02 2
+    100056: SOCKET_FL_02 3
+    100058: SOCKET_FL_02 4
+    100060: SOCKET_FR_02 1
+    100062: SOCKET_FR_02 2
+    100064: SOCKET_FR_02 3
+    100066: SOCKET_FR_02 4
+    100068: SOCKET_FR_02 5
+    100070: SOCKET_FR_03 1
+    100072: SOCKET_FR_03 2
+    100074: SOCKET_FR_03 3
+    100076: SOCKET_FR_03 4
+    100078: SOCKET_RL_03 1
+    100080: SOCKET_RL_03 2
+    100082: SOCKET_RL_03 3
+    100084: SOCKET_RL_03 4
+    100086: SOCKET_RL_03 5
+    100088: SOCKET_RL_04 1
+    100090: SOCKET_RL_04 2
+    100092: SOCKET_RL_04 3
+    100094: SOCKET_RL_04 4
+    100096: SOCKET_RR_04 1
+    100098: SOCKET_RR_04 2
+    100100: SOCKET_RR_04 3
+    100102: SOCKET_RR_04 4
+    100104: SOCKET_RR_04 5
+    100106: SOCKET_RR_05 1
+    100108: SOCKET_RR_05 2
+    100110: SOCKET_RR_05 3
+    100112: SOCKET_RR_05 4
+    100114: Body_LOD_0
+    100116: Body_LOD_1
+    100118: Body_LOD_2
+    100120: Body_LOD_3
+    100122: Body_LOD_4
+    100124: Body_LOD_5
+    100126: Body_LOD0
+    100128: Body_LOD1
+    100130: Body_LOD2
+    100132: Body_LOD3
+    100134: Body_LOD4
+    100136: Body_LOD5
+    100138: license_cn
+    100140: license_eu
+    100142: license_us
+    400000: //RootNode
+    400002: SOCKET_FL_02
+    400004: SOCKET_FR_03
+    400006: SOCKET_RL_04
+    400008: SOCKET_RR_05
+    400010: SOCKET_FL_01
+    400012: SOCKET_FR_02
+    400014: SOCKET_RL_03
+    400016: SOCKET_RR_04
+    400018: Body
+    400020: Body 1
+    400022: Body 2
+    400024: Body 3
+    400026: Body 4
+    400028: Body 5
+    400030: LOD_0
+    400032: LOD_1
+    400034: LOD_2
+    400036: LOD_3
+    400038: LOD_4
+    400040: LOD_5
+    400042: SOCKET_FL_01 1
+    400044: SOCKET_FL_01 2
+    400046: SOCKET_FL_01 3
+    400048: SOCKET_FL_01 4
+    400050: SOCKET_FL_01 5
+    400052: SOCKET_FL_02 1
+    400054: SOCKET_FL_02 2
+    400056: SOCKET_FL_02 3
+    400058: SOCKET_FL_02 4
+    400060: SOCKET_FR_02 1
+    400062: SOCKET_FR_02 2
+    400064: SOCKET_FR_02 3
+    400066: SOCKET_FR_02 4
+    400068: SOCKET_FR_02 5
+    400070: SOCKET_FR_03 1
+    400072: SOCKET_FR_03 2
+    400074: SOCKET_FR_03 3
+    400076: SOCKET_FR_03 4
+    400078: SOCKET_RL_03 1
+    400080: SOCKET_RL_03 2
+    400082: SOCKET_RL_03 3
+    400084: SOCKET_RL_03 4
+    400086: SOCKET_RL_03 5
+    400088: SOCKET_RL_04 1
+    400090: SOCKET_RL_04 2
+    400092: SOCKET_RL_04 3
+    400094: SOCKET_RL_04 4
+    400096: SOCKET_RR_04 1
+    400098: SOCKET_RR_04 2
+    400100: SOCKET_RR_04 3
+    400102: SOCKET_RR_04 4
+    400104: SOCKET_RR_04 5
+    400106: SOCKET_RR_05 1
+    400108: SOCKET_RR_05 2
+    400110: SOCKET_RR_05 3
+    400112: SOCKET_RR_05 4
+    400114: Body_LOD_0
+    400116: Body_LOD_1
+    400118: Body_LOD_2
+    400120: Body_LOD_3
+    400122: Body_LOD_4
+    400124: Body_LOD_5
+    400126: Body_LOD0
+    400128: Body_LOD1
+    400130: Body_LOD2
+    400132: Body_LOD3
+    400134: Body_LOD4
+    400136: Body_LOD5
+    400138: license_cn
+    400140: license_eu
+    400142: license_us
+    2100000: m_body
+    2100002: m_reflectors
+    2100004: m_generic
+    2100006: m_windows
+    2300000: //RootNode
+    2300002: Body
+    2300004: Body 1
+    2300006: Body 2
+    2300008: Body 3
+    2300010: Body 4
+    2300012: Body 5
+    2300014: Body_LOD_0
+    2300016: Body_LOD_1
+    2300018: Body_LOD_2
+    2300020: Body_LOD_3
+    2300022: Body_LOD_4
+    2300024: Body_LOD_5
+    2300026: Body_LOD0
+    2300028: Body_LOD1
+    2300030: Body_LOD2
+    2300032: Body_LOD3
+    2300034: Body_LOD4
+    2300036: Body_LOD5
+    2300038: license_cn
+    2300040: license_eu
+    2300042: license_us
+    3300000: //RootNode
+    3300002: Body
+    3300004: Body 1
+    3300006: Body 2
+    3300008: Body 3
+    3300010: Body 4
+    3300012: Body 5
+    3300014: Body_LOD_0
+    3300016: Body_LOD_1
+    3300018: Body_LOD_2
+    3300020: Body_LOD_3
+    3300022: Body_LOD_4
+    3300024: Body_LOD_5
+    3300026: Body_LOD0
+    3300028: Body_LOD1
+    3300030: Body_LOD2
+    3300032: Body_LOD3
+    3300034: Body_LOD4
+    3300036: Body_LOD5
+    3300038: license_cn
+    3300040: license_eu
+    3300042: license_us
+    4300000: Body
+    4300002: Body
+    4300004: Body
+    4300006: Body
+    4300008: Body
+    4300010: Body
+    4300012: Body_LOD_0
+    4300014: Body_LOD_1
+    4300016: Body_LOD_2
+    4300018: Body_LOD_3
+    4300020: Body_LOD_4
+    4300022: Body_LOD_5
+    4300024: Body_LOD0
+    4300026: Body_LOD1
+    4300028: Body_LOD2
+    4300030: Body_LOD3
+    4300032: Body_LOD4
+    4300034: Body_LOD5
+    4300036: license_us
+    4300038: license_eu
+    4300040: license_cn
+    20500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_body
+    second: {fileID: 2100000, guid: 278dc82a3f9c1354ab54d18d9b4e84ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_generic
+    second: {fileID: 2100000, guid: d9439fde40f3cc94a834f982493dab06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_reflector
+    second: {fileID: 2100000, guid: ca55079a4cc87024f9f3075a1c765965, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_reflectors
+    second: {fileID: 2100000, guid: ca55079a4cc87024f9f3075a1c765965, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_windows
+    second: {fileID: 2100000, guid: 4f80f41b6522d54438d18c2996522a75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__m_license
+    second: {fileID: 2100000, guid: c1500568ed561b643b3b16b094375519, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.7797453
+    - 0.60188246
+    - 0.4277132
+    - 0.33008152
+    - 0.21456121
+    - 0.06349988
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
