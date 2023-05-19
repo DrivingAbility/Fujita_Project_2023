@@ -10,36 +10,36 @@ public class Car : MonoBehaviour
     private string carBodyMaterialName = "m_body"; //car material name
     [SerializeField]
     private string carLightMaterialName = "m_reflector"; //light material name
-    
+
     [SerializeField]
     private List<CarTexture> carMatList = new List<CarTexture>(); //different colors textures
-    
+
     [Serializable]
     private class CarTexture
     {
         public Texture albedoTexture;
     }
-    
+
     [SerializeField]
     private CarColorType carColorType; //type of car color
-    
+
     public enum CarColorType
     {
         RandomlyAssigned,
         AssignedManually
     }
-    
+
     [SerializeField]
     private CarNumberType selectedCarNumberType; //selected car number type
-    
+
     public enum CarNumberType
     {
         None = 0,
         US = 1,
         EU = 2,
         CN = 3
-    } 
-    [SerializeField] 
+    }
+    [SerializeField]
     private List<CarNumber> carNumbersObjects = new List<CarNumber>();
 
     [Serializable]
@@ -51,7 +51,7 @@ public class Car : MonoBehaviour
 
     [SerializeField]
     private CarColor carColorSelected; //selected car color
-    
+
     public enum CarColor
     {
         Color_a = 0,
@@ -60,10 +60,10 @@ public class Car : MonoBehaviour
         Color_d = 3,
         Color_e = 4
     }
-    
-    [SerializeField] 
+
+    [SerializeField]
     private WheelRotateMode wheelRotateMode; //rotate mode for wheels
-    
+
     public enum WheelRotateMode
     {
         NoRotate,
@@ -71,27 +71,27 @@ public class Car : MonoBehaviour
         ConstantSpeed
     }
 
-    [SerializeField] 
+    [SerializeField]
     private float wheelConstantRotateSpeed = 150f; //if we are using ConstantSpeed mode - we are using current value for wheel 
 
-    [SerializeField] 
+    [SerializeField]
     private ChangeWheelMesh changeWheelMeshMode;  //change wheel to blurred wheel or not
-    
+
     public enum ChangeWheelMesh
     {
         DontActivate,
         SpeedMoreThen
     }
-    
-    [SerializeField] 
+
+    [SerializeField]
     private float changeMaterialRotateSpeed = 100f; //when speed > then changeMaterialRotateSpeed we are change model of wheel
 
-    [SerializeField] 
+    [SerializeField]
     private float wheelSpeedTokmH = 41f; //wheel speed to km/h speed
-    
-    [SerializeField] 
+
+    [SerializeField]
     private List<CarWheel> wheelObject = new List<CarWheel>(); //car wheel object
-    
+
     [Serializable]
     private class CarWheel
     {
@@ -100,7 +100,7 @@ public class Car : MonoBehaviour
         public GameObject wheelBluredObject;
         [HideInInspector]
         public Material wheelBluredMaterial;
-        [HideInInspector] 
+        [HideInInspector]
         public float startWheelAngle = 0f;
         public bool FL = false;
         public bool FR = false;
@@ -109,12 +109,12 @@ public class Car : MonoBehaviour
     }
 
     private bool wheelsBlurred = false;
-    
-    [SerializeField] 
+
+    [SerializeField]
     private float maxWheelRotateAngle = 20f; //max angle for rotate front wheels
-    [SerializeField] 
+    [SerializeField]
     private float wheelRotateValue = 0f;//front wheel rotate 
-    
+
     public float WheelRotateValue //public variable for set wheels rotation
     {
         set
@@ -122,35 +122,35 @@ public class Car : MonoBehaviour
             wheelRotateValue = value;
         }
     }
-    
-    [SerializeField] 
+
+    [SerializeField]
     private bool enableLight = false; //enable light property
-    
+
     //Lights properties
-    [SerializeField] 
+    [SerializeField]
     private List<Light> carLights;
-    [SerializeField] 
+    [SerializeField]
     private float carLightRange = 10f;
-    [SerializeField] 
+    [SerializeField]
     private float carLightSpotAngle = 115f;
-    [SerializeField] 
+    [SerializeField]
     private float carLightIntensity = 5f;
-    [SerializeField] 
+    [SerializeField]
     private LightShadows carLightShadowType = LightShadows.Hard;
-    [SerializeField] 
+    [SerializeField]
     private bool enableLightEmission = false;
-    [SerializeField] 
+    [SerializeField]
     private float emissionIntensity = 1;
 
-    [SerializeField] 
+    [SerializeField]
     private float moveSpeed = 0f; //calculated car speed
 
     private Vector3 lastPosition = Vector3.zero; //previos frame car position
     private float animationTime = 0f; //time for fade animation
-    
+
     private bool bloorStared = false;
     private bool bloorEnd = false;
-    
+
     private MaterialPropertyBlock materialPropertyBody;
     private MaterialPropertyBlock materialPropertyLight;
 
@@ -167,9 +167,9 @@ public class Car : MonoBehaviour
         {
             SetColorByIndex((int)carColorSelected);
         }
-        
+
         lastPosition = transform.position;
-        
+
         if (enableLight)
         {
             EnableLight();
@@ -180,7 +180,7 @@ public class Car : MonoBehaviour
         }
 
         SetCarNumberType();
-        
+
         //Init wheels
         foreach (CarWheel wheel in wheelObject)
         {
@@ -188,7 +188,7 @@ public class Car : MonoBehaviour
             {
                 Debug.Log("No wheel socket!");
             }
-            
+
             if (wheel.wheelObject)
             {
                 wheel.wheelObject.SetActive(true);
@@ -206,7 +206,7 @@ public class Car : MonoBehaviour
                     if (wheel.wheelBluredObject.GetComponent<Renderer>().sharedMaterial)
                     {
                         wheel.wheelBluredMaterial = wheel.wheelBluredObject.GetComponent<Renderer>().sharedMaterial;
-                    } 
+                    }
                     else
                     {
                         Debug.Log("No material on the blured object");
@@ -216,7 +216,7 @@ public class Car : MonoBehaviour
                 {
                     Debug.Log("No renderer component on the blured object");
                 }
-            } 
+            }
             else
             {
                 Debug.Log("No blured wheel object");
@@ -247,7 +247,7 @@ public class Car : MonoBehaviour
                 wheel.startWheelAngle = wheel.wheelSocket.eulerAngles.y;
             }
         }
-       
+
     }
 
     private void SetColorByIndex(int index = 0)
@@ -269,7 +269,7 @@ public class Car : MonoBehaviour
                         if (carMatList[index].albedoTexture != null)
                         {
                             materialPropertyBody.Clear();
-                            materialPropertyBody.SetTexture("_MainTex", carMatList[index].albedoTexture);
+                            materialPropertyBody.SetTexture("_BaseColorMap", carMatList[index].albedoTexture);
                             renderer.SetPropertyBlock(materialPropertyBody, i);
                         }
                     }
@@ -286,21 +286,21 @@ public class Car : MonoBehaviour
             {
                 carNumber.numberObject.SetActive(carNumber.carNumberType == selectedCarNumberType);
             }
-        }    
+        }
     }
-    
+
     //public method for enable light
     public void EnableLight()
     {
         if (materialPropertyLight == null)
         {
             materialPropertyLight = new MaterialPropertyBlock();
-        } 
+        }
         foreach (Light light in carLights)
         {
             light.enabled = true;
         }
-        
+
         if (enableLightEmission)
         {
             EnableLightEmission();
@@ -313,15 +313,15 @@ public class Car : MonoBehaviour
             light.intensity = carLightIntensity;
             light.shadows = carLightShadowType;
         }
-    } 
-    
+    }
+
     //public method for disable light
     public void DisableLight()
     {
         if (materialPropertyLight == null)
         {
             materialPropertyLight = new MaterialPropertyBlock();
-        } 
+        }
         if (enableLightEmission)
         {
             DisableLightEmission();
@@ -335,7 +335,7 @@ public class Car : MonoBehaviour
             }
         }
     }
-    
+
     private void EnableLightEmission()
     {
         Renderer[] renderers = GetComponentsInChildren<Renderer>();
@@ -345,15 +345,15 @@ public class Car : MonoBehaviour
             {
                 if (renderer.sharedMaterials[i].name == carLightMaterialName || renderer.sharedMaterials[i].name == carLightMaterialName + " (Instance)")
                 {
-                    float factor = Mathf.Pow(2,emissionIntensity);
+                    float factor = Mathf.Pow(2, emissionIntensity);
                     Material mat = renderer.sharedMaterials[i];
-                    materialPropertyLight.SetColor("_EmissionColor", new Color(mat.color.r*factor,mat.color.g*factor,mat.color.b*factor));
+                    materialPropertyLight.SetColor("_EmissionColor", new Color(mat.color.r * factor, mat.color.g * factor, mat.color.b * factor));
                     renderer.SetPropertyBlock(materialPropertyLight, i);
                 }
             }
         }
     }
-    
+
     private void DisableLightEmission()
     {
         Renderer[] renderers = GetComponentsInChildren<Renderer>();
@@ -363,15 +363,15 @@ public class Car : MonoBehaviour
             {
                 if (renderer.sharedMaterials[i].name == carLightMaterialName || renderer.sharedMaterials[i].name == carLightMaterialName + " (Instance)")
                 {
-                    float factor = Mathf.Pow(2,emissionIntensity * -1);
+                    float factor = Mathf.Pow(2, emissionIntensity * -1);
                     Material mat = renderer.sharedMaterials[i];
-                    materialPropertyLight.SetColor("_EmissionColor", new Color(mat.color.r*factor,mat.color.g*factor,mat.color.b*factor));
+                    materialPropertyLight.SetColor("_EmissionColor", new Color(mat.color.r * factor, mat.color.g * factor, mat.color.b * factor));
                     renderer.SetPropertyBlock(materialPropertyLight, i);
                 }
             }
         }
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -401,7 +401,7 @@ public class Car : MonoBehaviour
                     case WheelRotateMode.AutoDetectMovement:
                         moveSpeed = 4f * ((transform.position - lastPosition).magnitude / Time.deltaTime);
                         lastPosition = transform.position;
-                       
+
                         break;
                     case WheelRotateMode.ConstantSpeed:
                         moveSpeed = 60f * wheelConstantRotateSpeed * Time.deltaTime;
@@ -409,7 +409,7 @@ public class Car : MonoBehaviour
                 }
                 moveSpeed = Mathf.Round(moveSpeed * 100f) / 100f;
             }
-            
+
             foreach (CarWheel wheel in wheelObject)
             {
                 if (wheel.wheelSocket)
