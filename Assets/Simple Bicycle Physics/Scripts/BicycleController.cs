@@ -57,6 +57,7 @@ namespace SBPScripts
     }
     public class BicycleController : MonoBehaviour
     {
+        [SerializeField] private bool isAutoInput;
         public CycleGeometry cycleGeometry;
         public GameObject fPhysicsWheel, rPhysicsWheel;
         public WheelFrictionSettings wheelFrictionSettings;
@@ -353,11 +354,11 @@ namespace SBPScripts
                 transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, turnLeanAmount + cycleOscillation + GroundConformity(groundConformity));
             }
             //Wheelie
-            if(!isAirborne && wheelieInput && rawCustomAccelerationAxis>0)
+            if (!isAirborne && wheelieInput && rawCustomAccelerationAxis > 0)
             {
                 rb.angularDrag = 15;
-                wheeliePower = customAccelerationAxis*150*System.Convert.ToInt32(wheelieToggle);
-                var rot = Quaternion.FromToRotation(transform.forward, new Vector3(transform.forward.x,0.75f,transform.forward.z));
+                wheeliePower = customAccelerationAxis * 150 * System.Convert.ToInt32(wheelieToggle);
+                var rot = Quaternion.FromToRotation(transform.forward, new Vector3(transform.forward.x, 0.75f, transform.forward.z));
                 rb.AddTorque(new Vector3(rot.x, rot.y, rot.z) * wheeliePower, ForceMode.Acceleration);
             }
             else
@@ -457,6 +458,17 @@ namespace SBPScripts
         float CustomInput(string name, ref float axis, float sensitivity, float gravity, bool isRaw)
         {
             var r = Input.GetAxisRaw(name);
+            if (isAutoInput)
+            {
+                if (name == "Vertical")
+                {
+                    r = 1;
+                }
+                else
+                {
+                    r = 0;
+                }
+            }
             var s = sensitivity;
             var g = gravity;
             var t = Time.unscaledDeltaTime;
@@ -962,7 +974,7 @@ namespace SBPScripts
 //                     sprint = mobileControls.sprint.buttonPressed == 1? true : false;
 //                 else
 //                     sprint = Input.GetKey(KeyCode.LeftShift);
-                
+
 //                 if(mobileControls.wheelie !=null)
 //                     wheelieInput = mobileControls.wheelie.buttonPressed == 1? true : false;
 
