@@ -2,6 +2,7 @@
 using UnityEngine;
 
 [CustomEditor(typeof(Car))]
+[CanEditMultipleObjects]
 class CarEditorGUI : Editor
 {
     private SerializedProperty carColorType;
