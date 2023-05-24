@@ -46,7 +46,7 @@ public class CarUserControl : MonoBehaviour
     {
         if (context.action.name != "Horizontal") return;
         var value = context.ReadValue<Vector2>();
-        var normalizedScale = 45;
+        var normalizedScale = 45.0f;
         _horizontal = Vector2.SignedAngle(value, Vector2.up) / normalizedScale;
     }
     public void OnBrake(InputAction.CallbackContext context)

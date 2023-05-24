@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6836260100215105851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: -50}
+  m_LocalPosition: {x: -5.8, y: 0, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118,6 +118,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 976543092708187320}
     m_Modifications:
+    - target: {fileID: 15800314473767241, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2669489162393442438, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
       propertyPath: wheelObject.Array.data[0].startWheelAngle
       value: 90
@@ -125,6 +129,22 @@ PrefabInstance:
     - target: {fileID: 2669489162393442438, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
       propertyPath: wheelObject.Array.data[1].startWheelAngle
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945034700782394930, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984055954573033872, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413721747933456034, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320306529670173264, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6053153482583467235, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
       propertyPath: wheelObject.Array.data[0].startWheelAngle
@@ -285,6 +305,22 @@ PrefabInstance:
     - target: {fileID: 6971171882680814578, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
       propertyPath: m_Name
       value: Building Unit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407398480382760379, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499959170541373698, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017590026101162849, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126422722006086281, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce3d375fcf1ad3641aee440593ffcc16, type: 3}
