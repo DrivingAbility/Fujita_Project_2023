@@ -143,23 +143,23 @@ public class CarController : MonoBehaviour
     }
     private float Torque(float accel)
     {
-        float thrustTorque = _currentTorque;
+        float torque = _currentTorque;
         if (accel == 0)
         {
             if (CurrentSpeed > _creepSpeed)
             {
-                thrustTorque = 0;
+                torque = 0;
             }
             else
             {
-                thrustTorque = _currentTorque / 4f;
+                torque = _currentTorque / 4f;
             };
         }
         else
         {
-            thrustTorque = accel * _currentTorque / 2f;
+            torque = accel * _currentTorque / 2f;
         }
-        return thrustTorque;
+        return torque;
     }
     // this is used to add more grip in relation to speed
     private void AddDownForce()
