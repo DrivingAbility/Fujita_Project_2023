@@ -62,7 +62,7 @@ public class CarController : MonoBehaviour
     }
     private void FindMeter()
     {
-        string s = "Meter Needle";
+        string s = "Meter_Needle";
         List<Transform> list = GetAllChildren.GetAll(transform);
         foreach (Transform tf in list)
         {
@@ -71,7 +71,7 @@ public class CarController : MonoBehaviour
                 _meterTf = tf;
             }
         }
-        if (_meterTf == null) Debug.Log("Can't Find Meter Object");
+        if (_meterTf == null) Debug.Log("Can't Find 'Meter_Needle'");
     }
 
     public void Move(float steering, float accel, float footbrake)
