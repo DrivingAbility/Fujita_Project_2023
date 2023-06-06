@@ -110,16 +110,25 @@ public class ExportExcel
 [Serializable]
 public class ExportDistance : ExportExcel
 {
+
+    [SerializeField] private bool _isTargetBoxActive;
     [SerializeField] private Transform[] _movingTargetParents;
+    [SerializeField] private GameObject _targetBoxObject;
     private Transform[] _targetTrans;
-    private int[] childIndex;
+    private int[] _childIndex;
     public override string[] _startStrArray()
     {
-        childIndex = new int[_movingTargetParents.Count()];
+        _childIndex = new int[_movingTargetParents.Count()];
         _targetTrans = new Transform[]{
-            _movingTargetParents[0].GetChild(childIndex[0]=0),
-            _movingTargetParents[1].GetChild(childIndex[1]=0)
+            _movingTargetParents[0].GetChild(_childIndex[0]=0),
+            _movingTargetParents[1].GetChild(_childIndex[1]=0)
         };
+
+        if (_isTargetBoxActive)
+        {
+            CreateTargetBoxObj(0, out _);
+            CreateTargetBoxObj(1, out _);
+        }
 
         string[] s = new string[]{
             "Distance",
@@ -159,8 +168,28 @@ public class ExportDistance : ExportExcel
     {
         var oldDistanceVt3 = _targetTrans[parentTransIndex].position - _carTrans.position;
         if (oldDistanceVt3.z > 0) return;
-        childIndex[parentTransIndex]++;
-        _targetTrans[parentTransIndex] = parentTrans[parentTransIndex].GetChild(childIndex[parentTransIndex]);
+        _childIndex[parentTransIndex]++;
+        _targetTrans[parentTransIndex] = parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex]);
+
+        if (!_isTargetBoxActive) return;
+        string objName = string.Empty;
+        CreateTargetBoxObj(parentTransIndex, out objName);
+        parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex] - 1).Find(objName).gameObject.SetActive(false);
+    }
+    private void CreateTargetBoxObj(int parentTransIndex, out string objName)
+    {
+        GameObject obj = GameObject.Instantiate(_targetBoxObject, _targetTrans[parentTransIndex]);
+        if (parentTransIndex == 0)
+        {
+            obj.transform.localPosition = new Vector3(0f, 1.0f, 0f);
+            obj.transform.localScale = new Vector3(2.5f, 2.0f, 5.0f);
+        }
+        else
+        {
+            obj.transform.localPosition = new Vector3(0f, 1.0f, 0f);
+            obj.transform.localScale = new Vector3(1.0f, 2.0f, 1.0f);
+        }
+        objName = obj.name;
     }
 }
 public class MainSceneDirector : MonoBehaviour
