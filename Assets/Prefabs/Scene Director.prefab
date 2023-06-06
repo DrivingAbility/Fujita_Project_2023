@@ -44,10 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13eaaf5bff790943b8042f60e365278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frameRateController:
-    _frameRate: 30
-  exportExcel:
-    _isExportFile: 0
-  exportDistancce:
-    _isExportFile: 1
-    _targetParents: []
+  _frameRateController:
+    _frameRate: 60
+  _exportDistance:
+    _isExportCsvfile: 1
+    _isTargetBoxActive: 1
+    _movingTargetParents:
+    - {fileID: 0}
+    - {fileID: 0}
+    _targetBoxObject: {fileID: 8161847264246973797, guid: 827143d9a416cd04595099e2db67a25d, type: 3}
