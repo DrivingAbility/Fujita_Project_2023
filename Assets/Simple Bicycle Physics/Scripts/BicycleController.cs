@@ -58,6 +58,7 @@ namespace SBPScripts
     public class BicycleController : MonoBehaviour
     {
         [SerializeField] private bool isAutoInput;
+        float xPosition;
         public CycleGeometry cycleGeometry;
         public GameObject fPhysicsWheel, rPhysicsWheel;
         public WheelFrictionSettings wheelFrictionSettings;
@@ -180,6 +181,8 @@ namespace SBPScripts
                 wayPointSystem.sprintInstructionSet.Clear();
                 wayPointSystem.bHopInstructionSet.Clear();
             }
+
+            xPosition = transform.position.x;
         }
 
         void FixedUpdate()
@@ -271,6 +274,7 @@ namespace SBPScripts
             cycleOscillation = -Mathf.Sin(Mathf.Deg2Rad * (crankSpeed + 90)) * (oscillationAmount * (Mathf.Clamp(currentTopSpeed / currentSpeed, 1f, 1.5f))) * pickUpSpeed;
             turnLeanAmount = -leanCurve.Evaluate(customLeanAxis) * Mathf.Clamp(currentSpeed * 0.1f, 0, 1);
             oscillationSteerEffect = cycleOscillation * Mathf.Clamp01(customAccelerationAxis) * (oscillationAffectSteerRatio * (Mathf.Clamp(topSpeed / currentSpeed, 1f, 1.5f)));
+            if (isAutoInput) oscillationSteerEffect += 0.1f * (-transform.position.x + xPosition);
 
             //FrictionSettings
             wheelFrictionSettings.fPhysicMaterial.staticFriction = wheelFrictionSettings.fFriction.x;
