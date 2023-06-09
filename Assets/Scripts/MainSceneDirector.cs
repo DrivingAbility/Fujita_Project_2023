@@ -110,24 +110,32 @@ public class ExportExcel
 [Serializable]
 public class ExportDistance : ExportExcel
 {
+    private enum TargetGroup
+    {
+        Cars = 0,
+        Bikes = 1
+    }
 
-    [SerializeField] private bool _isTargetBoxActive;
+    [SerializeField] private bool _isTargetVisualize;
     [SerializeField] private Transform[] _movingTargetParents;
     [SerializeField] private GameObject _targetBoxObject;
+    [SerializeField] private GameObject _targetSphereObject;
     private Transform[] _targetTrans;
     private int[] _childIndex;
+    private GameObject _targetSphere;
     public override string[] _startStrArray()
     {
         _childIndex = new int[_movingTargetParents.Count()];
+
         _targetTrans = new Transform[]{
-            _movingTargetParents[0].GetChild(_childIndex[0]=0),
-            _movingTargetParents[1].GetChild(_childIndex[1]=0)
+            _movingTargetParents[(int)TargetGroup.Cars].GetChild(_childIndex[(int)TargetGroup.Cars]=0),
+            _movingTargetParents[(int)TargetGroup.Bikes].GetChild(_childIndex[(int)TargetGroup.Bikes]=0)
         };
 
-        if (_isTargetBoxActive)
+        if (_isTargetVisualize)
         {
-            CreateTargetBoxObj(0, out _);
-            CreateTargetBoxObj(1, out _);
+            CreateTargetBoxObj((int)TargetGroup.Cars, out _);
+            CreateTargetBoxObj((int)TargetGroup.Bikes, out _);
         }
 
         string[] s = new string[]{
@@ -145,11 +153,13 @@ public class ExportDistance : ExportExcel
     }
     public override string[] _updateStrArray()
     {
-        NearestTarget(_movingTargetParents, 0);
-        var carDistanceVt3 = _targetTrans[0].position - _carTrans.position;
+        NearestTarget(_movingTargetParents, (int)TargetGroup.Cars);
+        RayControll((int)TargetGroup.Cars);
+        var carDistanceVt3 = _targetTrans[(int)TargetGroup.Cars].position - _carTrans.position;
 
-        NearestTarget(_movingTargetParents, 1);
-        var bikeDistanceVt3 = _targetTrans[1].position - _carTrans.position;
+        NearestTarget(_movingTargetParents, (int)TargetGroup.Bikes);
+        RayControll((int)TargetGroup.Bikes);
+        var bikeDistanceVt3 = _targetTrans[(int)TargetGroup.Bikes].position - _carTrans.position;
 
         string[] s = new string[]{
             string.Empty,
@@ -167,11 +177,32 @@ public class ExportDistance : ExportExcel
     private void NearestTarget(Transform[] parentTrans, int parentTransIndex)
     {
         var oldDistanceVt3 = _targetTrans[parentTransIndex].position - _carTrans.position;
+
         if (oldDistanceVt3.z > 0) return;
         _childIndex[parentTransIndex]++;
         _targetTrans[parentTransIndex] = parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex]);
 
-        if (!_isTargetBoxActive) return;
+        TargetBoxControll(parentTrans, parentTransIndex);
+    }
+    private void RayControll(int parentTransIndex)
+    {
+        Vector3 direction = _targetTrans[parentTransIndex].position - _carTrans.position;
+        Ray ray = new Ray(_carTrans.position + new Vector3(0, 0.6f, 0), direction);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity) && parentTransIndex == 0)
+        {
+            if (_targetSphere != null)
+            {
+                GameObject.Destroy(_targetSphere);
+            }
+            _targetSphere = GameObject.Instantiate(_targetSphereObject, hit.point, Quaternion.identity);
+
+            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red, 0, false);
+        }
+    }
+    private void TargetBoxControll(Transform[] parentTrans, int parentTransIndex)
+    {
+        if (!_isTargetVisualize) return;
         string objName = string.Empty;
         CreateTargetBoxObj(parentTransIndex, out objName);
         parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex] - 1).Find(objName).gameObject.SetActive(false);
@@ -179,7 +210,7 @@ public class ExportDistance : ExportExcel
     private void CreateTargetBoxObj(int parentTransIndex, out string objName)
     {
         GameObject obj = GameObject.Instantiate(_targetBoxObject, _targetTrans[parentTransIndex]);
-        if (parentTransIndex == 0)
+        if (parentTransIndex == (int)TargetGroup.Cars)
         {
             obj.transform.localPosition = new Vector3(0f, 1.0f, 0f);
             obj.transform.localScale = new Vector3(2.5f, 2.0f, 5.0f);

@@ -19,6 +19,6 @@ public class CpuCarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rb.velocity = _velocity * transform.forward;
+        transform.Translate(transform.forward * Time.deltaTime * _velocity, Space.World);
     }
 }
