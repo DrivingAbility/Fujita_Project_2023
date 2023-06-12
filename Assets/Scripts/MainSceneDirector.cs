@@ -40,7 +40,7 @@ public class ExportExcel
         return s;
     }
     // Start is called before the first frame update
-    public void StreamWriterStart(string[] strArry)
+    public void StreamWriterStart()
     {
         _carTrans = GameObject.FindGameObjectWithTag("Player").transform;
         _playerCar = _carTrans.GetComponent<CarController>();
@@ -70,7 +70,7 @@ public class ExportExcel
 
         using (StreamWriter sw = new StreamWriter(_path, false, Encoding.GetEncoding("Shift_JIS")))
         {
-            sw.WriteLine(string.Join(",", strArry));
+            sw.WriteLine(string.Join(",", _startStrArray()));
         }
     }
     public virtual string[] _updateStrArray()
@@ -122,7 +122,8 @@ public class ExportDistance : ExportExcel
     [SerializeField] private GameObject _targetSphereObject;
     private Transform[] _targetTrans;
     private int[] _childIndex;
-    private GameObject _targetSphere;
+    private Transform[] _hitCpuPoint;
+    private Transform[] _hitPlayerPoint;
     public override string[] _startStrArray()
     {
         _childIndex = new int[_movingTargetParents.Count()];
@@ -132,6 +133,10 @@ public class ExportDistance : ExportExcel
             _movingTargetParents[(int)TargetGroup.Bikes].GetChild(_childIndex[(int)TargetGroup.Bikes]=0)
         };
 
+        _hitPlayerPoint = new Transform[_movingTargetParents.Count()];
+        _hitCpuPoint = new Transform[_movingTargetParents.Count()];
+        RayControll((int)TargetGroup.Cars);
+        RayControll((int)TargetGroup.Bikes);
         if (_isTargetVisualize)
         {
             CreateTargetBoxObj((int)TargetGroup.Cars, out _);
@@ -155,20 +160,20 @@ public class ExportDistance : ExportExcel
     {
         NearestTarget(_movingTargetParents, (int)TargetGroup.Cars);
         RayControll((int)TargetGroup.Cars);
-        var carDistanceVt3 = _targetTrans[(int)TargetGroup.Cars].position - _carTrans.position;
+        var carDirection = _targetTrans[(int)TargetGroup.Cars].position - _carTrans.position;
 
         NearestTarget(_movingTargetParents, (int)TargetGroup.Bikes);
         RayControll((int)TargetGroup.Bikes);
-        var bikeDistanceVt3 = _targetTrans[(int)TargetGroup.Bikes].position - _carTrans.position;
+        var bikeDirection = _targetTrans[(int)TargetGroup.Bikes].position - _carTrans.position;
 
         string[] s = new string[]{
             string.Empty,
-            carDistanceVt3.x.ToString(_format),
-            carDistanceVt3.z.ToString(_format),
-            carDistanceVt3.magnitude.ToString(_format),
-            bikeDistanceVt3.x.ToString(_format),
-            bikeDistanceVt3.z.ToString(_format),
-            bikeDistanceVt3.magnitude.ToString(_format)
+            carDirection.x.ToString(_format),
+            carDirection.z.ToString(_format),
+            carDirection.magnitude.ToString(_format),
+            bikeDirection.x.ToString(_format),
+            bikeDirection.z.ToString(_format),
+            bikeDirection.magnitude.ToString(_format)
         };
         s = base._updateStrArray().Concat(s).ToArray();
 
@@ -176,9 +181,9 @@ public class ExportDistance : ExportExcel
     }
     private void NearestTarget(Transform[] parentTrans, int parentTransIndex)
     {
-        var oldDistanceVt3 = _targetTrans[parentTransIndex].position - _carTrans.position;
+        var oldDirection = _targetTrans[parentTransIndex].position - _carTrans.position;
 
-        if (oldDistanceVt3.z > 0) return;
+        if (oldDirection.z > 0) return;
         _childIndex[parentTransIndex]++;
         _targetTrans[parentTransIndex] = parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex]);
 
@@ -187,17 +192,27 @@ public class ExportDistance : ExportExcel
     private void RayControll(int parentTransIndex)
     {
         Vector3 direction = _targetTrans[parentTransIndex].position - _carTrans.position;
-        Ray ray = new Ray(_carTrans.position + new Vector3(0, 0.6f, 0), direction);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity) && parentTransIndex == 0)
-        {
-            if (_targetSphere != null)
-            {
-                GameObject.Destroy(_targetSphere);
-            }
-            _targetSphere = GameObject.Instantiate(_targetSphereObject, hit.point, Quaternion.identity);
+        Vector3 rayPositionOffset = new Vector3(0, 0.6f, 0);
+        Ray rayToCpu = new Ray(_carTrans.position + rayPositionOffset, direction);
+        RayHitControll(rayToCpu, _hitCpuPoint, 1 << 7, parentTransIndex);
 
-            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red, 0, false);
+        Ray rayToPlayer = new Ray(_targetTrans[parentTransIndex].position + rayPositionOffset, -direction);
+        RayHitControll(rayToPlayer, _hitPlayerPoint, 1 << 6, parentTransIndex);
+    }
+    private void RayHitControll(Ray ray, Transform[] hitPoint, int layerMask, int parentTransIndex)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+        {
+            if (hitPoint[parentTransIndex] == null)
+            {
+                hitPoint[parentTransIndex] = GameObject.Instantiate(_targetSphereObject, hit.point, Quaternion.identity).transform;
+            }
+            hitPoint[parentTransIndex].position = hit.point;
+            if (_isTargetVisualize)
+            {
+                Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.yellow, 0, false);
+            }
         }
     }
     private void TargetBoxControll(Transform[] parentTrans, int parentTransIndex)
@@ -213,12 +228,12 @@ public class ExportDistance : ExportExcel
         if (parentTransIndex == (int)TargetGroup.Cars)
         {
             obj.transform.localPosition = new Vector3(0f, 1.0f, 0f);
-            obj.transform.localScale = new Vector3(2.5f, 2.0f, 5.0f);
+            obj.transform.localScale = new Vector3(2.5f, 2.0f, 5.5f);
         }
         else
         {
             obj.transform.localPosition = new Vector3(0f, 1.0f, 0f);
-            obj.transform.localScale = new Vector3(1.0f, 2.0f, 1.0f);
+            obj.transform.localScale = new Vector3(1.0f, 2.0f, 2.1f);
         }
         objName = obj.name;
     }
@@ -233,10 +248,10 @@ public class MainSceneDirector : MonoBehaviour
 
         if (_exportDistance._isExportCsvfile)
         {
-            _exportDistance.StreamWriterStart(_exportDistance._startStrArray());
+            _exportDistance.StreamWriterStart();
         }
     }
-    void FixedUpdate()
+    void Update()
     {
         if (_exportDistance._isExportCsvfile)
         {
