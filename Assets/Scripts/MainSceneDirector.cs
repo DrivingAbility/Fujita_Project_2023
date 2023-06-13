@@ -135,6 +135,7 @@ public class ExportDistance : ExportExcel
 
         _hitPlayerPoint = new Transform[_movingTargetParents.Count()];
         _hitCpuPoint = new Transform[_movingTargetParents.Count()];
+
         RayControll((int)TargetGroup.Cars);
         RayControll((int)TargetGroup.Bikes);
         if (_isTargetVisualize)
@@ -160,11 +161,11 @@ public class ExportDistance : ExportExcel
     {
         NearestTarget(_movingTargetParents, (int)TargetGroup.Cars);
         RayControll((int)TargetGroup.Cars);
-        var carDirection = _targetTrans[(int)TargetGroup.Cars].position - _carTrans.position;
+        var carDirection = _hitCpuPoint[(int)TargetGroup.Cars].position - _hitPlayerPoint[(int)TargetGroup.Cars].position;
 
         NearestTarget(_movingTargetParents, (int)TargetGroup.Bikes);
         RayControll((int)TargetGroup.Bikes);
-        var bikeDirection = _targetTrans[(int)TargetGroup.Bikes].position - _carTrans.position;
+        var bikeDirection = _hitCpuPoint[(int)TargetGroup.Bikes].position - _hitPlayerPoint[(int)TargetGroup.Bikes].position;
 
         string[] s = new string[]{
             string.Empty,
@@ -182,8 +183,12 @@ public class ExportDistance : ExportExcel
     private void NearestTarget(Transform[] parentTrans, int parentTransIndex)
     {
         var oldDirection = _targetTrans[parentTransIndex].position - _carTrans.position;
-
+        if (parentTransIndex == 1)
+        {
+            Debug.Log("Change Object to " + oldDirection.z);
+        }
         if (oldDirection.z > 0) return;
+        if (_childIndex[parentTransIndex] == parentTrans[parentTransIndex].childCount - 1) return;//last object
         _childIndex[parentTransIndex]++;
         _targetTrans[parentTransIndex] = parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex]);
 
@@ -207,18 +212,24 @@ public class ExportDistance : ExportExcel
             if (hitPoint[parentTransIndex] == null)
             {
                 hitPoint[parentTransIndex] = GameObject.Instantiate(_targetSphereObject, hit.point, Quaternion.identity).transform;
+                if (_isTargetVisualize)
+                {
+                    hitPoint[parentTransIndex].GetComponent<Renderer>().material.SetColor("_UnlitColor", Color.yellow);
+                }
             }
             hitPoint[parentTransIndex].position = hit.point;
-            if (_isTargetVisualize)
-            {
-                Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.yellow, 0, false);
-            }
+            if (!_isTargetVisualize) return;
+            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.yellow, 0, false);
+        }
+        else
+        {
+            Debug.Log("Ray Hit Nothing!!");
         }
     }
     private void TargetBoxControll(Transform[] parentTrans, int parentTransIndex)
     {
         if (!_isTargetVisualize) return;
-        string objName = string.Empty;
+        string objName;
         CreateTargetBoxObj(parentTransIndex, out objName);
         parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex] - 1).Find(objName).gameObject.SetActive(false);
     }

@@ -48,8 +48,9 @@ MonoBehaviour:
     _frameRate: 60
   _exportDistance:
     _isExportCsvfile: 1
-    _isTargetBoxActive: 1
+    _isTargetVisualize: 1
     _movingTargetParents:
     - {fileID: 0}
     - {fileID: 0}
     _targetBoxObject: {fileID: 8161847264246973797, guid: 827143d9a416cd04595099e2db67a25d, type: 3}
+    _targetSphereObject: {fileID: 1466972504994066833, guid: 8c62ebd400653a549aeb3c7cb9c63601, type: 3}

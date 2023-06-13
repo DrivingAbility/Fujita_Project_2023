@@ -633,6 +633,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Biycycle Standard
       objectReference: {fileID: 0}
+    - target: {fileID: 7763693495198784919, guid: 3ab47840993e3924eb6621b3fdf90428, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9650926
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763693495198784919, guid: 3ab47840993e3924eb6621b3fdf90428, type: 3}
+      propertyPath: m_Center.y
+      value: 0.7562065
+      objectReference: {fileID: 0}
     - target: {fileID: 7763693495198784921, guid: 3ab47840993e3924eb6621b3fdf90428, type: 3}
       propertyPath: isAutoInput
       value: 1
