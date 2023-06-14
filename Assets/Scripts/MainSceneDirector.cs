@@ -115,10 +115,7 @@ public class ExportDistance : ExportExcel
         Cars = 0,
         Bikes = 1
     }
-
-    [SerializeField] private bool _isTargetVisualize;
     [SerializeField] private Transform[] _movingTargetParents;
-    [SerializeField] private GameObject _targetBoxObject;
     private float _rayPositionY;
     private Collider[] _targetCollider;
     private Collider _playerCollider;
@@ -130,7 +127,7 @@ public class ExportDistance : ExportExcel
     public Vector3[] HitPlayerPosition { get; private set; }
     public override string[] _startStrArray()
     {
-        _rayPositionY = 0.4f;
+        _rayPositionY = 0.6f;
         _childIndex = new int[_movingTargetParents.Count()];
 
         _targetTrans = new Transform[]{
@@ -145,12 +142,6 @@ public class ExportDistance : ExportExcel
 
         _hitPlayerPosition = new Vector3[_movingTargetParents.Count()];
         _hitCpuPosition = new Vector3[_movingTargetParents.Count()];
-
-        if (_isTargetVisualize)
-        {
-            CreateTargetBoxObj((int)TargetGroup.Cars, out _);
-            CreateTargetBoxObj((int)TargetGroup.Bikes, out _);
-        }
 
         string[] s = new string[]{
             "Distance",
@@ -211,7 +202,6 @@ public class ExportDistance : ExportExcel
         _targetTrans[parentTransIndex] = parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex]);
 
         TargetColliderSetting(parentTransIndex);
-        TargetBoxControll(parentTrans, parentTransIndex);
     }
     private void ClosestPointing(int parentTransIndex)
     {
@@ -221,28 +211,6 @@ public class ExportDistance : ExportExcel
 
         _hitPlayerPosition[parentTransIndex] = _playerCollider.ClosestPoint(_hitCpuPosition[parentTransIndex]);
         _hitPlayerPosition[parentTransIndex].y = _rayPositionY;
-    }
-    private void TargetBoxControll(Transform[] parentTrans, int parentTransIndex)
-    {
-        if (!_isTargetVisualize) return;
-        string objName;
-        CreateTargetBoxObj(parentTransIndex, out objName);
-        parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex] - 1).Find(objName).gameObject.SetActive(false);
-    }
-    private void CreateTargetBoxObj(int parentTransIndex, out string objName)
-    {
-        GameObject obj = GameObject.Instantiate(_targetBoxObject, _targetTrans[parentTransIndex]);
-        if (parentTransIndex == (int)TargetGroup.Cars)
-        {
-            obj.transform.localPosition = new Vector3(0f, 1.0f, 0f);
-            obj.transform.localScale = new Vector3(2.5f, 2.0f, 5.5f);
-        }
-        else
-        {
-            obj.transform.localPosition = new Vector3(0f, 1.0f, 0f);
-            obj.transform.localScale = new Vector3(1.0f, 2.0f, 2.1f);
-        }
-        objName = obj.name;
     }
 }
 public class MainSceneDirector : MonoBehaviour
