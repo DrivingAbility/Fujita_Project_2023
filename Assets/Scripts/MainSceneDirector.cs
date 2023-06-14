@@ -119,13 +119,18 @@ public class ExportDistance : ExportExcel
     [SerializeField] private bool _isTargetVisualize;
     [SerializeField] private Transform[] _movingTargetParents;
     [SerializeField] private GameObject _targetBoxObject;
-    [SerializeField] private GameObject _targetSphereObject;
+    private float _rayPositionY;
+    private Collider[] _targetCollider;
+    private Collider _playerCollider;
     private Transform[] _targetTrans;
     private int[] _childIndex;
-    private Transform[] _hitCpuPoint;
-    private Transform[] _hitPlayerPoint;
+    private Vector3[] _hitCpuPosition;
+    private Vector3[] _hitPlayerPosition;
+    public Vector3[] HitCpuPosition { get; private set; }
+    public Vector3[] HitPlayerPosition { get; private set; }
     public override string[] _startStrArray()
     {
+        _rayPositionY = 0.4f;
         _childIndex = new int[_movingTargetParents.Count()];
 
         _targetTrans = new Transform[]{
@@ -133,11 +138,14 @@ public class ExportDistance : ExportExcel
             _movingTargetParents[(int)TargetGroup.Bikes].GetChild(_childIndex[(int)TargetGroup.Bikes]=0)
         };
 
-        _hitPlayerPoint = new Transform[_movingTargetParents.Count()];
-        _hitCpuPoint = new Transform[_movingTargetParents.Count()];
+        _playerCollider = _carTrans.GetComponentInChildren<Collider>();
+        _targetCollider = new Collider[_movingTargetParents.Count()];
+        TargetColliderSetting((int)TargetGroup.Cars);
+        TargetColliderSetting((int)TargetGroup.Bikes);
 
-        RayControll((int)TargetGroup.Cars);
-        RayControll((int)TargetGroup.Bikes);
+        _hitPlayerPosition = new Vector3[_movingTargetParents.Count()];
+        _hitCpuPosition = new Vector3[_movingTargetParents.Count()];
+
         if (_isTargetVisualize)
         {
             CreateTargetBoxObj((int)TargetGroup.Cars, out _);
@@ -160,12 +168,16 @@ public class ExportDistance : ExportExcel
     public override string[] _updateStrArray()
     {
         NearestTarget(_movingTargetParents, (int)TargetGroup.Cars);
-        RayControll((int)TargetGroup.Cars);
-        var carDirection = _hitCpuPoint[(int)TargetGroup.Cars].position - _hitPlayerPoint[(int)TargetGroup.Cars].position;
+        ClosestPointing((int)TargetGroup.Cars);
+        var carDirection = _hitCpuPosition[(int)TargetGroup.Cars] - _hitPlayerPosition[(int)TargetGroup.Cars];
+
 
         NearestTarget(_movingTargetParents, (int)TargetGroup.Bikes);
-        RayControll((int)TargetGroup.Bikes);
-        var bikeDirection = _hitCpuPoint[(int)TargetGroup.Bikes].position - _hitPlayerPoint[(int)TargetGroup.Bikes].position;
+        ClosestPointing((int)TargetGroup.Bikes);
+        var bikeDirection = _hitCpuPosition[(int)TargetGroup.Bikes] - _hitPlayerPosition[(int)TargetGroup.Bikes];
+
+        HitCpuPosition = _hitCpuPosition;
+        HitPlayerPosition = _hitPlayerPosition;
 
         string[] s = new string[]{
             string.Empty,
@@ -180,51 +192,35 @@ public class ExportDistance : ExportExcel
 
         return s;
     }
+    private void TargetColliderSetting(int parentTransIndex)
+    {
+        Vector3 direction = _targetTrans[parentTransIndex].position - _carTrans.position;
+        RaycastHit hit;
+        Vector3 origin = new Vector3(_carTrans.position.x, _rayPositionY, _carTrans.position.z);
+        if (Physics.Raycast(origin, direction, out hit, Mathf.Infinity))
+        {
+            _targetCollider[parentTransIndex] = hit.collider;
+        }
+    }
     private void NearestTarget(Transform[] parentTrans, int parentTransIndex)
     {
         var oldDirection = _targetTrans[parentTransIndex].position - _carTrans.position;
-        if (parentTransIndex == 1)
-        {
-            Debug.Log("Change Object to " + oldDirection.z);
-        }
         if (oldDirection.z > 0) return;
         if (_childIndex[parentTransIndex] == parentTrans[parentTransIndex].childCount - 1) return;//last object
         _childIndex[parentTransIndex]++;
         _targetTrans[parentTransIndex] = parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex]);
 
+        TargetColliderSetting(parentTransIndex);
         TargetBoxControll(parentTrans, parentTransIndex);
     }
-    private void RayControll(int parentTransIndex)
+    private void ClosestPointing(int parentTransIndex)
     {
-        Vector3 direction = _targetTrans[parentTransIndex].position - _carTrans.position;
-        Vector3 rayPositionOffset = new Vector3(0, 0.6f, 0);
-        Ray rayToCpu = new Ray(_carTrans.position + rayPositionOffset, direction);
-        RayHitControll(rayToCpu, _hitCpuPoint, 1 << 7, parentTransIndex);
+        Vector3 origin = new Vector3(_carTrans.position.x, _rayPositionY, _carTrans.position.z);
+        _hitCpuPosition[parentTransIndex] = _targetCollider[parentTransIndex].ClosestPoint(origin);
+        _hitCpuPosition[parentTransIndex].y = _rayPositionY;
 
-        Ray rayToPlayer = new Ray(_targetTrans[parentTransIndex].position + rayPositionOffset, -direction);
-        RayHitControll(rayToPlayer, _hitPlayerPoint, 1 << 6, parentTransIndex);
-    }
-    private void RayHitControll(Ray ray, Transform[] hitPoint, int layerMask, int parentTransIndex)
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
-        {
-            if (hitPoint[parentTransIndex] == null)
-            {
-                hitPoint[parentTransIndex] = GameObject.Instantiate(_targetSphereObject, hit.point, Quaternion.identity).transform;
-                if (_isTargetVisualize)
-                {
-                    hitPoint[parentTransIndex].GetComponent<Renderer>().material.SetColor("_UnlitColor", Color.yellow);
-                }
-            }
-            hitPoint[parentTransIndex].position = hit.point;
-            if (!_isTargetVisualize) return;
-            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.yellow, 0, false);
-        }
-        else
-        {
-            Debug.Log("Ray Hit Nothing!!");
-        }
+        _hitPlayerPosition[parentTransIndex] = _playerCollider.ClosestPoint(_hitCpuPosition[parentTransIndex]);
+        _hitPlayerPosition[parentTransIndex].y = _rayPositionY;
     }
     private void TargetBoxControll(Transform[] parentTrans, int parentTransIndex)
     {
@@ -267,6 +263,30 @@ public class MainSceneDirector : MonoBehaviour
         if (_exportDistance._isExportCsvfile)
         {
             _exportDistance.SaveData(_exportDistance._updateStrArray());
+        }
+    }
+    void OnDrawGizmos()
+    {
+        if (_exportDistance.HitCpuPosition == null || _exportDistance.HitPlayerPosition == null) return;
+        float radius = 0.2f;
+        Gizmos.color = Color.yellow;
+        Vector3[] to = new Vector3[2];
+        Vector3[] from = new Vector3[2];
+        for (int i = 0; i < _exportDistance.HitCpuPosition.Length; i++)
+        {
+            Vector3 position = _exportDistance.HitCpuPosition[i];
+            Gizmos.DrawSphere(position, radius);
+            to[i] = position;
+        }
+        for (int i = 0; i < _exportDistance.HitPlayerPosition.Length; i++)
+        {
+            Vector3 position = _exportDistance.HitPlayerPosition[i];
+            Gizmos.DrawSphere(position, radius);
+            from[i] = position;
+        }
+        for (int i = 0; i < Mathf.Min(from.Length, to.Length); i++)
+        {
+            Gizmos.DrawLine(from[i], to[i]);
         }
     }
 }

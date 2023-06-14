@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3534.1284, g: 4047.0674, b: 4456.8516, a: 1}
+  m_IndirectSpecularColor: {r: 3534.142, g: 4047.081, b: 4456.8984, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &25092941
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &82282145
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &99529713
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &133676963
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &145968889
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3598,7 +3598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &522975233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3906,7 +3906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &532373148
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3945,7 +3945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &533693427
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5969,7 +5969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &897206415
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5992,7 +5992,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh4822814
+  m_Name: pb_Mesh79392
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6214,6 +6214,10 @@ PrefabInstance:
     - target: {fileID: 2699128444334658233, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190798689958775619, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
@@ -6796,7 +6800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &1095121604
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7115,7 +7119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &1193136664
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7463,7 +7467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &1276922197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7909,7 +7913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &1339135377
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8806,7 +8810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &1465990024
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9382,7 +9386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &1512946334
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10038,7 +10042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &1599308131
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11322,7 +11326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &1700535027
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12261,7 +12265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &1861165081
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14216,7 +14220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &1982950199
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15722,7 +15726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c31deac6bb37448f91742ee428265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityPerHour: 60
+  _velocityPerHour: 10
 --- !u!54 &2107780465
 Rigidbody:
   m_ObjectHideFlags: 0
