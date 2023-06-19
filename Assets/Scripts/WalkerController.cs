@@ -9,6 +9,7 @@ public class WalkerController : MonoBehaviour
     private NavMeshAgent _agent;
     private Animator _animator;
     int _animIDSpeed;
+    int _animIDMotionSpeed;
     bool _hasAnimator;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class WalkerController : MonoBehaviour
     private void AssignAnimationIDs()
     {
         _animIDSpeed = Animator.StringToHash("Speed");
+        _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
     }
 
     // Update is called once per frame
@@ -36,7 +38,8 @@ public class WalkerController : MonoBehaviour
         _hasAnimator = TryGetComponent<Animator>(out _animator);
         if (_hasAnimator)
         {
-            _animator.SetFloat(_animIDSpeed, 6.0f);
+            _animator.SetFloat(_animIDSpeed, 2.0f);
+            _animator.SetFloat(_animIDMotionSpeed, 1.0f);
         }
 
         _agent.destination = _targetPos;
