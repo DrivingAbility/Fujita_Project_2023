@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8122888139617137453}
   - component: {fileID: 1852304027345931595}
   - component: {fileID: 1396045562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right Mirror Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6936574832847874078}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mirror Cameras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 1676114815686547993}
   - component: {fileID: 4052953479441362942}
   - component: {fileID: 1745969967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left Mirror Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 8449241063282492836}
   - component: {fileID: 1615758726531567238}
   - component: {fileID: 449536991}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Center Mirror Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}

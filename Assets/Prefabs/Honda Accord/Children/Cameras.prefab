@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462348332}
   - component: {fileID: 1462348334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camera FB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 999462044774164216}
   - component: {fileID: 999462044774164214}
   - component: {fileID: 8873017331894010749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camera L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 999462045869663077}
   - component: {fileID: 999462045869663075}
   - component: {fileID: 8528092572364853637}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camera R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 999462045891142971}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cameras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 999462045937942622}
   - component: {fileID: 999462045937942623}
   - component: {fileID: 1383027028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camera Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
