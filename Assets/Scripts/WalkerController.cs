@@ -59,4 +59,8 @@ public class WalkerController : MonoBehaviour
             }
         }
     }
+    private void OnFootstep()
+    {
+        return;//Error解消
+    }
 }
