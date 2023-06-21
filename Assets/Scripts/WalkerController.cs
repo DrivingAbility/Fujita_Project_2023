@@ -5,24 +5,25 @@ using UnityEngine.AI;
 
 public class WalkerController : MonoBehaviour
 {
+    [SerializeField] private Transform trs;
     private CarController _player;
     private Vector2 _smoothDeltaPosition = Vector2.zero;
     private Vector2 _velocity = Vector2.zero;
     private Vector3 _targetPos;
     private NavMeshAgent _agent;
     private Animator _animator;
-    private float _animationBlend;
-    [SerializeField] private float _speedChangeRate;
-    int _animIDSpeed;
-    int _animIDMotionSpeed;
+    int _animIDVelocityX;
+    int _animIDVelocityY;
     bool _hasAnimator;
     // Start is called before the first frame update
     void Start()
     {
-        _player = FindAnyObjectByType<CarController>();
+        //_player = FindAnyObjectByType<CarController>();
         _agent = GetComponent<NavMeshAgent>();
 
-        _targetPos = transform.position + 140 * Vector3.forward;
+        _targetPos = transform.position + 130 * Vector3.forward;
+        _targetPos = trs.position;
+        _agent.destination = _targetPos;
         _agent.updatePosition = false;
 
         _hasAnimator = TryGetComponent<Animator>(out _animator);
@@ -30,8 +31,8 @@ public class WalkerController : MonoBehaviour
     }
     private void AssignAnimationIDs()
     {
-        _animIDSpeed = Animator.StringToHash("Speed");
-        _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
+        _animIDVelocityX = Animator.StringToHash("velx");
+        _animIDVelocityY = Animator.StringToHash("vely");
     }
 
     // Update is called once per frame
@@ -41,7 +42,6 @@ public class WalkerController : MonoBehaviour
     }
     void Move()
     {
-        _hasAnimator = TryGetComponent<Animator>(out _animator);
         Vector3 worldDeltaPosition = _agent.nextPosition - transform.position;
 
         // worldDeltaPosition をローカル空間にマップします
@@ -49,24 +49,19 @@ public class WalkerController : MonoBehaviour
         float dy = Vector3.Dot(transform.forward, worldDeltaPosition);
         Vector2 deltaPosition = new Vector2(dx, dy);
 
-        // deltaMove にローパスフィルターを適用します
-        float smooth = Mathf.Min(1.0f, Time.deltaTime / 0.15f);
-        _smoothDeltaPosition = Vector2.Lerp(_smoothDeltaPosition, deltaPosition, smooth);
-        // 時間が進んだら、velocity (速度) を更新します
-        if (Time.deltaTime > 1e-5f) _velocity = _smoothDeltaPosition / Time.deltaTime;
-        bool shouldMove = _velocity.magnitude > 0.5f && _agent.remainingDistance > _agent.radius;
-
-        _animationBlend = Mathf.Lerp(_animationBlend, _agent.speed, Time.deltaTime * _speedChangeRate);
+        // velocity (速度) を更新します
+        _velocity = deltaPosition / Time.deltaTime;
         if (_hasAnimator)
         {
-            _animator.SetFloat(_animIDSpeed, deltaPosition.sqrMagnitude);
-            _animator.SetFloat(_animIDMotionSpeed, 1.0f);
+            _animator.SetFloat(_animIDVelocityX, _velocity.x);
+            _animator.SetFloat(_animIDVelocityY, _velocity.y);
         }
+        transform.position = _agent.nextPosition;
     }
     void OnAnimatorMove()
     {
         // position (位置) を agent (エージェント) の位置に更新します
-        transform.position = _agent.nextPosition;
+
     }
     void OnDrawGizmos()
     {
