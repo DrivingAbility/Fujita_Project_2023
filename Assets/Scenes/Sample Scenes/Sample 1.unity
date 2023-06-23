@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 1b1235b75cac86041bf39d08145af6fa, type: 2}
---- !u!4 &74352258 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2699128444334658233, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
-  m_PrefabInstance: {fileID: 485116516}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &485116516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -361,7 +356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4896060694295011593, guid: 242b2ff0c1e8ffe4686a9df55297aa4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4896060694295011593, guid: 242b2ff0c1e8ffe4686a9df55297aa4d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -399,14 +394,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4933961947489061872, guid: 242b2ff0c1e8ffe4686a9df55297aa4d, type: 3}
-      propertyPath: _looking
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4933961947489061872, guid: 242b2ff0c1e8ffe4686a9df55297aa4d, type: 3}
-      propertyPath: _lookAtTargetTransform
-      value: 
-      objectReference: {fileID: 74352258}
     - target: {fileID: 5240393288166718387, guid: 242b2ff0c1e8ffe4686a9df55297aa4d, type: 3}
       propertyPath: m_Name
       value: Armature

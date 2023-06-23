@@ -3,20 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[System.Serializable]
+public class LookAtWeight
+{
+    [SerializeField] private float _bodyWeight;
+    [SerializeField] private float _headWeight;
+    [SerializeField] private float _eyeWeight;
+    [SerializeField] private float _clampWeight;
+
+    public float BodyWeight { get => _bodyWeight; }
+    public float HeadWeight { get => _headWeight; }
+    public float EyeWeight { get => _eyeWeight; }
+    public float ClampWeight { get => _clampWeight; }
+}
 public class WalkerController : MonoBehaviour
 {
     [SerializeField] private Transform _head;
-    [SerializeField] private float _lookAtBoarder = 50.0f;
-    [SerializeField] private Transform _lookAtTargetTransform;
-    [SerializeField] Vector3 _lookAtTargetPosition;
-    private float _weightRatio = 2.5f;
-    float _lookAtCoolTime = 0.2f;
-    public float _lookAtHeatTime = 0.2f;
-    public bool _looking = true;
+    [SerializeField] private LookAtWeight _weightParams;
+    [SerializeField] private float _lookAtBoarder = 5;
+    [SerializeField] private float _weightRatio = 5.0f;
+    private Vector3 _lookAtTargetPosition;
     private bool _looked = false;
     private float _lookAtWeight = 0.0f;
-
-    private Vector3 _lookAtPosition;
     private CarController _myCar;
     private Vector2 _velocity = Vector2.zero;
     private Vector3 _targetPos;
@@ -42,7 +50,6 @@ public class WalkerController : MonoBehaviour
         if (_head)
         {
             _lookAtTargetPosition = _head.position + transform.position;
-            _lookAtPosition = _lookAtTargetPosition;
         }
     }
     private void AssignAnimationIDs()
@@ -58,6 +65,14 @@ public class WalkerController : MonoBehaviour
     }
     void Move()
     {
+        if (_looked && _myCar)
+        {
+            var direction = transform.position - _myCar.transform.position;
+            if (direction.z > 0)
+            {
+                _agent.nextPosition = transform.position + _agent.speed * direction.normalized * Time.deltaTime;
+            }
+        }
         Vector3 worldDeltaPosition = _agent.nextPosition - transform.position;
 
         // worldDeltaPosition をローカル空間にマップします
@@ -72,7 +87,6 @@ public class WalkerController : MonoBehaviour
             _animator.SetFloat(_animIDVelocityX, _velocity.x);
             _animator.SetFloat(_animIDVelocityY, _velocity.y);
         }
-
         transform.position = _agent.nextPosition;
     }
     void OnAnimatorMove()
@@ -90,28 +104,23 @@ public class WalkerController : MonoBehaviour
             foreach (Vector3 position in _agent.path.corners)
             {
                 Gizmos.DrawLine(prepos, position);
+                Gizmos.DrawSphere(position, 0.1f);
                 prepos = position;
             }
         }
     }
     private void OnAnimatorIK()
     {
-        _lookAtTargetPosition = _lookAtTargetTransform.position;
-        _lookAtTargetPosition.y = _head.position.y;
-        int lerpTarget;
-        if (!_looked)
-        {
-            lerpTarget = 1;
-        }
-        else
-        {
-            lerpTarget = 0;
-        }
-        Debug.Log(_lookAtWeight);
+        if (!_myCar) return;
+        _lookAtTargetPosition = _myCar.transform.position;
+        //_lookAtTargetPosition.y = _head.position.y;
+        var isNear = Vector3.Distance(_lookAtTargetPosition, transform.position) < _lookAtBoarder;
+        var lerpTarget = (!_looked && isNear) ? 1 : 0;
         _lookAtWeight = Mathf.Lerp(_lookAtWeight, lerpTarget, Time.deltaTime * _weightRatio);
-        _animator.SetLookAtWeight(_lookAtWeight, 0.2f, 0.5f, 0.7f, 0.2f);
+        _animator.SetLookAtWeight(_lookAtWeight, _weightParams.BodyWeight, _weightParams.HeadWeight,
+            _weightParams.EyeWeight, _weightParams.ClampWeight);
         _animator.SetLookAtPosition(_lookAtTargetPosition);
-        if (_lookAtWeight / lerpTarget > 0.9999f)
+        if (!_looked && _lookAtWeight > 0.95f)
         {
             _looked = true;
         }
