@@ -22,6 +22,7 @@ public class WalkerController : MonoBehaviour
     [SerializeField] private LookAtWeight _weightParams;
     [SerializeField] private float _lookAtBoarder = 5;
     [SerializeField] private float _weightRatio = 5.0f;
+    [SerializeField] private float _avoidanceAngle = 45;
     private Vector3 _lookAtTargetPosition;
     private bool _looked = false;
     private float _lookAtWeight = 0.0f;
@@ -70,6 +71,7 @@ public class WalkerController : MonoBehaviour
             var direction = transform.position - _myCar.transform.position;
             if (direction.z > 0)
             {
+                direction = new Vector3(Mathf.Sign(transform.position.x) * Mathf.Sin(_avoidanceAngle * Mathf.Deg2Rad), 0, Mathf.Cos(_avoidanceAngle * Mathf.Deg2Rad));
                 _agent.nextPosition = transform.position + _agent.speed * direction.normalized * Time.deltaTime;
             }
         }
