@@ -89,12 +89,8 @@ public class WalkerController : MonoBehaviour
             _animator.SetFloat(_animIDVelocityX, _velocity.x);
             _animator.SetFloat(_animIDVelocityY, _velocity.y);
         }
-        transform.position = _agent.nextPosition;
-    }
-    void OnAnimatorMove()
-    {
-        // position (位置) を agent (エージェント) の位置に更新します
 
+        transform.position = new Vector3(_agent.nextPosition.x, 0, _agent.nextPosition.z);
     }
     void OnDrawGizmos()
     {
@@ -115,7 +111,6 @@ public class WalkerController : MonoBehaviour
     {
         if (!_myCar) return;
         _lookAtTargetPosition = _myCar.transform.position;
-        //_lookAtTargetPosition.y = _head.position.y;
         var isNear = Vector3.Distance(_lookAtTargetPosition, transform.position) < _lookAtBoarder;
         var lerpTarget = (!_looked && isNear) ? 1 : 0;
         _lookAtWeight = Mathf.Lerp(_lookAtWeight, lerpTarget, Time.deltaTime * _weightRatio);
@@ -125,6 +120,7 @@ public class WalkerController : MonoBehaviour
         if (!_looked && _lookAtWeight > 0.95f)
         {
             _looked = true;
+            Debug.Log(gameObject.name + " Looked Player!!");
         }
     }
 }
