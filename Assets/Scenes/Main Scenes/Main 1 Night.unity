@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3.3033602, g: 3.5208201, b: 3.4600046, a: 1}
+  m_IndirectSpecularColor: {r: 4.3247347, g: 4.8207793, b: 5.156195, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.3
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 0.5
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
-    manualCellSize: 0
-    cellSize: 0.16666667
+    manualCellSize: 1
+    cellSize: 0.3
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -182,9 +182,73 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4621187043585277041, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_Range
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621187043585277041, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_Intensity
+      value: 3183.0989
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621187043585277041, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_SpotAngle
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621187043585277041, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621187043585277041, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621187043585277041, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944246149383938132, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6347f5f3e3a440d4aa48ba079ee9a625, type: 2}
     - target: {fileID: 5565510349785585190, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
       propertyPath: far clip plane
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713125577581873212, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_Intensity
+      value: 3183.0989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713125577581873212, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_InnerSpotPercent
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713125577581873212, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_CustomSpotLightShadowCone
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107865903051262076, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_Range
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107865903051262076, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_Intensity
+      value: 3183.0989
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107865903051262076, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_SpotAngle
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107865903051262076, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107865903051262076, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107865903051262076, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7164670216584378206, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
       propertyPath: far clip plane
@@ -197,6 +261,18 @@ PrefabInstance:
     - target: {fileID: 7833700564973728915, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
       propertyPath: far clip plane
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946978778761249125, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_Intensity
+      value: 3183.0989
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946978778761249125, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_InnerSpotPercent
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946978778761249125, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
+      propertyPath: m_CustomSpotLightShadowCone
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
@@ -3586,6 +3662,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1518383322714684275, guid: 242b2ff0c1e8ffe4686a9df55297aa4d, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4896060694295011593, guid: 242b2ff0c1e8ffe4686a9df55297aa4d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3631,9 +3711,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4933961947489061872, guid: 242b2ff0c1e8ffe4686a9df55297aa4d, type: 3}
+      propertyPath: _lookAtBoarder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933961947489061872, guid: 242b2ff0c1e8ffe4686a9df55297aa4d, type: 3}
       propertyPath: _lookAtTargetTransform
       value: 
       objectReference: {fileID: 1109648492}
+    - target: {fileID: 4933961947489061875, guid: 242b2ff0c1e8ffe4686a9df55297aa4d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5240393288166718387, guid: 242b2ff0c1e8ffe4686a9df55297aa4d, type: 3}
       propertyPath: m_Name
       value: Armature
