@@ -6,11 +6,13 @@ using UnityEngine.AI;
 [System.Serializable]
 public class LookAtWeight
 {
-    [SerializeField] private float _bodyWeight;
-    [SerializeField] private float _headWeight;
-    [SerializeField] private float _eyeWeight;
-    [SerializeField] private float _clampWeight;
+    [SerializeField] private float _maxWeight = 0.95f;
+    [SerializeField] private float _bodyWeight = 0.05f;
+    [SerializeField] private float _headWeight = 0.5f;
+    [SerializeField] private float _eyeWeight = 0.8f;
+    [SerializeField] private float _clampWeight = 0.05f;
 
+    public float MaxWeight { get => _maxWeight; }
     public float BodyWeight { get => _bodyWeight; }
     public float HeadWeight { get => _headWeight; }
     public float EyeWeight { get => _eyeWeight; }
@@ -18,9 +20,8 @@ public class LookAtWeight
 }
 public class WalkerController : MonoBehaviour
 {
-    [SerializeField] private Transform _head;
     [SerializeField] private LookAtWeight _weightParams;
-    [SerializeField] private float _lookAtBoarder = 5;
+    [SerializeField] private float _lookAtBoarder = 10;
     [SerializeField] private float _weightRatio = 5.0f;
     [SerializeField] private float _avoidanceAngle = 45;
     private Vector3 _lookAtTargetPosition;
@@ -47,11 +48,6 @@ public class WalkerController : MonoBehaviour
         _agent.updatePosition = false;
         _hasAnimator = TryGetComponent<Animator>(out _animator);
         AssignAnimationIDs();
-
-        if (_head)
-        {
-            _lookAtTargetPosition = _head.position + transform.position;
-        }
     }
     private void AssignAnimationIDs()
     {
@@ -117,7 +113,7 @@ public class WalkerController : MonoBehaviour
         _animator.SetLookAtWeight(_lookAtWeight, _weightParams.BodyWeight, _weightParams.HeadWeight,
             _weightParams.EyeWeight, _weightParams.ClampWeight);
         _animator.SetLookAtPosition(_lookAtTargetPosition);
-        if (!_looked && _lookAtWeight > 0.95f)
+        if (!_looked && _lookAtWeight > _weightParams.MaxWeight)
         {
             _looked = true;
             Debug.Log(gameObject.name + " Looked Player!!");

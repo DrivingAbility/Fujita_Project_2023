@@ -1427,7 +1427,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 4ff1f17465438493daaeed8275d7457c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1493,8 +1493,9 @@ MonoBehaviour:
     _headWeight: 0.5
     _eyeWeight: 0.8
     _clampWeight: 0.05
-  _lookAtBoarder: 10
+  _lookAtBoarder: 15
   _weightRatio: 5
+  _avoidanceAngle: 45
 --- !u!1 &5263492996698006781
 GameObject:
   m_ObjectHideFlags: 0
