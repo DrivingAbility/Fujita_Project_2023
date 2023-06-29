@@ -5130,10 +5130,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_324
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 305
@@ -5192,17 +5188,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_428
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -5649,17 +5637,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_450
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -5886,10 +5866,6 @@ PrefabInstance:
     - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_Name
       value: bottlecaseA_867
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
@@ -6534,14 +6510,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_362
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 343
@@ -6864,17 +6832,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_485
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -7004,10 +6964,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseA_880
       objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
       value: 861
@@ -7136,10 +7092,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_225
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 206
@@ -7201,10 +7153,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_283
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -8257,17 +8205,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_475
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -8770,17 +8710,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_501
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -9173,10 +9105,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_197
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -9639,17 +9567,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_448
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -10236,10 +10156,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_311
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -11319,10 +11235,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_297
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 278
@@ -11605,10 +11517,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_257
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -12341,10 +12249,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_271
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 252
@@ -12852,10 +12756,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_92
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 93
@@ -13112,17 +13012,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_451
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -13547,10 +13439,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_209
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 190
@@ -13609,17 +13497,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_465
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -14139,10 +14019,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_270
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 251
@@ -14332,17 +14208,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_432
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -14534,17 +14402,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_434
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -14739,10 +14599,6 @@ PrefabInstance:
     - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_Name
       value: bottlecaseB_863
-      objectReference: {fileID: 0}
-    - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 3316693925767112238, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_RootOrder
@@ -15690,10 +15546,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseA_873
       objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
       value: 854
@@ -16130,17 +15982,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_496
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -16669,10 +16513,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_196
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 177
@@ -16863,17 +16703,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_488
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -16936,10 +16768,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_335
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -17267,10 +17095,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseA_860
       objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
       value: 841
@@ -17332,10 +17156,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_104
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -17542,10 +17362,6 @@ PrefabInstance:
     - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_Name
       value: bottlecaseB_872
-      objectReference: {fileID: 0}
-    - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 3316693925767112238, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_RootOrder
@@ -18455,21 +18271,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_492
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -19084,14 +18888,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_364
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 345
@@ -19285,10 +19081,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_178
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -20277,10 +20069,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_246
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 227
@@ -20593,10 +20381,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_182
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -21390,10 +21174,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_338
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 319
@@ -21553,10 +21333,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_227
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -21743,17 +21519,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_452
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -22042,10 +21810,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseA_862
       objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
       value: 843
@@ -22170,17 +21934,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_446
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -22306,17 +22062,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_449
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -22721,25 +22469,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_437
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -23120,17 +22852,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_429
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -23193,10 +22917,6 @@ PrefabInstance:
     - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_Name
       value: bottlecaseA_878
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
@@ -23388,17 +23108,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_506
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -23458,17 +23170,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_431
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -23730,17 +23434,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_466
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -24016,10 +23712,6 @@ PrefabInstance:
     - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_Name
       value: bottlecaseA_858
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
@@ -25430,10 +25122,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_106
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 107
@@ -25717,17 +25405,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_455
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -25790,10 +25470,6 @@ PrefabInstance:
     - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_Name
       value: bottlecaseB_865
-      objectReference: {fileID: 0}
-    - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 3316693925767112238, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_RootOrder
@@ -26120,10 +25796,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_73
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -27251,10 +26923,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_103
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 104
@@ -27651,10 +27319,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_59
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 60
@@ -27783,14 +27447,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_350
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 331
@@ -27918,10 +27574,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_74
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -28166,17 +27818,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_456
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -28236,17 +27880,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_436
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -28441,10 +28077,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_258
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -29552,10 +29184,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_62
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 63
@@ -29614,17 +29242,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_468
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -30223,17 +29843,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_477
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -30994,10 +30606,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_60
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 61
@@ -31056,17 +30664,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_495
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -31261,10 +30861,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_210
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -31486,10 +31082,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_310
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -32650,10 +32242,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_272
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 253
@@ -33678,17 +33266,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_486
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -34580,17 +34160,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_504
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -34719,10 +34291,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_244
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -34914,21 +34482,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_490
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -35322,14 +34878,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseB_870
       objectReference: {fileID: 0}
-    - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 3316693925767112238, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_RootOrder
       value: 851
@@ -35721,10 +35269,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_179
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -37002,10 +36546,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_76
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -38870,10 +38410,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_286
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 267
@@ -39430,14 +38966,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_348
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 329
@@ -39940,17 +39468,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_508
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -40269,17 +39789,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_454
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -40471,17 +39983,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_443
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -40541,17 +40045,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_473
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -40611,17 +40107,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_445
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -40800,17 +40288,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_425
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -40940,10 +40420,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseB_861
       objectReference: {fileID: 0}
-    - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 3316693925767112238, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_RootOrder
       value: 842
@@ -41068,17 +40544,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_447
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -41622,10 +41090,6 @@ PrefabInstance:
     - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_Name
       value: bottlecaseB_874
-      objectReference: {fileID: 0}
-    - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 3316693925767112238, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_RootOrder
@@ -42481,17 +41945,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_467
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -42768,10 +42224,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_284
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 265
@@ -42903,10 +42355,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_336
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -43604,17 +43052,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_426
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -43740,17 +43180,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_469
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -43957,10 +43389,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_58
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 59
@@ -44022,10 +43450,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_247
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -44151,17 +43575,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_435
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -44520,17 +43936,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_503
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -44656,17 +44064,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_474
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -44792,17 +44192,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_499
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -45634,10 +45026,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_224
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 205
@@ -45971,17 +45359,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_439
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -46119,17 +45499,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_510
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -47141,17 +46513,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_470
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -47462,17 +46826,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_430
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -47827,10 +47183,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_223
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 204
@@ -48168,10 +47520,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_194
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 175
@@ -48300,10 +47648,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_107
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 108
@@ -48365,10 +47709,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_226
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -49166,10 +48506,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseA_875
       objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
       value: 856
@@ -49363,10 +48699,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_88
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -50204,10 +49536,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_285
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -51205,10 +50533,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_322
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -52362,10 +51686,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseA_864
       objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
       value: 845
@@ -52546,10 +51866,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_193
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -52741,17 +52057,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_479
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -52947,10 +52255,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseB_868
       objectReference: {fileID: 0}
-    - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 3316693925767112238, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_RootOrder
       value: 849
@@ -53012,10 +52316,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_312
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -53669,17 +52969,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_472
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -54647,17 +53939,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_433
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -54863,10 +54147,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_323
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -55407,10 +54687,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_208
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 189
@@ -55538,10 +54814,6 @@ PrefabInstance:
     - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_Name
       value: bottlecaseB_859
-      objectReference: {fileID: 0}
-    - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 3316693925767112238, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_RootOrder
@@ -56456,10 +55728,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseB_879
       objectReference: {fileID: 0}
-    - target: {fileID: 2687684847857253524, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 3316693925767112238, guid: f74c1283d41ad1b4caaf4fb376fa1f2e, type: 3}
       propertyPath: m_RootOrder
       value: 860
@@ -57314,17 +56582,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_480
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -57795,17 +57055,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_427
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -58327,25 +57579,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_440
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -58739,10 +57975,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_260
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 241
@@ -58801,17 +58033,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_478
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -58874,10 +58098,6 @@ PrefabInstance:
     - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_Name
       value: bottlecaseA_869
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
@@ -59165,10 +58385,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_180
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -59988,17 +59204,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_471
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -60264,10 +59472,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_105
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 106
@@ -60461,10 +59665,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_298
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -61218,10 +60418,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseA_866
       objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
       value: 847
@@ -61280,17 +60476,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_498
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -61551,10 +60739,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_325
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -62011,21 +61195,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_489
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -62151,17 +61323,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_476
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -63460,10 +62624,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseA_871
       objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
       value: 852
@@ -63859,17 +63019,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_453
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -63998,14 +63150,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_349
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -64329,17 +63473,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_507
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -64663,17 +63799,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_497
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -65199,10 +64327,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottlecaseA_881
       objectReference: {fileID: 0}
-    - target: {fileID: 8451164380746735564, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 9080173390478148982, guid: 624044509291a724d99a21f19cfd8da5, type: 3}
       propertyPath: m_RootOrder
       value: 862
@@ -65261,17 +64385,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_442
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -65331,25 +64447,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_438
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -65409,17 +64509,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_509
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -65548,10 +64640,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_181
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -66294,21 +65382,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_493
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -66438,21 +65514,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_491
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -66581,10 +65645,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_212
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -67450,10 +66510,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_89
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 90
@@ -67846,14 +66902,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_351
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 332
@@ -68048,17 +67096,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_482
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -68323,10 +67363,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_91
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -68787,10 +67823,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_211
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -69602,10 +68634,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_61
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 62
@@ -70305,10 +69333,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_75
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 76
@@ -70367,17 +69391,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -70573,14 +69589,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_363
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 344
@@ -70642,14 +69650,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_361
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -70845,17 +69845,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_487
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -70984,10 +69976,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_195
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -71306,17 +70294,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_481
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -71445,10 +70425,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_309
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -71869,10 +70845,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_245
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 226
@@ -72001,10 +70973,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_259
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 240
@@ -72129,17 +71097,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_444
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -72400,10 +71360,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_337
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -74053,17 +73009,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_505
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -74258,10 +73206,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -74483,10 +73427,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_296
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -74813,10 +73753,6 @@ PrefabInstance:
     - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_Name
       value: Road_I_77
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
@@ -75982,17 +74918,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_483
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -76398,10 +75326,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_273
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 254
@@ -76526,17 +75450,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_441
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -76596,17 +75512,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_502
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -76748,17 +75656,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_484
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
@@ -77174,10 +76074,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_I_299
       objectReference: {fileID: 0}
-    - target: {fileID: 5933059363619055652, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 127
-      objectReference: {fileID: 0}
     - target: {fileID: 6421471862397727390, guid: 516f15233eae7d94899eb22be2e1ef36, type: 3}
       propertyPath: m_RootOrder
       value: 280
@@ -77495,21 +76391,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8571059429678231259}
     m_Modifications:
-    - target: {fileID: 208113265473689639, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
-      objectReference: {fileID: 0}
     - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_Name
       value: light_streetA_494
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266388330507358522, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6754693902386269056, guid: d21f04ab6d6a44047bf039cf82152138, type: 3}
       propertyPath: m_RootOrder
