@@ -42,9 +42,12 @@ public class WalkerController : MonoBehaviour
     private Vector3 _targetPos = Vector3.zero;
     private NavMeshAgent _agent;
     private Animator _animator;
+    private CharacterController _charController;
     int _animIDVelocityX;
     int _animIDVelocityY;
     bool _hasAnimator;
+    int _forwardSign;
+    //private Vector3 _desVelocity = Vector3.zero;
 
     private int _crossInterval = 36;
 
@@ -52,12 +55,19 @@ public class WalkerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _charController = GetComponent<CharacterController>();
         _agent = GetComponent<NavMeshAgent>();
         _myCar = FindObjectOfType<CarController>();
 
-        SetDestination(out _targetPos);
+        _charController.stepOffset = 0;
+
+        _forwardSign = (int)ForwardSign();
+
+        _targetPos = GetDestinationPosition();
         _agent.destination = _targetPos;
+        //_agent.autoRepath = false;
         _agent.updatePosition = false;
+        //_agent.updateRotation = false;
         _agent.avoidancePriority = Random.Range(0, 50);
         _agent.speed = _agentSpeed;
         _hasAnimator = TryGetComponent<Animator>(out _animator);
@@ -68,15 +78,24 @@ public class WalkerController : MonoBehaviour
         _animIDVelocityX = Animator.StringToHash("velx");
         _animIDVelocityY = Animator.StringToHash("vely");
     }
-    private void SetDestination(out Vector3 targetPos)
+    private Vector3 GetDestinationPosition()
     {
         int i = 0;
-        targetPos = Vector3.zero;
+        Vector3 targetPos = Vector3.zero;
         while ((targetPos - transform.position).z <= 0)
         {
             targetPos = new Vector3(transform.position.x, 0, i * _crossInterval);
             i++;
         }
+        if (_forwardSign == -1)
+        {
+            targetPos.z -= _crossInterval;
+        }
+        return targetPos;
+    }
+    private float ForwardSign()
+    {
+        return Mathf.Sign(Vector3.Dot(Vector3.forward, transform.forward));
     }
 
     // Update is called once per frame
@@ -90,9 +109,10 @@ public class WalkerController : MonoBehaviour
         if (_looked && _myCar)
         {
             var direction = transform.position - _myCar.transform.position;
-            if (direction.z > -_avoidEndDistance)
+            var angleRatio = Mathf.Clamp((transform.position.x + 4) / 1, 0, 1);
+            if (direction.z > -_avoidEndDistance && angleRatio > 0)
             {
-                direction = new Vector3(Mathf.Sign(transform.position.x) * Mathf.Sin(_avoidanceAngle * Mathf.Deg2Rad), 0, Mathf.Cos(_avoidanceAngle * Mathf.Deg2Rad));
+                direction = new Vector3(Mathf.Sign(transform.position.x) * Mathf.Sin(_avoidanceAngle * Mathf.Deg2Rad * angleRatio), 0, _forwardSign * Mathf.Cos(_avoidanceAngle * Mathf.Deg2Rad * angleRatio));
                 _agent.nextPosition = transform.position + _agent.speed * direction.normalized * Time.deltaTime;
             }
         }
@@ -113,10 +133,35 @@ public class WalkerController : MonoBehaviour
 
         transform.position = new Vector3(_agent.nextPosition.x, 0, _agent.nextPosition.z);
     }
+
+    /*キャラクターコントローラーで制御
+    private void Move2()
+    {
+        _desVelocity = new Vector3(_agent.desiredVelocity.x, 0, _agent.desiredVelocity.z);
+        if (_looked && _myCar)
+        {
+            var distanceZ = (transform.position - _myCar.transform.position).z;
+            if (distanceZ > -_avoidEndDistance)
+            {
+                var direction = new Vector3(Mathf.Sign(transform.position.x) * Mathf.Sin(_avoidanceAngle * Mathf.Deg2Rad), 0, Mathf.Cos(_avoidanceAngle * Mathf.Deg2Rad));
+                _desVelocity = direction.normalized * _desVelocity.magnitude;
+            }
+        }
+        float dx = Vector3.Dot(transform.right, _agent.velocity);
+        float dy = Vector3.Dot(transform.forward, _agent.velocity);
+        if (_hasAnimator)
+        {
+            _animator.SetFloat(_animIDVelocityX, dx);
+            _animator.SetFloat(_animIDVelocityY, dy);
+        }
+        print(transform.position.y);
+        _charController.Move(_desVelocity * Time.deltaTime);
+        _agent.velocity = _charController.velocity;
+    }*/
     private void SetDestinationUpdate()
     {
         if (_agent.remainingDistance > 3) return;
-        _agent.destination += Vector3.forward * _crossInterval;
+        _agent.destination += _forwardSign * Vector3.forward * _crossInterval;
     }
     void OnDrawGizmos()
     {
