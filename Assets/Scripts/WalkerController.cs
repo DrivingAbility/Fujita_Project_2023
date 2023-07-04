@@ -22,17 +22,21 @@ public class LookAtWeight
     public float ClampWeight { get => _clampWeight; }
     public float WeightAccelRatio { get => _weightAccelRatio; }
 }
+
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(CharacterController))]
 public class WalkerController : MonoBehaviour
 {
     [SerializeField] private LookAtWeight _weightParams;
+    private CPUDirector _cpuDirector;
     [SerializeField] private float _lookStartDistance = 15.0f;
     [SerializeField] private float _avoidEndDistance = 5.0f;
     [SerializeField] private float _lookAtTargetHeight = 0.5f;
     [SerializeField] private float _avoidanceAngle = 45.0f;
     [SerializeField] private float _agentSpeed = 1.2f;
+    [SerializeField] private float _changeTargetRemaining = 3.0f;
+    [SerializeField] private float _navigationBorder = -4.0f;
     private Vector3 _lookAtTargetPosition;
     private bool _isWeightOverMax = false;
     private bool _looked = false;
@@ -47,9 +51,8 @@ public class WalkerController : MonoBehaviour
     int _animIDVelocityY;
     bool _hasAnimator;
     int _forwardSign;
-    //private Vector3 _desVelocity = Vector3.zero;
-
-    private int _crossInterval = 36;
+    private Vector3 _startPosition;
+    private int _startPriority;
 
 
     // Start is called before the first frame update
@@ -57,18 +60,22 @@ public class WalkerController : MonoBehaviour
     {
         _charController = GetComponent<CharacterController>();
         _agent = GetComponent<NavMeshAgent>();
+        _cpuDirector = FindObjectOfType<CPUDirector>();
         _myCar = FindObjectOfType<CarController>();
 
         _charController.stepOffset = 0;
 
         _forwardSign = (int)ForwardSign();
 
+        _startPosition = transform.position;
         _targetPos = GetDestinationPosition();
         _agent.destination = _targetPos;
-        //_agent.autoRepath = false;
+
         _agent.updatePosition = false;
-        //_agent.updateRotation = false;
-        _agent.avoidancePriority = Random.Range(0, 50);
+
+        _startPriority = GetPriority();
+        _agent.avoidancePriority = _startPriority;
+
         _agent.speed = _agentSpeed;
         _hasAnimator = TryGetComponent<Animator>(out _animator);
         AssignAnimationIDs();
@@ -78,18 +85,26 @@ public class WalkerController : MonoBehaviour
         _animIDVelocityX = Animator.StringToHash("velx");
         _animIDVelocityY = Animator.StringToHash("vely");
     }
+    private int GetPriority()
+    {
+        int priority = 0;
+        int halfMin = _cpuDirector.Priority.MinAgentPriority / 2;
+        int halfMax = _cpuDirector.Priority.MaxAgentPriority / 2;
+        priority = 2 * Random.Range(halfMin, halfMax) + (_forwardSign + 1) / 2;
+        return priority;
+    }
     private Vector3 GetDestinationPosition()
     {
         int i = 0;
         Vector3 targetPos = Vector3.zero;
-        while ((targetPos - transform.position).z <= 0)
+        while (targetPos.z <= transform.position.z)
         {
-            targetPos = new Vector3(transform.position.x, 0, i * _crossInterval);
+            targetPos = new Vector3(_startPosition.x, 0, i * _cpuDirector.CrossInterval);
             i++;
         }
         if (_forwardSign == -1)
         {
-            targetPos.z -= _crossInterval;
+            targetPos.z -= _cpuDirector.CrossInterval;
         }
         return targetPos;
     }
@@ -106,12 +121,16 @@ public class WalkerController : MonoBehaviour
     }
     void Move()
     {
+        _agent.avoidancePriority = _startPriority;
+
         if (_looked && _myCar)
         {
             var direction = transform.position - _myCar.transform.position;
-            var angleRatio = Mathf.Clamp((transform.position.x + 4) / 1, 0, 1);
+            var angleRatio = Mathf.Clamp((transform.position.x - _cpuDirector.NavMeshAreaBorder) / 1, 0, 1);
             if (direction.z > -_avoidEndDistance && angleRatio > 0)
             {
+                _agent.avoidancePriority = _cpuDirector.Priority.LookedAgentPriority + _forwardSign;
+
                 direction = new Vector3(Mathf.Sign(transform.position.x) * Mathf.Sin(_avoidanceAngle * Mathf.Deg2Rad * angleRatio), 0, _forwardSign * Mathf.Cos(_avoidanceAngle * Mathf.Deg2Rad * angleRatio));
                 _agent.nextPosition = transform.position + _agent.speed * direction.normalized * Time.deltaTime;
             }
@@ -160,8 +179,9 @@ public class WalkerController : MonoBehaviour
     }*/
     private void SetDestinationUpdate()
     {
-        if (_agent.remainingDistance > 3) return;
-        _agent.destination += _forwardSign * Vector3.forward * _crossInterval;
+        if (Mathf.Abs(transform.position.z - _targetPos.z) > _changeTargetRemaining) return;
+        _targetPos.z += _forwardSign * _cpuDirector.CrossInterval;
+        _agent.destination = _targetPos;
     }
     void OnDrawGizmos()
     {

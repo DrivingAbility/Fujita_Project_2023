@@ -148,6 +148,8 @@ namespace SBPScripts
         public WayPointSystem wayPointSystem;
         public AirTimeSettings airTimeSettings;
 
+        private BikerController _biker;
+
         void Awake()
         {
             transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
@@ -155,6 +157,8 @@ namespace SBPScripts
 
         void Start()
         {
+            _biker = GetComponent<BikerController>();
+
             rb = GetComponent<Rigidbody>();
             rb.maxAngularVelocity = Mathf.Infinity;
 
@@ -462,16 +466,9 @@ namespace SBPScripts
         float CustomInput(string name, ref float axis, float sensitivity, float gravity, bool isRaw)
         {
             var r = Input.GetAxisRaw(name);
-            if (isAutoInput)
+            if (_biker)
             {
-                if (name == "Vertical")
-                {
-                    r = 1;
-                }
-                else
-                {
-                    r = 0;
-                }
+                r = name == "Vertical" ? _biker.InputVertical : _biker.InputHorizontal;
             }
             var s = sensitivity;
             var g = gravity;
