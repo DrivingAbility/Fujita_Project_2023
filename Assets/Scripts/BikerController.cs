@@ -66,15 +66,12 @@ public class BikerController : MonoBehaviour
 
         // worldDeltaPosition をローカル空間にマップします
         float dx = Vector3.Dot(transform.right, worldDeltaPosition);
-        float dy = Vector3.Dot(transform.forward, worldDeltaPosition);
+        float dz = Vector3.Dot(transform.forward, worldDeltaPosition);
 
-        Vector3 deltaPosition = new Vector3(dx, 0, dy);
+        Vector3 deltaPosition = new Vector3(dx, 0, dz);
         // velocity (速度) を更新します
         _velocity = deltaPosition / Time.deltaTime;
-        print(_velocity);
-
         InputVertical = _velocity.z;
-        InputHorizontal = _velocity.x;
         _agent.nextPosition = transform.position;
     }
     private void SetDestinationUpdate()
