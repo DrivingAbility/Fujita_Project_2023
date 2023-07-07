@@ -15,6 +15,7 @@ public class BikerController : MonoBehaviour
     private Vector3 _startPosition;
     private Vector3 _velocity;
     private float _changeTargetRemaining = 3;
+    private NavMeshPath _path;
     public float InputVertical { get; private set; }
     public float InputHorizontal { get; private set; }
 
@@ -31,6 +32,8 @@ public class BikerController : MonoBehaviour
         _agent.updatePosition = false;
         _agent.speed = _agentSpeed;
         _agent.avoidancePriority = _cpuDirector.Priority.BikeAgentPriority;
+
+        _path = new NavMeshPath();
 
         _forwardSign = (int)ForwardSign();
     }
@@ -72,6 +75,7 @@ public class BikerController : MonoBehaviour
         // velocity (速度) を更新します
         _velocity = deltaPosition / Time.deltaTime;
         InputVertical = _velocity.z;
+        transform.position = _agent.nextPosition;
         _agent.nextPosition = transform.position;
     }
     private void SetDestinationUpdate()
@@ -79,6 +83,11 @@ public class BikerController : MonoBehaviour
         if (Mathf.Abs(transform.position.z - _targetPos.z) > _changeTargetRemaining) return;
         _targetPos.z += _forwardSign * _cpuDirector.CrossInterval;
         _agent.destination = _targetPos;
+
+        if (!NavMesh.CalculatePath(transform.position, _targetPos, NavMesh.AllAreas, _path))
+        {
+            gameObject.SetActive(false);
+        }
     }
     void OnDrawGizmos()
     {

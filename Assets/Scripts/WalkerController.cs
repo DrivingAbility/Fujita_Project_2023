@@ -36,7 +36,6 @@ public class WalkerController : MonoBehaviour
     [SerializeField] private float _avoidanceAngle = 45.0f;
     [SerializeField] private float _agentSpeed = 1.2f;
     [SerializeField] private float _changeTargetRemaining = 3.0f;
-    [SerializeField] private float _navigationBorder = -4.0f;
     private Vector3 _lookAtTargetPosition;
     private bool _isWeightOverMax = false;
     private bool _looked = false;
@@ -45,6 +44,7 @@ public class WalkerController : MonoBehaviour
     private Vector2 _velocity = Vector2.zero;
     private Vector3 _targetPos = Vector3.zero;
     private NavMeshAgent _agent;
+    private NavMeshPath _path;
     private Animator _animator;
     private CharacterController _charController;
     int _animIDVelocityX;
@@ -75,6 +75,7 @@ public class WalkerController : MonoBehaviour
 
         _startPriority = GetPriority();
         _agent.avoidancePriority = _startPriority;
+        _path = new NavMeshPath();
 
         _agent.speed = _agentSpeed;
         _hasAnimator = TryGetComponent<Animator>(out _animator);
@@ -182,6 +183,11 @@ public class WalkerController : MonoBehaviour
         if (Mathf.Abs(transform.position.z - _targetPos.z) > _changeTargetRemaining) return;
         _targetPos.z += _forwardSign * _cpuDirector.CrossInterval;
         _agent.destination = _targetPos;
+
+        if (!NavMesh.CalculatePath(transform.position, _targetPos, NavMesh.AllAreas, _path))
+        {
+            gameObject.SetActive(false);
+        }
     }
     void OnDrawGizmos()
     {
