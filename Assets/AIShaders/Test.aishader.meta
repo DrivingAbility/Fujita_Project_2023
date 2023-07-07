@@ -8,7 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 7ff5ebea90ada4fe5aea1ff6169301d4, type: 3}
-  _prompt: Simple solid fill shader. The color is exposed as a property.
+  _prompt: "\u8D64\u3044\u30B7\u30A7\u30FC\u30C0"
   _cached: "\n\nShader \"Unlit/SolidFill\"\n{\n    Properties\n    {\n        _Color(\"Color\",
     Color) = (1,1,1,1)\n    }\n \n    SubShader\n    {\n        Tags { \"RenderType\"=\"Opaque\"
     }\n        LOD 100\n \n        Pass\n        {\n            CGPROGRAM\n           
