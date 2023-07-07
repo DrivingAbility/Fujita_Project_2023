@@ -79,7 +79,7 @@ MonoBehaviour:
     wheelObject: {fileID: 1810876118429581795}
     wheelBluredObject: {fileID: 2389449224017749420}
     wheelBluredMaterial: {fileID: 2100000, guid: 0932c8a7ff1594042afe9ac86c746532, type: 2}
-    startWheelAngle: 0
+    startWheelAngle: 90
     FL: 1
     FR: 0
     RL: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
     wheelObject: {fileID: 4242108135063410698}
     wheelBluredObject: {fileID: 1573035416647609571}
     wheelBluredMaterial: {fileID: 2100000, guid: 0932c8a7ff1594042afe9ac86c746532, type: 2}
-    startWheelAngle: 180
+    startWheelAngle: 270
     FL: 0
     FR: 1
     RL: 0
@@ -1037,6 +1037,7 @@ GameObject:
   - component: {fileID: 5232471307005618157}
   - component: {fileID: 5232471307002193871}
   - component: {fileID: 5232471307003323663}
+  - component: {fileID: 6252740969512867953}
   m_Layer: 0
   m_Name: Body_L0
   m_TagString: Untagged
@@ -1112,6 +1113,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6252740969512867953
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232471307005328333}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 77f3150d186ab8642af2f87e12e1c998, type: 3}
 --- !u!1 &5232471307005328335
 GameObject:
   m_ObjectHideFlags: 0

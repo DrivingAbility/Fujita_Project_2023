@@ -14,7 +14,7 @@ public class BikerController : MonoBehaviour
     private Vector3 _targetPos;
     private Vector3 _startPosition;
     private Vector3 _velocity;
-    private float _changeTargetRemaining = 3;
+    private float _changeTargetRemaining = 10;
     private NavMeshPath _path;
     public float InputVertical { get; private set; }
     public float InputHorizontal { get; private set; }

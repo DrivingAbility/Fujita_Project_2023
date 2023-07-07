@@ -118,7 +118,7 @@ public class ExportDistance : ExportExcel
     [SerializeField] private Transform[] _movingTargetParents;
     private float _rayPositionY;
     private Collider[] _targetCollider;
-    private Collider _playerCollider;
+    [SerializeField] private Collider _playerCollider;
     private Transform[] _targetTrans;
     private int[] _childIndex;
     private Vector3[] _hitCpuPosition;
@@ -134,8 +134,6 @@ public class ExportDistance : ExportExcel
             _movingTargetParents[(int)TargetGroup.Cars].GetChild(_childIndex[(int)TargetGroup.Cars]=0),
             _movingTargetParents[(int)TargetGroup.Bikes].GetChild(_childIndex[(int)TargetGroup.Bikes]=0)
         };
-
-        _playerCollider = _carTrans.GetComponentInChildren<Collider>();
         _targetCollider = new Collider[_movingTargetParents.Count()];
         TargetColliderSetting((int)TargetGroup.Cars);
         TargetColliderSetting((int)TargetGroup.Bikes);
