@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7339194364951080184}
   - component: {fileID: 159977338}
+  - component: {fileID: 1821742387}
   m_Layer: 0
   m_Name: Scene Director
   m_TagString: Untagged
@@ -47,10 +48,26 @@ MonoBehaviour:
   _frameRateController:
     _frameRate: 60
   _exportDistance:
-    _isExportCsvfile: 1
-    _isTargetVisualize: 1
+    _isExportCsvfile: 0
     _movingTargetParents:
     - {fileID: 0}
     - {fileID: 0}
-    _targetBoxObject: {fileID: 8161847264246973797, guid: 827143d9a416cd04595099e2db67a25d, type: 3}
-    _targetSphereObject: {fileID: 1466972504994066833, guid: 8c62ebd400653a549aeb3c7cb9c63601, type: 3}
+    _playerCollider: {fileID: 0}
+--- !u!114 &1821742387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7339194364951080190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86759c0f004b668478f1524e67b4b7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dotObj: {fileID: 5508884243811788242, guid: 240be244d273ee946abd8edca20162db, type: 3}
+  _numPerSquare: 10
+  dotSize: 0.03
+  _meshSquareLength: 12
+  _tilling: {x: 1, y: 100}
+  height: 0
