@@ -6,7 +6,8 @@ public class RandomObjInstanciate : MonoBehaviour
 {
     [SerializeField] GameObject dotObj;
     [SerializeField] int _numPerSquare = 10;
-    [SerializeField, Range(0f, 0.1f)] float dotSize;
+    [SerializeField, Range(0f, 0.1f)] float _minDotSize = 0.01f;
+    [SerializeField, Range(0f, 0.1f)] float _maxDotSize = 0.03f;
     [SerializeField] float _meshSquareLength = 12.0f;
     [SerializeField] Vector2 _tilling = Vector2.one;
     [SerializeField, Range(0f, 2f)] float height;
@@ -31,7 +32,7 @@ public class RandomObjInstanciate : MonoBehaviour
             position.z = Random.Range(-_meshSquareLength / 2, _meshSquareLength / 2);
 
             dotObj.transform.position = position;
-            dotObj.transform.localScale = Vector3.one * Random.Range(0.01f, dotSize);
+            dotObj.transform.localScale = Vector3.one * Random.Range(_minDotSize, _maxDotSize);
             combine[i].mesh = dotObj.GetComponent<MeshFilter>().sharedMesh;
             combine[i].transform = dotObj.GetComponent<MeshFilter>().transform.localToWorldMatrix;
         }
