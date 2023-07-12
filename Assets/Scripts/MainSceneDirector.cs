@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEditor;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class FrameRateController
@@ -211,10 +212,50 @@ public class ExportDistance : ExportExcel
         _hitPlayerPosition[parentTransIndex].y = _rayPositionY;
     }
 }
+[System.Serializable]
+public class ModelTypeController
+{
+    private enum ModelType
+    {
+        Normal,
+        WheelMaskFrame
+    }
+    [SerializeField] ModelType _modelType;
+    public void ChangeType(CarController _playerCar)
+    {
+        var partsTf = _playerCar.GetComponentsInChildren<Transform>(true);
+        List<GameObject> frontPartsList = new List<GameObject>();
+
+        for (int i = 0; i < partsTf.Length; i++)
+        {
+            if (partsTf[i].gameObject.CompareTag("FrontParts"))
+            {
+                frontPartsList.Add(partsTf[i].gameObject);
+            }
+        }
+        switch (_modelType)
+        {
+            case ModelType.Normal:
+                foreach (GameObject obj in frontPartsList)
+                {
+                    obj.SetActive(true);
+                }
+                break;
+            case ModelType.WheelMaskFrame:
+                foreach (GameObject obj in frontPartsList)
+                {
+                    obj.SetActive(false);
+                }
+                break;
+        }
+    }
+}
 public class MainSceneDirector : MonoBehaviour
 {
+    private CarController _playerCar { get => FindAnyObjectByType<CarController>(); }
     [SerializeField] private FrameRateController _frameRateController;
     [SerializeField] private ExportDistance _exportDistance;
+    [SerializeField] private ModelTypeController _modelTypeController;
     void Start()
     {
         Application.targetFrameRate = _frameRateController._frameRate;
@@ -224,6 +265,19 @@ public class MainSceneDirector : MonoBehaviour
             _exportDistance.StreamWriterStart();
         }
     }
+#if UNITY_EDITOR
+    //警告除去
+    private void OnValidate()
+    {
+        UnityEditor.EditorApplication.delayCall += _OnValidate;
+    }
+    void _OnValidate()
+    {
+        UnityEditor.EditorApplication.delayCall -= _OnValidate;
+        if (this == null) return;
+        _modelTypeController.ChangeType(_playerCar);
+    }
+#endif
     void Update()
     {
         if (_exportDistance._isExportCsvfile)
