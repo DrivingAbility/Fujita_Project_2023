@@ -47,6 +47,7 @@ public class RandomObjInstanciate : MonoBehaviour
         parentMeshFilter.sharedMesh.name = "CombinedMesh";
         parentMeshFilter.sharedMesh.CombineMeshes(combine);
         parentMeshRenderer.sharedMaterial = dotObj.GetComponent<MeshRenderer>().sharedMaterial;
+        parentMeshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
         for (int i = 0; i < _tilling.x; i++)
         {
