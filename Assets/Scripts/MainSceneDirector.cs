@@ -218,14 +218,18 @@ public class ModelTypeController
     private enum ModelType
     {
         Normal,
+        Wheel,
+        WheelFrame,
+        WheelMask,
         WheelMaskFrame
     }
     [SerializeField] ModelType _modelType;
+    List<GameObject> frontPartsList = new List<GameObject>();
+    [SerializeField] GameObject frameObjects;
+    [SerializeField] GameObject maskObjects;
     public void ChangeType(CarController _playerCar)
     {
         var partsTf = _playerCar.GetComponentsInChildren<Transform>(true);
-        List<GameObject> frontPartsList = new List<GameObject>();
-
         for (int i = 0; i < partsTf.Length; i++)
         {
             if (partsTf[i].gameObject.CompareTag("FrontParts"))
@@ -233,21 +237,34 @@ public class ModelTypeController
                 frontPartsList.Add(partsTf[i].gameObject);
             }
         }
+
         switch (_modelType)
         {
             case ModelType.Normal:
-                foreach (GameObject obj in frontPartsList)
-                {
-                    obj.SetActive(true);
-                }
+                ActiveControll(true, false, false);
                 break;
             case ModelType.WheelMaskFrame:
-                foreach (GameObject obj in frontPartsList)
-                {
-                    obj.SetActive(false);
-                }
+                ActiveControll(false, true, true);
+                break;
+            case ModelType.Wheel:
+                ActiveControll(false, false, false);
+                break;
+            case ModelType.WheelFrame:
+                ActiveControll(false, true, false);
+                break;
+            case ModelType.WheelMask:
+                ActiveControll(false, false, true);
                 break;
         }
+    }
+    void ActiveControll(bool isFrontPartsActive, bool isFrameActive, bool isMaskActive)
+    {
+        foreach (GameObject obj in frontPartsList)
+        {
+            obj.SetActive(isFrontPartsActive);
+        }
+        if (frameObjects) frameObjects.SetActive(isFrameActive);
+        if (maskObjects) maskObjects.SetActive(isMaskActive);
     }
 }
 public class MainSceneDirector : MonoBehaviour

@@ -74,7 +74,7 @@ public class BikerController : MonoBehaviour
         Vector3 deltaPosition = new Vector3(dx, 0, dz);
         // velocity (速度) を更新します
         _velocity = deltaPosition / Time.deltaTime;
-        InputVertical = _velocity.z;
+        InputVertical = Mathf.Clamp01(_velocity.z);
         transform.position = _agent.nextPosition;
         _agent.nextPosition = transform.position;
     }

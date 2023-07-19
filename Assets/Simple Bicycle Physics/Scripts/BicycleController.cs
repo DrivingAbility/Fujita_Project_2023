@@ -148,7 +148,7 @@ namespace SBPScripts
         public WayPointSystem wayPointSystem;
         public AirTimeSettings airTimeSettings;
 
-        private BikerController _biker;
+        public BikerController Biker { get => GetComponent<BikerController>(); }
 
         void Awake()
         {
@@ -157,8 +157,6 @@ namespace SBPScripts
 
         void Start()
         {
-            _biker = GetComponent<BikerController>();
-
             rb = GetComponent<Rigidbody>();
             rb.maxAngularVelocity = Mathf.Infinity;
 
@@ -278,7 +276,7 @@ namespace SBPScripts
             cycleOscillation = -Mathf.Sin(Mathf.Deg2Rad * (crankSpeed + 90)) * (oscillationAmount * (Mathf.Clamp(currentTopSpeed / currentSpeed, 1f, 1.5f))) * pickUpSpeed;
             turnLeanAmount = -leanCurve.Evaluate(customLeanAxis) * Mathf.Clamp(currentSpeed * 0.1f, 0, 1);
             oscillationSteerEffect = cycleOscillation * Mathf.Clamp01(customAccelerationAxis) * (oscillationAffectSteerRatio * (Mathf.Clamp(topSpeed / currentSpeed, 1f, 1.5f)));
-            if (isAutoInput) oscillationSteerEffect += 0.1f * (-transform.position.x + xPosition);
+            //if (isAutoInput) oscillationSteerEffect += 0.1f * (-transform.position.x + xPosition);
 
             //FrictionSettings
             wheelFrictionSettings.fPhysicMaterial.staticFriction = wheelFrictionSettings.fFriction.x;
@@ -466,9 +464,9 @@ namespace SBPScripts
         float CustomInput(string name, ref float axis, float sensitivity, float gravity, bool isRaw)
         {
             var r = Input.GetAxisRaw(name);
-            if (_biker)
+            if (Biker && Biker.enabled)
             {
-                r = name == "Vertical" ? _biker.InputVertical : _biker.InputHorizontal;
+                r = name == "Vertical" ? Biker.InputVertical : Biker.InputHorizontal;
             }
             var s = sensitivity;
             var g = gravity;

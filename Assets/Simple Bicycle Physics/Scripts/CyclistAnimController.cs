@@ -51,10 +51,10 @@ namespace SBPScripts
                     bicycleStatus.onBike = !bicycleStatus.onBike;
                     if (bicycleStatus.onBike)
                     {
-                        if(prevLocalPosX<0)
-                        anim.Play("OnBike");
+                        if (prevLocalPosX < 0)
+                            anim.Play("OnBike");
                         else
-                        anim.Play("OnBikeFlipped");
+                            anim.Play("OnBikeFlipped");
                         StartCoroutine(AdjustRigWeight(0));
                     }
                     else
@@ -69,7 +69,9 @@ namespace SBPScripts
             waitTime = Mathf.Clamp(waitTime, 0, 1.5f);
 
 
-            speed = bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity).z;
+            speed = (bicycleController.Biker && bicycleController.Biker.enabled) ?
+                bicycleController.Biker.InputVertical * 8.3f :
+                bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity).z;
             isAirborne = bicycleController.isAirborne;
             anim.SetFloat("Speed", speed);
             anim.SetBool("isAirborne", isAirborne);
@@ -95,7 +97,7 @@ namespace SBPScripts
                 else
                 {
                     cyclist.SetActive(false);
-                    if(Input.GetKeyDown(KeyCode.R))
+                    if (Input.GetKeyDown(KeyCode.R))
                     {
                         cyclist.SetActive(true);
                         bicycleStatus.dislodged = false;
