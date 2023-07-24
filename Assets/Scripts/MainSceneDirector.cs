@@ -17,6 +17,7 @@ public class ExportExcel
     public bool _isExportCsvfile;
     protected Transform _carTrans;
     private CarController _playerCar;
+    private ModelTypeController.ModelType _type;
     private string _path;
     float _time;
     protected string _format = "f4";
@@ -46,6 +47,8 @@ public class ExportExcel
         _carTrans = GameObject.FindGameObjectWithTag("Player").transform;
         _playerCar = _carTrans.GetComponent<CarController>();
 
+        _type = GameObject.FindObjectOfType<MainSceneDirector>()._modelTypeController.Type;
+
         string datetimeStr = DateTime.Now.ToString("yyyy_MM_dd");
         _path = Application.dataPath + @"\Excel Data\" + datetimeStr + @"\";
         Directory.CreateDirectory(_path);
@@ -71,6 +74,7 @@ public class ExportExcel
 
         using (StreamWriter sw = new StreamWriter(_path, false, Encoding.GetEncoding("Shift_JIS")))
         {
+            sw.WriteLine(string.Join(",", _type.ToString()));
             sw.WriteLine(string.Join(",", _startStrArray()));
         }
     }
@@ -215,7 +219,7 @@ public class ExportDistance : ExportExcel
 [System.Serializable]
 public class ModelTypeController
 {
-    private enum ModelType
+    public enum ModelType
     {
         Normal,
         Wheel,
@@ -224,6 +228,7 @@ public class ModelTypeController
         WheelMaskFrame
     }
     [SerializeField] ModelType _modelType;
+    public ModelType Type { get => _modelType; }
     List<GameObject> frontPartsList = new List<GameObject>();
     [SerializeField] GameObject frameObjects;
     [SerializeField] GameObject maskObjects;
@@ -272,7 +277,7 @@ public class MainSceneDirector : MonoBehaviour
     private CarController _playerCar { get => FindAnyObjectByType<CarController>(); }
     [SerializeField] private FrameRateController _frameRateController;
     [SerializeField] private ExportDistance _exportDistance;
-    [SerializeField] private ModelTypeController _modelTypeController;
+    public ModelTypeController _modelTypeController;
     void Start()
     {
         Application.targetFrameRate = _frameRateController._frameRate;
