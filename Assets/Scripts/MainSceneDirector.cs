@@ -261,7 +261,7 @@ public class ModelTypeController
     {
         foreach (GameObject obj in frontPartsList)
         {
-            obj.SetActive(isFrontPartsActive);
+            if (obj) obj.SetActive(isFrontPartsActive);
         }
         if (frameObjects) frameObjects.SetActive(isFrameActive);
         if (maskObjects) maskObjects.SetActive(isMaskActive);
