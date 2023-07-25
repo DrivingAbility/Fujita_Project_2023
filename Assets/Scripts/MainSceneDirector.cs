@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEditor;
+using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
@@ -123,7 +124,7 @@ public class ExportDistance : ExportExcel
     [SerializeField] private Transform[] _movingTargetParents;
     private float _rayPositionY;
     private Collider[] _targetCollider;
-    [SerializeField] private Collider _playerCollider;
+    private Collider _playerCollider;
     private Transform[] _targetTrans;
     private int[] _childIndex;
     private Vector3[] _hitCpuPosition;
@@ -134,6 +135,7 @@ public class ExportDistance : ExportExcel
     {
         _rayPositionY = 0.6f;
         _childIndex = new int[_movingTargetParents.Count()];
+        _playerCollider = CarController.MeshCollider;
 
         _targetTrans = new Transform[]{
             _movingTargetParents[(int)TargetGroup.Cars].GetChild(_childIndex[(int)TargetGroup.Cars]=0),
@@ -272,11 +274,31 @@ public class ModelTypeController
         if (maskObjects) maskObjects.SetActive(isMaskActive);
     }
 }
+[System.Serializable]
+public class CanvasController
+{
+    [SerializeField] GameObject _hitAlertPanel;
+    public void HitAlertPanelControll(CarController _playerCar)
+    {
+        if (!_hitAlertPanel) return;
+        if (_playerCar.CarIsHitting)
+        {
+            _hitAlertPanel.SetActive(true);
+            CoroutineHandler.StartStaticCoroutine(SwitchPanelActiveself(_hitAlertPanel));
+        }
+    }
+    IEnumerator SwitchPanelActiveself(GameObject panel)
+    {
+        yield return new WaitForSeconds(2f);
+        panel.SetActive(false);
+    }
+}
 public class MainSceneDirector : MonoBehaviour
 {
     private CarController _playerCar { get => FindAnyObjectByType<CarController>(); }
     [SerializeField] private FrameRateController _frameRateController;
     [SerializeField] private ExportDistance _exportDistance;
+    [SerializeField] private CanvasController _canvasController;
     public ModelTypeController _modelTypeController;
     void Start()
     {
@@ -306,6 +328,7 @@ public class MainSceneDirector : MonoBehaviour
         {
             _exportDistance.SaveData(_exportDistance._updateStrArray());
         }
+        _canvasController.HitAlertPanelControll(_playerCar);
     }
     void OnDrawGizmos()
     {

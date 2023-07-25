@@ -34,6 +34,8 @@ public class CarController : MonoBehaviour
     public float MaxSpeed { get { return m_Topspeed; } }
     public float AccelInput { get; private set; }
     public float SteeringInput { get; private set; }
+    public bool CarIsHitting { get; private set; }
+    public static Collider MeshCollider;
 
     private Transform _meterTf;
 
@@ -45,6 +47,7 @@ public class CarController : MonoBehaviour
     private void Start()
     {
         m_WheelMeshLocalRotations = new Quaternion[4];
+        MeshCollider = GetComponentInChildren<MeshCollider>();
         for (int i = 0; i < 4; i++)
         {
             if (m_WheelMeshes[i] != null)
@@ -181,6 +184,16 @@ public class CarController : MonoBehaviour
     {
         if (handleObj == null) return;
         handleObj.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, -1 * h * 30));
+    }
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        CarIsHitting = true;
+        StartCoroutine(HittingSwitch());
+    }
+    private IEnumerator HittingSwitch()
+    {
+        yield return null;
+        CarIsHitting = false;
     }
 }
 
