@@ -302,6 +302,8 @@ public class MainSceneDirector : MonoBehaviour
     public ModelTypeController _modelTypeController;
     void Start()
     {
+        int level = QualitySettings.GetQualityLevel();
+        Debug.Log( $"Level:[{ level }] name:[{ QualitySettings.names[level] }]" );
         Application.targetFrameRate = _frameRateController._frameRate;
 
         if (_exportDistance._isExportCsvfile)
