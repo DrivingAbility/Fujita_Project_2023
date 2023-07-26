@@ -18,6 +18,7 @@ public class CarUserControl : MonoBehaviour
         _car = GetComponent<CarController>();
         _playerInput = FindObjectOfType<PlayerInput>();
     }
+
     private void OnEnable()
     {
         if (_playerInput == null) return;
@@ -61,7 +62,7 @@ public class CarUserControl : MonoBehaviour
     }
     private void OnApplicationQuit()
     {
-        Debug.Log("OnApplicationQuit");
+
     }
 }
 
