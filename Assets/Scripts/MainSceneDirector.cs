@@ -34,6 +34,7 @@ public class ExportExcel
             "Zpos",
             "Velocity",
             "RotateY",
+            "Hitting",
             "InputValue",
             "AcceInput",
             "SteeringInput",
@@ -96,6 +97,7 @@ public class ExportExcel
             carPos.z.ToString(_format),
             (velocity.magnitude*3600/1000).ToString(_format),
             rotateY.ToString(_format),
+            _playerCar.CarIsHitting.ToString(),
             String.Empty,
             _playerCar.AccelInput.ToString(_format),
             _playerCar.SteeringInput.ToString(_format),
@@ -150,11 +152,11 @@ public class ExportDistance : ExportExcel
 
         string[] s = new string[]{
             "Distance",
-            "CarPos.x",
-            "CarPos.z",
+            "CarPos.deltaX",
+            "CarPos.deltaZ",
             "CarDistance",
-            "Bike.x",
-            "Bike.z",
+            "Bike.deltaX",
+            "Bike.deltaZ",
             "BikeDistance"
         };
         s = base._startStrArray().Concat(s).ToArray();
