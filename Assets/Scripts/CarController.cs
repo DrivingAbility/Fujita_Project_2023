@@ -34,7 +34,7 @@ public class CarController : MonoBehaviour
     public float MaxSpeed { get { return m_Topspeed; } }
     public float AccelInput { get; private set; }
     public float SteeringInput { get; private set; }
-    public bool CarIsHitting { get; private set; }
+    public Collision CollisionInfo { get; private set; }
     public static Collider MeshCollider;
 
     private Transform _meterTf;
@@ -187,13 +187,13 @@ public class CarController : MonoBehaviour
     }
     void OnCollisionEnter(Collision collisionInfo)
     {
-        CarIsHitting = true;
+        CollisionInfo = collisionInfo;
         StartCoroutine(HittingSwitch());
     }
     private IEnumerator HittingSwitch()
     {
         yield return null;
-        CarIsHitting = false;
+        CollisionInfo = null;
     }
 }
 

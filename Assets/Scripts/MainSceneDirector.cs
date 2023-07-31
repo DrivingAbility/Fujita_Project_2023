@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 [System.Serializable]
 public class FrameRateController
@@ -97,8 +98,8 @@ public class ExportExcel
             carPos.z.ToString(_format),
             (velocity.magnitude*3600/1000).ToString(_format),
             rotateY.ToString(_format),
-            _playerCar.CarIsHitting.ToString(),
-            String.Empty,
+            (_playerCar.CollisionInfo!=null).ToString(),
+        String.Empty,
             _playerCar.AccelInput.ToString(_format),
             _playerCar.SteeringInput.ToString(_format),
             _playerCar.BrakeInput.ToString(_format)
@@ -280,11 +281,13 @@ public class ModelTypeController
 public class CanvasController
 {
     [SerializeField] GameObject _hitAlertPanel;
+    [SerializeField] TextMeshProUGUI _hitText;
     public void HitAlertPanelControll(CarController _playerCar)
     {
         if (!_hitAlertPanel) return;
-        if (_playerCar.CarIsHitting)
+        if (_playerCar.CollisionInfo != null)
         {
+            _hitText.text = _playerCar.CollisionInfo.gameObject.name;
             _hitAlertPanel.SetActive(true);
             CoroutineHandler.StartStaticCoroutine(SwitchPanelActiveself(_hitAlertPanel));
         }
@@ -305,7 +308,7 @@ public class MainSceneDirector : MonoBehaviour
     void Start()
     {
         int level = QualitySettings.GetQualityLevel();
-        Debug.Log( $"Level:[{ level }] name:[{ QualitySettings.names[level] }]" );
+        Debug.Log($"Level:[{level}] name:[{QualitySettings.names[level]}]");
         Application.targetFrameRate = _frameRateController._frameRate;
 
         if (_exportDistance._isExportCsvfile)
