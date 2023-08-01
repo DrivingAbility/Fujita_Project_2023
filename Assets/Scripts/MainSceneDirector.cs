@@ -99,7 +99,7 @@ public class ExportExcel
             (velocity.magnitude*3600/1000).ToString(_format),
             rotateY.ToString(_format),
             (_playerCar.CollisionInfo!=null).ToString(),
-        String.Empty,
+            String.Empty,
             _playerCar.AccelInput.ToString(_format),
             _playerCar.SteeringInput.ToString(_format),
             _playerCar.BrakeInput.ToString(_format)
@@ -124,6 +124,7 @@ public class ExportDistance : ExportExcel
         Cars = 0,
         Bikes = 1
     }
+    [SerializeField] int _scooterCount = 7;
     [SerializeField] private Transform[] _movingTargetParents;
     private float _rayPositionY;
     private Collider[] _targetCollider;
@@ -134,12 +135,14 @@ public class ExportDistance : ExportExcel
     private Vector3[] _hitPlayerPosition;
     public Vector3[] HitCpuPosition { get; private set; }
     public Vector3[] HitPlayerPosition { get; private set; }
+    public bool Finished { get; private set; }
     public override string[] _startStrArray()
     {
+
         _rayPositionY = 0.6f;
         _childIndex = new int[_movingTargetParents.Count()];
         _playerCollider = CarController.MeshCollider;
-
+        Finished = false;
         _targetTrans = new Transform[]{
             _movingTargetParents[(int)TargetGroup.Cars].GetChild(_childIndex[(int)TargetGroup.Cars]=0),
             _movingTargetParents[(int)TargetGroup.Bikes].GetChild(_childIndex[(int)TargetGroup.Bikes]=0)
@@ -203,9 +206,13 @@ public class ExportDistance : ExportExcel
     }
     private void NearestTarget(Transform[] parentTrans, int parentTransIndex)
     {
+        if (_childIndex[parentTransIndex] == _scooterCount && parentTransIndex == (int)TargetGroup.Bikes)
+        {
+            Finished = true;
+            return;
+        }
         var oldDirection = _targetTrans[parentTransIndex].position - _carTrans.position;
         if (oldDirection.z > 0) return;
-        if (_childIndex[parentTransIndex] == parentTrans[parentTransIndex].childCount - 1) return;//last object
         _childIndex[parentTransIndex]++;
         _targetTrans[parentTransIndex] = parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex]);
 
@@ -281,6 +288,7 @@ public class ModelTypeController
 public class CanvasController
 {
     [SerializeField] GameObject _hitAlertPanel;
+    [SerializeField] GameObject _endPanel;
     [SerializeField] TextMeshProUGUI _hitText;
     public void HitAlertPanelControll(CarController _playerCar)
     {
@@ -291,6 +299,10 @@ public class CanvasController
             _hitAlertPanel.SetActive(true);
             CoroutineHandler.StartStaticCoroutine(SwitchPanelActiveself(_hitAlertPanel));
         }
+    }
+    public void EndPanelControll(bool isFinished)
+    {
+        _endPanel.SetActive(isFinished);
     }
     IEnumerator SwitchPanelActiveself(GameObject panel)
     {
@@ -336,6 +348,7 @@ public class MainSceneDirector : MonoBehaviour
             _exportDistance.SaveData(_exportDistance._updateStrArray());
         }
         _canvasController.HitAlertPanelControll(_playerCar);
+        _canvasController.EndPanelControll(_exportDistance.Finished);
     }
     void OnDrawGizmos()
     {
