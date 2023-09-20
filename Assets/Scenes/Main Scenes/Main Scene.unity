@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3842.6113, g: 4749.166, b: 6277.547, a: 1}
+  m_IndirectSpecularColor: {r: 3846.8594, g: 4755.1504, b: 6286.0625, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3515,6 +3515,14 @@ PrefabInstance:
     - target: {fileID: 1925503599292934429, guid: b9884a27fdd2c7141a0d29b88d253c4b, type: 3}
       propertyPath: m_Name
       value: Building Set Left (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724833552966191550, guid: b9884a27fdd2c7141a0d29b88d253c4b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776165080086224724, guid: b9884a27fdd2c7141a0d29b88d253c4b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8725955540899162384, guid: b9884a27fdd2c7141a0d29b88d253c4b, type: 3}
       propertyPath: m_RootOrder
@@ -9917,6 +9925,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1964448340}
     m_Modifications:
+    - target: {fileID: 1309723954792359069, guid: 3c061cf925291954387f3fd1a37de2d3, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612025256286059639, guid: 3c061cf925291954387f3fd1a37de2d3, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612025256445568206, guid: 3c061cf925291954387f3fd1a37de2d3, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612025257290291522, guid: 3c061cf925291954387f3fd1a37de2d3, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 3272938082390370451, guid: 3c061cf925291954387f3fd1a37de2d3, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -9964,6 +9988,22 @@ PrefabInstance:
     - target: {fileID: 3272938082390370452, guid: 3c061cf925291954387f3fd1a37de2d3, type: 3}
       propertyPath: m_Name
       value: Moving Cars
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979571163786694270, guid: 3c061cf925291954387f3fd1a37de2d3, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235716213136552865, guid: 3c061cf925291954387f3fd1a37de2d3, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235716213745931924, guid: 3c061cf925291954387f3fd1a37de2d3, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235716213922483757, guid: 3c061cf925291954387f3fd1a37de2d3, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c061cf925291954387f3fd1a37de2d3, type: 3}
