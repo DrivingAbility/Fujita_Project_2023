@@ -5,7 +5,7 @@ using UnityEngine;
 public class RandomObjInstanciate : MonoBehaviour
 {
     [SerializeField] GameObject dotObj;
-    [SerializeField] int _numPerSquare = 10;
+    [SerializeField] int _numPerSquareMeter = 10;
     [SerializeField, Range(0f, 0.1f)] float _minDotSize = 0.01f;
     [SerializeField, Range(0f, 0.1f)] float _maxDotSize = 0.03f;
     [SerializeField] float _meshSquareLength = 12.0f;
@@ -22,7 +22,7 @@ public class RandomObjInstanciate : MonoBehaviour
         if (GameObject.Find(parentPlaneName)) DestroyImmediate(GameObject.Find(parentPlaneName));
         var parentObj = new GameObject(parentPlaneName);
 
-        int dotsCount = (int)Mathf.Pow(_meshSquareLength, 2) * _numPerSquare;
+        int dotsCount = (int)Mathf.Pow(_meshSquareLength, 2) * _numPerSquareMeter;
         CombineInstance[] combine = new CombineInstance[dotsCount];
         for (int i = 0; i < dotsCount; i++)
         {
