@@ -70,7 +70,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: wheelRotateMode
@@ -78,7 +78,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: changeWheelMeshMode
@@ -90,19 +94,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1619112453450817089, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Name
@@ -202,15 +214,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: wheelRotateMode
@@ -218,7 +234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: changeWheelMeshMode
@@ -286,11 +306,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
@@ -342,15 +366,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: wheelRotateMode
@@ -358,7 +386,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: changeWheelMeshMode
@@ -426,11 +458,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
@@ -482,7 +518,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: wheelRotateMode
@@ -490,7 +526,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: changeWheelMeshMode
@@ -558,19 +598,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
@@ -622,15 +670,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2265803783926930286, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2265803783926930286, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2265803783926930286, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_SpotAngle
       value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265803783926930286, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2371567906693792228, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_Name
@@ -682,19 +734,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4792353928588293024, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4792353928588293024, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4792353928588293024, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_SpotAngle
       value: 115
       objectReference: {fileID: 0}
+    - target: {fileID: 4792353928588293024, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: wheelRotateMode
@@ -702,11 +758,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: carLightSpotAngle
       value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: changeWheelMeshMode
@@ -766,7 +826,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: wheelRotateMode
@@ -774,7 +834,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: changeWheelMeshMode
@@ -842,19 +906,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 171866296f28d334da869d25ad540041, type: 3}
@@ -910,23 +982,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: wheelRotateMode
@@ -934,7 +1014,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: changeWheelMeshMode
@@ -1094,7 +1178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: wheelRotateMode
@@ -1102,7 +1186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: changeWheelMeshMode
@@ -1122,19 +1210,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
@@ -1234,7 +1330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: wheelRotateMode
@@ -1242,7 +1338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: changeWheelMeshMode
@@ -1262,19 +1362,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
@@ -1330,23 +1438,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: wheelRotateMode
@@ -1354,7 +1470,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: changeWheelMeshMode
@@ -1466,19 +1586,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5929197248550521976, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_RootOrder
@@ -1530,7 +1658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: wheelRotateMode
@@ -1538,7 +1666,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: changeWheelMeshMode
@@ -1654,7 +1786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: wheelRotateMode
@@ -1662,7 +1794,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: changeWheelMeshMode
@@ -1682,19 +1818,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
@@ -1746,7 +1890,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: wheelRotateMode
@@ -1754,7 +1898,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: changeWheelMeshMode
@@ -1766,19 +1914,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1619112453450817089, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Name
@@ -1878,7 +2034,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: wheelRotateMode
@@ -1886,7 +2042,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: changeWheelMeshMode
@@ -1954,19 +2114,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
@@ -2018,19 +2186,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5929197248550521976, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_RootOrder
@@ -2082,7 +2258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: wheelRotateMode
@@ -2090,7 +2266,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: changeWheelMeshMode
@@ -2158,7 +2338,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: wheelRotateMode
@@ -2166,7 +2346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: changeWheelMeshMode
@@ -2234,19 +2418,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 171866296f28d334da869d25ad540041, type: 3}
@@ -2298,15 +2490,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: wheelRotateMode
@@ -2314,7 +2510,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: changeWheelMeshMode
@@ -2382,11 +2582,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
@@ -2438,15 +2642,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2265803783926930286, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2265803783926930286, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2265803783926930286, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_SpotAngle
       value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265803783926930286, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2371567906693792228, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_Name
@@ -2498,19 +2706,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4792353928588293024, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4792353928588293024, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4792353928588293024, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: m_SpotAngle
       value: 115
       objectReference: {fileID: 0}
+    - target: {fileID: 4792353928588293024, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: wheelRotateMode
@@ -2518,11 +2730,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: carLightSpotAngle
       value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6145415660778853592, guid: 4fa4b8533d1e7d149acd4368fdaa66d8, type: 3}
       propertyPath: changeWheelMeshMode
@@ -2582,7 +2798,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: wheelRotateMode
@@ -2590,7 +2806,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: changeWheelMeshMode
@@ -2658,19 +2878,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
@@ -2726,23 +2954,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: wheelRotateMode
@@ -2750,7 +2986,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: changeWheelMeshMode
@@ -2862,15 +3102,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 423852100611509669, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: wheelRotateMode
@@ -2878,7 +3122,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5023059342956198908, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: changeWheelMeshMode
@@ -2946,11 +3194,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260312830278050111, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21577da929f093e4c95ce43e7abfc0aa, type: 3}
@@ -3002,19 +3254,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5929197248550521976, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_RootOrder
@@ -3066,7 +3326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: wheelRotateMode
@@ -3074,7 +3334,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: changeWheelMeshMode
@@ -3142,7 +3406,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: wheelRotateMode
@@ -3150,7 +3414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 225485886, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: changeWheelMeshMode
@@ -3218,19 +3486,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266280721716283557, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926830468421395014, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f7c8a6dcdef41f4db6d830a1f4de814, type: 3}
@@ -3282,7 +3558,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: wheelRotateMode
@@ -3290,7 +3566,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: changeWheelMeshMode
@@ -3302,19 +3582,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1619112453450817089, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Name
@@ -3414,19 +3702,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535797702942655242, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368148156062394966, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5929197248550521976, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: m_RootOrder
@@ -3478,7 +3774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: wheelRotateMode
@@ -3486,7 +3782,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8977892510649709907, guid: 8da6f6655e7363d488926fb3aabc81f9, type: 3}
       propertyPath: changeWheelMeshMode
@@ -3554,7 +3854,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: wheelRotateMode
@@ -3562,7 +3862,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: changeWheelMeshMode
@@ -3630,19 +3934,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 171866296f28d334da869d25ad540041, type: 3}
@@ -3698,23 +4010,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439841685342247405, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936684946283084793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: wheelRotateMode
@@ -3722,7 +4042,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3800911509328130793, guid: 9206009a4ae66804c8de6cbfd834de8c, type: 3}
       propertyPath: changeWheelMeshMode
@@ -3882,7 +4206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: wheelRotateMode
@@ -3890,7 +4214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4246256789697902352, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: changeWheelMeshMode
@@ -3910,19 +4238,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481201421900823565, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513377977479608489, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6279c8ba047c4a4887ce634f5c351b4, type: 3}
@@ -3974,7 +4310,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: wheelRotateMode
@@ -3982,7 +4318,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 508387088, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: changeWheelMeshMode
@@ -3994,19 +4334,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151023141, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541325318, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1619112453450817089, guid: d419a9a5a3c76714a85f90a568c40243, type: 3}
       propertyPath: m_Name
@@ -4106,7 +4454,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: enableLight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: wheelRotateMode
@@ -4114,7 +4462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: carLightIntensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: carLightShadowType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 48146164, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: changeWheelMeshMode
@@ -4182,19 +4534,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191558680333504248, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
       propertyPath: m_Intensity
-      value: 1000
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286074246769710471, guid: 171866296f28d334da869d25ad540041, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 171866296f28d334da869d25ad540041, type: 3}

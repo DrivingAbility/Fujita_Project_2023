@@ -57,8 +57,8 @@ namespace SBPScripts
     }
     public class BicycleController : MonoBehaviour
     {
-        [SerializeField] private bool isAutoInput;
         float xPosition;
+        [SerializeField] bool isAutoInput;
         public CycleGeometry cycleGeometry;
         public GameObject fPhysicsWheel, rPhysicsWheel;
         public WheelFrictionSettings wheelFrictionSettings;
@@ -464,9 +464,15 @@ namespace SBPScripts
         float CustomInput(string name, ref float axis, float sensitivity, float gravity, bool isRaw)
         {
             var r = Input.GetAxisRaw(name);
+            //Navmesh利用
             if (Biker && Biker.enabled)
             {
                 r = name == "Vertical" ? Biker.InputVertical : Biker.InputHorizontal;
+            }
+            //Navmesh未使用
+            if (isAutoInput && !Biker)
+            {
+                r = name == "Vertical" ? 1 : 0;
             }
             var s = sensitivity;
             var g = gravity;

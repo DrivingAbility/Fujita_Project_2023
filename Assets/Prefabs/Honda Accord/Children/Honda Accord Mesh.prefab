@@ -1906,6 +1906,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1766467150685684196, guid: 801d8fa9809f63f4384f4c1b967295b2, type: 3}
+      propertyPath: m_TagString
+      value: FrontParts
+      objectReference: {fileID: 0}
     - target: {fileID: 1815050006437117618, guid: 801d8fa9809f63f4384f4c1b967295b2, type: 3}
       propertyPath: m_Layer
       value: 6
