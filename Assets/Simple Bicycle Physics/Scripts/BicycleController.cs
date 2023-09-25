@@ -394,7 +394,13 @@ namespace SBPScripts
                 bunnyHopAmount = Mathf.Lerp(bunnyHopAmount, 0, Time.deltaTime * 8f);
 
             bunnyHopAmount = Mathf.Clamp01(bunnyHopAmount);
-
+            
+            //注意　x座標強制
+            if(isAutoInput){
+                var position=transform.position;
+                position.x=xPosition;
+                transform.position=position;
+            }
         }
         float GroundConformity(bool toggle)
         {
