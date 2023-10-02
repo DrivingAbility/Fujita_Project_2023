@@ -30076,7 +30076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3515857009091911046, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3533787454851800511, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
       propertyPath: m_IsActive
@@ -30344,7 +30344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6564145341781721681, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6600260679981750201, guid: ef006c60f8bb6244c97bf0364efc40ee, type: 3}
       propertyPath: m_IsActive
@@ -63786,7 +63786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 159977338, guid: b2c468c3a7094a141810451be074b543, type: 3}
       propertyPath: _modelTypeController._modelType
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 159977338, guid: b2c468c3a7094a141810451be074b543, type: 3}
       propertyPath: _canvasController._hitAlertPanel
@@ -63794,7 +63794,7 @@ PrefabInstance:
       objectReference: {fileID: 1967816975}
     - target: {fileID: 159977338, guid: b2c468c3a7094a141810451be074b543, type: 3}
       propertyPath: _exportDistance._isExportCsvfile
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 159977338, guid: b2c468c3a7094a141810451be074b543, type: 3}
       propertyPath: _modelTypeController.maskObjects
@@ -68141,7 +68141,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 93621658517436528, guid: 86e61d1341bd844498052c04d5068270, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 93621658699487457, guid: 86e61d1341bd844498052c04d5068270, type: 3}
       propertyPath: m_Pivot.x
