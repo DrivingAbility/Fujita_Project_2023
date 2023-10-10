@@ -234,6 +234,9 @@ public class ModelTypeController
     public enum ModelType
     {
         Normal,
+        NormalFrame,
+        NormalMask,
+        NormalFrameMask,
         Wheel,
         WheelFrame,
         WheelMask,
@@ -259,6 +262,15 @@ public class ModelTypeController
         {
             case ModelType.Normal:
                 ActiveControll(true, false, false);
+                break;
+            case ModelType.NormalFrame:
+                ActiveControll(true, true, false);
+                break;
+            case ModelType.NormalMask:
+                ActiveControll(true, false, true);
+                break;
+            case ModelType.NormalFrameMask:
+                ActiveControll(true, true, true);
                 break;
             case ModelType.WheelMaskFrame:
                 ActiveControll(false, true, true);
