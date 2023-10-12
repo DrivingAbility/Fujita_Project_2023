@@ -46,13 +46,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frameRateController:
-    _frameRate: 60
+    _frameRate: 30
   _exportDistance:
-    _isExportCsvfile: 0
+    _isExportCsvfile: 1
+    _scooterCount: 7
     _movingTargetParents:
     - {fileID: 0}
     - {fileID: 0}
-    _playerCollider: {fileID: 0}
+  _canvasController:
+    _hitAlertPanel: {fileID: 0}
+    _endPanel: {fileID: 0}
+    _hitText: {fileID: 0}
+  _modelTypeController:
+    _modelType: 0
+    frameObjects: {fileID: 0}
+    maskObjects: {fileID: 0}
 --- !u!114 &1821742387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,9 +73,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86759c0f004b668478f1524e67b4b7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dotObj: {fileID: 5508884243811788242, guid: 240be244d273ee946abd8edca20162db, type: 3}
-  _numPerSquare: 10
-  dotSize: 0.03
-  _meshSquareLength: 12
-  _tilling: {x: 1, y: 100}
-  height: 0
+  _dotObj: {fileID: 5508884243811788242, guid: 240be244d273ee946abd8edca20162db, type: 3}
+  _numPerSquareMeter: 6.6
+  _minDotSize: 0.01
+  _maxDotSize: 0.03
+  _meshSquareLength: {x: 4, y: 50}
+  _tilling: {x: 4, y: 30}
+  _height: 0
