@@ -119,13 +119,9 @@ public class ExportExcel
 [Serializable]
 public class ExportDistance : ExportExcel
 {
-    private enum TargetGroup
-    {
-        Cars = 0,
-        Bikes = 1
-    }
     [SerializeField] int _scooterCount = 7;
-    [SerializeField] private Transform[] _movingTargetParents;
+    [SerializeField] private Transform[] _targetCPUParents;
+    private Transform[] _activeTargetCPUParents;
     private float _rayPositionY;
     private Collider[] _targetCollider;
     private Collider _playerCollider;
@@ -140,62 +136,66 @@ public class ExportDistance : ExportExcel
     {
 
         _rayPositionY = 0.6f;
-        _childIndex = new int[_movingTargetParents.Count()];
+        List<Transform> transList=new List<Transform>();
+        for (int i = 0; i < _targetCPUParents.Count(); i++)
+        {
+            if (_targetCPUParents[i].gameObject.activeSelf) transList.Add(_targetCPUParents[i]);
+        }
+        _activeTargetCPUParents = transList.ToArray();
+
+        _childIndex = new int[_activeTargetCPUParents.Count()];
+        _targetTrans = new Transform[_activeTargetCPUParents.Count()];
+        _targetCollider = new Collider[_activeTargetCPUParents.Count()];
+        _hitPlayerPosition = new Vector3[_activeTargetCPUParents.Count()];
+        _hitCpuPosition = new Vector3[_activeTargetCPUParents.Count()];
         _playerCollider = CarController.MeshCollider;
         Finished = false;
-        _targetTrans = new Transform[]{
-            _movingTargetParents[(int)TargetGroup.Cars].GetChild(_childIndex[(int)TargetGroup.Cars]=0),
-            _movingTargetParents[(int)TargetGroup.Bikes].GetChild(_childIndex[(int)TargetGroup.Bikes]=0)
-        };
-        _targetCollider = new Collider[_movingTargetParents.Count()];
-        TargetColliderSetting((int)TargetGroup.Cars);
-        TargetColliderSetting((int)TargetGroup.Bikes);
-
-        _hitPlayerPosition = new Vector3[_movingTargetParents.Count()];
-        _hitCpuPosition = new Vector3[_movingTargetParents.Count()];
-
-        string[] s = new string[]{
-            "Distance",
-            "CarPos.deltaX",
-            "CarPos.deltaZ",
-            "CarDistance",
-            "Bike.deltaX",
-            "Bike.deltaZ",
-            "BikeDistance"
-        };
-        s = base._startStrArray().Concat(s).ToArray();
-
+        List<string> strList = new List<string>();
+        for (int i = 0; i < _activeTargetCPUParents.Count(); i++)
+        {
+            _targetTrans[i]=_activeTargetCPUParents[i].GetChild(_childIndex[i] = 0);
+            TargetColliderSetting(i);
+            strList.AddRange(
+                new string[]{
+                    _activeTargetCPUParents[i].name,
+                    "dX",
+                    "dZ",
+                    "Distance"});
+        }
+        string[] s = base._startStrArray().Concat(strList.ToArray()).ToArray();
         return s;
     }
     public override string[] _updateStrArray()
     {
-        NearestTarget(_movingTargetParents, (int)TargetGroup.Cars);
-        ClosestPointing((int)TargetGroup.Cars);
-        var carDirection = _hitCpuPosition[(int)TargetGroup.Cars] - _hitPlayerPosition[(int)TargetGroup.Cars];
-
-
-        NearestTarget(_movingTargetParents, (int)TargetGroup.Bikes);
-        ClosestPointing((int)TargetGroup.Bikes);
-        var bikeDirection = _hitCpuPosition[(int)TargetGroup.Bikes] - _hitPlayerPosition[(int)TargetGroup.Bikes];
+        var directions = new Vector3[_activeTargetCPUParents.Count()];
+        for (int i = 0; i < _activeTargetCPUParents.Count(); i++)
+        {
+            NearestTarget(i);
+            ClosestPointing(i);
+            directions[i] = _hitCpuPosition[i] - _hitPlayerPosition[i];
+        }
 
         HitCpuPosition = _hitCpuPosition;
         HitPlayerPosition = _hitPlayerPosition;
-
-        string[] s = new string[]{
-            string.Empty,
-            carDirection.x.ToString(_format),
-            carDirection.z.ToString(_format),
-            carDirection.magnitude.ToString(_format),
-            bikeDirection.x.ToString(_format),
-            bikeDirection.z.ToString(_format),
-            bikeDirection.magnitude.ToString(_format)
+        List<string> strList = new List<string>();
+        for (int i = 0; i < _activeTargetCPUParents.Count(); i++)
+        {
+            strList.AddRange(
+                new string[]{
+                    string.Empty,
+                    directions[i].x.ToString(_format),
+                    directions[i].z.ToString(_format),
+                    directions[i].magnitude.ToString(_format)
+                }
+            );
         };
-        s = base._updateStrArray().Concat(s).ToArray();
+        string[] s = base._updateStrArray().Concat(strList.ToArray()).ToArray();
 
         return s;
     }
     private void TargetColliderSetting(int parentTransIndex)
     {
+        if (_activeTargetCPUParents[parentTransIndex].gameObject.activeSelf == false) return;
         Vector3 direction = _targetTrans[parentTransIndex].position - _carTrans.position;
         RaycastHit hit;
         Vector3 origin = new Vector3(_carTrans.position.x, _rayPositionY, _carTrans.position.z);
@@ -204,9 +204,9 @@ public class ExportDistance : ExportExcel
             _targetCollider[parentTransIndex] = hit.collider;
         }
     }
-    private void NearestTarget(Transform[] parentTrans, int parentTransIndex)
+    private void NearestTarget(int parentTransIndex)
     {
-        if (_childIndex[parentTransIndex] == _scooterCount && parentTransIndex == (int)TargetGroup.Bikes)
+        if (_childIndex[parentTransIndex] == _scooterCount && _activeTargetCPUParents[parentTransIndex].name=="Moving Bicycles")
         {
             Finished = true;
             return;
@@ -214,7 +214,7 @@ public class ExportDistance : ExportExcel
         var oldDirection = _targetTrans[parentTransIndex].position - _carTrans.position;
         if (oldDirection.z > 0) return;
         _childIndex[parentTransIndex]++;
-        _targetTrans[parentTransIndex] = parentTrans[parentTransIndex].GetChild(_childIndex[parentTransIndex]);
+        _targetTrans[parentTransIndex] = _activeTargetCPUParents[parentTransIndex].GetChild(_childIndex[parentTransIndex]);
 
         TargetColliderSetting(parentTransIndex);
     }
