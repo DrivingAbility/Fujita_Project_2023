@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "3ade48a8-16c7-4a9f-aeb3-6d9fc4fc7777",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -71,6 +80,17 @@
                     "name": "",
                     "id": "5e33b9ea-0db4-4c9d-9a1e-54c68f612804",
                     "path": "<HID::Logitech G29 Driving Force Racing Wheel>/z",
+                    "interactions": "",
+                    "processors": "Invert,Normalize(min=-1,max=1,zero=-1)",
+                    "groups": "",
+                    "action": "Vertical",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4103653-7512-4905-aa94-aac0c0650ef6",
+                    "path": "<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/z",
                     "interactions": "",
                     "processors": "Invert,Normalize(min=-1,max=1,zero=-1)",
                     "groups": "",
@@ -135,12 +155,45 @@
                 },
                 {
                     "name": "",
+                    "id": "70a8d286-916f-4ca9-8524-7e359dfba87e",
+                    "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "InvertVector2(invertX=false),NormalizeVector2",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a3a64ca5-2b0b-4fd9-9b57-e528665b9d48",
                     "path": "<HID::Logitech G29 Driving Force Racing Wheel>/rz",
                     "interactions": "",
                     "processors": "Invert,Normalize(min=-1,max=1,zero=-1)",
                     "groups": "",
                     "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b726812b-99ca-4c6d-a356-e7ccdcc1f229",
+                    "path": "<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/rz",
+                    "interactions": "",
+                    "processors": "Invert,Normalize(min=-1,max=1,zero=-1)",
+                    "groups": "",
+                    "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "323ff74e-b044-48b8-a349-343d91e2c6b5",
+                    "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

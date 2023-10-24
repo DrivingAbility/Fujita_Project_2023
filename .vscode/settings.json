@@ -52,5 +52,5 @@
         "Temp/": true
     },
     "dotnet.preferCSharpExtension": true,
-    "dotnet.defaultSolution": "Fujita_Project_2023.sln"
+    "dotnet.defaultSolution": "Fujita Project 2023.sln"
 }
