@@ -53,15 +53,6 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""New action"",
-                    ""type"": ""Value"",
-                    ""id"": ""3ade48a8-16c7-4a9f-aeb3-6d9fc4fc7777"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -207,17 +198,6 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
                     ""action"": ""Brake"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""323ff74e-b044-48b8-a349-343d91e2c6b5"",
-                    ""path"": ""<Joystick>/stick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -229,7 +209,6 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
         m_Player_Vertical = m_Player.FindAction("Vertical", throwIfNotFound: true);
         m_Player_Horizontal = m_Player.FindAction("Horizontal", throwIfNotFound: true);
         m_Player_Brake = m_Player.FindAction("Brake", throwIfNotFound: true);
-        m_Player_Newaction = m_Player.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -294,7 +273,6 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Vertical;
     private readonly InputAction m_Player_Horizontal;
     private readonly InputAction m_Player_Brake;
-    private readonly InputAction m_Player_Newaction;
     public struct PlayerActions
     {
         private @CarControls m_Wrapper;
@@ -302,7 +280,6 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
         public InputAction @Vertical => m_Wrapper.m_Player_Vertical;
         public InputAction @Horizontal => m_Wrapper.m_Player_Horizontal;
         public InputAction @Brake => m_Wrapper.m_Player_Brake;
-        public InputAction @Newaction => m_Wrapper.m_Player_Newaction;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -321,9 +298,6 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
             @Brake.started += instance.OnBrake;
             @Brake.performed += instance.OnBrake;
             @Brake.canceled += instance.OnBrake;
-            @Newaction.started += instance.OnNewaction;
-            @Newaction.performed += instance.OnNewaction;
-            @Newaction.canceled += instance.OnNewaction;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -337,9 +311,6 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
             @Brake.started -= instance.OnBrake;
             @Brake.performed -= instance.OnBrake;
             @Brake.canceled -= instance.OnBrake;
-            @Newaction.started -= instance.OnNewaction;
-            @Newaction.performed -= instance.OnNewaction;
-            @Newaction.canceled -= instance.OnNewaction;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -362,6 +333,5 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
         void OnVertical(InputAction.CallbackContext context);
         void OnHorizontal(InputAction.CallbackContext context);
         void OnBrake(InputAction.CallbackContext context);
-        void OnNewaction(InputAction.CallbackContext context);
     }
 }
