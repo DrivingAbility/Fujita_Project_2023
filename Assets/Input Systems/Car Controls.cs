@@ -121,6 +121,17 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": """",
+                    ""id"": ""70a8d286-916f-4ca9-8524-7e359dfba87e"",
+                    ""path"": ""<Joystick>/stick"",
+                    ""interactions"": """",
+                    ""processors"": ""InvertVector2(invertX=false),NormalizeVector2"",
+                    ""groups"": """",
+                    ""action"": ""Horizontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""2D Vector"",
                     ""id"": ""518616f1-3e5a-4066-9c61-7368a038aa1a"",
                     ""path"": ""2DVector"",
@@ -168,17 +179,6 @@ public partial class @CarControls: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""97ba19f1-7ccb-485f-ad3a-cc20322810db"",
                     ""path"": ""<HID::Logitech G29 Driving Force Racing Wheel>/stick"",
-                    ""interactions"": """",
-                    ""processors"": ""InvertVector2(invertX=false),NormalizeVector2"",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""70a8d286-916f-4ca9-8524-7e359dfba87e"",
-                    ""path"": ""<Joystick>/stick"",
                     ""interactions"": """",
                     ""processors"": ""InvertVector2(invertX=false),NormalizeVector2"",
                     ""groups"": """",
