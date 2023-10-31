@@ -13,6 +13,7 @@ internal enum CarDriveType
 public class CarController : MonoBehaviour
 {
     [SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FrontWheelDrive;
+    [SerializeField]private bool _controllMeter;
     [SerializeField] private WheelCollider[] m_WheelColliders = new WheelCollider[4];
     [SerializeField] private GameObject[] m_WheelMeshes = new GameObject[4];
     [SerializeField] private Vector3 m_CentreOfMassOffset;
@@ -23,7 +24,6 @@ public class CarController : MonoBehaviour
     public float m_Topspeed = 200;
     private float _creepSpeed = 10f;
     [SerializeField] private float m_BrakeTorque;
-    [SerializeField] GameObject handleObj;
 
     private Quaternion[] m_WheelMeshLocalRotations;
     private float m_SteerAngle;
@@ -95,8 +95,6 @@ public class CarController : MonoBehaviour
         SteeringInput = Mathf.Clamp(steering, -1, 1);
         AccelInput = accel = Mathf.Clamp(accel, -1, 1);
         BrakeInput = footbrake = Mathf.Clamp(footbrake, 0, 1);
-
-        RotateSteering(SteeringInput);
 
         //Set the steer on the front wheels.
         //Assuming that wheels 0 and 1 are the front wheels.
@@ -172,6 +170,7 @@ public class CarController : MonoBehaviour
     }
     private void ControllMeterNeedle()
     {
+        if(!_controllMeter)return;
         if (_meterTf == null) return;
 
         Vector3 localAngle = _meterTf.eulerAngles;
@@ -179,11 +178,6 @@ public class CarController : MonoBehaviour
 
         localAngle.z = CurrentSpeed * angleScale;
         _meterTf.eulerAngles = localAngle;
-    }
-    private void RotateSteering(float h)
-    {
-        if (handleObj == null) return;
-        handleObj.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, -1 * h * 30));
     }
     void OnCollisionEnter(Collision collisionInfo)
     {
