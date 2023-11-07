@@ -11,7 +11,7 @@ using TMPro;
 [System.Serializable]
 public class FrameRateController
 {
-    public int _frameRate = 60;
+    public int _frameRate = 30;
 }
 [System.Serializable]
 public class ExportExcel
