@@ -7,6 +7,8 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.InputSystem.Interactions;
 
 [System.Serializable]
 public class FrameRateController
@@ -244,9 +246,13 @@ public class ModelTypeController
     }
     [SerializeField] ModelType _modelType;
     public ModelType Type { get => _modelType; }
-    List<GameObject> frontPartsList = new List<GameObject>();
-    [SerializeField] GameObject frameObjects;
-    [SerializeField] GameObject maskObjects;
+    List<GameObject> _frontPartsList = new List<GameObject>();
+    [SerializeField] GameObject _linesObject;
+    [SerializeField] GameObject _maskObjects;
+    [SerializeField]bool _isChangingShape;
+    [SerializeField]ShapeChangerParams _startParams;
+    [SerializeField]ShapeChangerParams _endParams;
+    LineRenderer[] _lines;
     public void ChangeType(CarController _playerCar)
     {
         var partsTf = _playerCar.GetComponentsInChildren<Transform>(true);
@@ -254,10 +260,9 @@ public class ModelTypeController
         {
             if (partsTf[i].gameObject.CompareTag("FrontParts"))
             {
-                frontPartsList.Add(partsTf[i].gameObject);
+                _frontPartsList.Add(partsTf[i].gameObject);
             }
         }
-
         switch (_modelType)
         {
             case ModelType.Normal:
@@ -285,16 +290,46 @@ public class ModelTypeController
                 ActiveControll(false, false, true);
                 break;
         }
+        if(_linesObject.activeSelf){
+            _lines=new LineRenderer[_linesObject.transform.childCount];
+            for(int i=0;i<_lines.Length;i++){
+                _lines[i]=_linesObject.transform.GetChild(i).GetComponent<LineRenderer>();
+                _lines[i].sharedMaterial.SetColor("_UnlitColor",_startParams._lineColor);
+            } 
+        }
     }
     void ActiveControll(bool isFrontPartsActive, bool isFrameActive, bool isMaskActive)
     {
-        foreach (GameObject obj in frontPartsList)
+        foreach (GameObject obj in _frontPartsList)
         {
             if (obj) obj.SetActive(isFrontPartsActive);
         }
-        if (frameObjects) frameObjects.SetActive(isFrameActive);
-        if (maskObjects) maskObjects.SetActive(isMaskActive);
+        if (_linesObject) _linesObject.SetActive(isFrameActive);
+        if (_maskObjects) _maskObjects.SetActive(isMaskActive);
     }
+    public void ShapeChangeStart(){
+        if(_isChangingShape){
+            _lines=new LineRenderer[_linesObject.transform.childCount];
+            for(int i=0;i<_lines.Length;i++){
+                _lines[i]=_linesObject.transform.GetChild(i).GetComponent<LineRenderer>();
+                _lines[i].sharedMaterial.SetColor("_UnlitColor",_startParams._lineColor);
+            } 
+        }
+    }
+    public void ShapeChange(float velocity){
+        if(!_isChangingShape)return;
+        for(int i=0;i<_lines.Length;i++){
+            Color color=Color.Lerp(_startParams._lineColor,_endParams._lineColor,
+                (velocity-_startParams._velocity)/(_endParams._velocity-_startParams._velocity));
+        _lines[i].sharedMaterial.SetColor("_UnlitColor",color);
+        }
+    }
+}
+[System.Serializable]
+public class ShapeChangerParams
+{
+    public float _velocity;
+    public Color _lineColor;
 }
 [System.Serializable]
 public class CanvasController
@@ -339,6 +374,8 @@ public class MainSceneDirector : MonoBehaviour
         {
             _exportDistance.StreamWriterStart();
         }
+
+        _modelTypeController.ShapeChangeStart();
     }
 #if UNITY_EDITOR
     //警告除去
@@ -361,6 +398,8 @@ public class MainSceneDirector : MonoBehaviour
         }
         _canvasController.HitAlertPanelControll(_playerCar);
         _canvasController.EndPanelControll(_exportDistance.Finished);
+
+        _modelTypeController.ShapeChange(_playerCar.m_Rigidbody.velocity.magnitude*3.6f);
     }
     void OnDrawGizmos()
     {
