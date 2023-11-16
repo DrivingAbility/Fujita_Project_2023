@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: LinesData
+  m_EditorClassIdentifier: Assembly-CSharp::LinesDataScriptableObject
+  _lineFwdRU: {fileID: 0}
+  _lineFwdRD: {fileID: 0}
+  _lineFwdLU: {fileID: 0}
+  _lineFwdLD: {fileID: 0}
+  _lineRightU: {fileID: 0}
+  _lineRightD: {fileID: 0}
+  _lineUpRF: {fileID: 0}
+  _lineUpRB: {fileID: 0}
+  _lineUpLF: {fileID: 0}
+  _lineUpLB: {fileID: 0}

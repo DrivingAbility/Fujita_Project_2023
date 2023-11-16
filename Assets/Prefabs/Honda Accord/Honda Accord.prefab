@@ -1,88 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &630579853
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 630579854}
-  - component: {fileID: 630579856}
-  - component: {fileID: 630579855}
-  m_Layer: 8
-  m_Name: Plane (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &630579854
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630579853}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.06, z: 6.5}
-  m_LocalScale: {x: 0.2, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6475027778344178320}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &630579856
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630579853}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &630579855
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630579853}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 257
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 0360aab0ed660c24f823d22753dc5494, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &687190027993303403
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +12,7 @@ GameObject:
   - component: {fileID: 9202933855728340249}
   - component: {fileID: 1910183480}
   m_Layer: 9
-  m_Name: LongLine (2)
+  m_Name: FwdLU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,7 +175,7 @@ GameObject:
   - component: {fileID: 2391975282441635013}
   - component: {fileID: 1518465145}
   m_Layer: 9
-  m_Name: LongLine (1)
+  m_Name: FwdRD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -552,7 +469,7 @@ GameObject:
   - component: {fileID: 6897654373914453355}
   - component: {fileID: 709831079}
   m_Layer: 9
-  m_Name: HeightLine (2)
+  m_Name: UpLF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -804,6 +721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6475027778344178320}
+  - component: {fileID: 6211291424799571439}
   m_Layer: 0
   m_Name: MaskObjects
   m_TagString: Untagged
@@ -824,10 +742,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3712790313535496482}
-  - {fileID: 630579854}
   m_Father: {fileID: 2699128444334658233}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6211291424799571439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3515857009091911046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724ae3f228bcfee4fa259fa23ca7387e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stencilMask: {fileID: 3712790313535496482}
 --- !u!1 &4506633182277785224
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,13 +800,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6940605117740916897}
+  - component: {fileID: 8890144923903244466}
   m_Layer: 9
   m_Name: LineObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6940605117740916897
 Transform:
   m_ObjectHideFlags: 0
@@ -902,6 +833,28 @@ Transform:
   m_Father: {fileID: 2699128444334658233}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8890144923903244466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6564145341781721681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50745ac4d7509fa47951b71ca3798a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lineFwdRU: {fileID: 6424903409148640729}
+  _lineFwdRD: {fileID: 2391975282441635013}
+  _lineFwdLU: {fileID: 9202933855728340249}
+  _lineFwdLD: {fileID: 7895902259737323109}
+  _lineRightU: {fileID: 923976048678634991}
+  _lineRightD: {fileID: 6835807067453342795}
+  _lineUpRF: {fileID: 5561936072762194765}
+  _lineUpRB: {fileID: 1639213185042097651}
+  _lineUpLF: {fileID: 6897654373914453355}
+  _lineUpLB: {fileID: 7034438737747236144}
 --- !u!1 &6680486520267745829
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +867,7 @@ GameObject:
   - component: {fileID: 923976048678634991}
   - component: {fileID: 2071597412}
   m_Layer: 9
-  m_Name: ShortLine (3)
+  m_Name: RightU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1068,7 +1021,7 @@ GameObject:
   - component: {fileID: 7034438737747236144}
   - component: {fileID: 1716154716}
   m_Layer: 9
-  m_Name: HeightLine
+  m_Name: UpLB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1222,7 +1175,7 @@ GameObject:
   - component: {fileID: 6424903409148640729}
   - component: {fileID: 1152284483}
   m_Layer: 9
-  m_Name: LongLine (3)
+  m_Name: FwdRU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1385,7 +1338,7 @@ GameObject:
   - component: {fileID: 6835807067453342795}
   - component: {fileID: 673912230}
   m_Layer: 9
-  m_Name: ShortLine (2)
+  m_Name: RightD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1972,7 +1925,7 @@ GameObject:
   - component: {fileID: 1557024954542076488}
   - component: {fileID: 7895902259737323109}
   m_Layer: 9
-  m_Name: LongLine
+  m_Name: FwdLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2113,7 +2066,7 @@ GameObject:
   - component: {fileID: 1639213185042097651}
   - component: {fileID: 505302763}
   m_Layer: 9
-  m_Name: HeightLine (1)
+  m_Name: UpRB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2267,7 +2220,7 @@ GameObject:
   - component: {fileID: 5561936072762194765}
   - component: {fileID: 992268579}
   m_Layer: 9
-  m_Name: HeightLine (3)
+  m_Name: UpRF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

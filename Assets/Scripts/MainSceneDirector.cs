@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem.Interactions;
+using Unity.VisualScripting.Dependencies.Sqlite;
+using TMPro.EditorUtilities;
 
 [System.Serializable]
 public class FrameRateController
@@ -138,7 +140,7 @@ public class ExportDistance : ExportExcel
     {
 
         _rayPositionY = 0.6f;
-        List<Transform> transList=new List<Transform>();
+        List<Transform> transList = new List<Transform>();
         for (int i = 0; i < _targetCPUParents.Count(); i++)
         {
             if (_targetCPUParents[i].gameObject.activeSelf) transList.Add(_targetCPUParents[i]);
@@ -155,7 +157,7 @@ public class ExportDistance : ExportExcel
         List<string> strList = new List<string>();
         for (int i = 0; i < _activeTargetCPUParents.Count(); i++)
         {
-            _targetTrans[i]=_activeTargetCPUParents[i].GetChild(_childIndex[i] = 0);
+            _targetTrans[i] = _activeTargetCPUParents[i].GetChild(_childIndex[i] = 0);
             TargetColliderSetting(i);
             strList.AddRange(
                 new string[]{
@@ -208,7 +210,7 @@ public class ExportDistance : ExportExcel
     }
     private void NearestTarget(int parentTransIndex)
     {
-        if (_childIndex[parentTransIndex] == _scooterCount && _activeTargetCPUParents[parentTransIndex].name=="Moving Bicycles")
+        if (_childIndex[parentTransIndex] == _scooterCount && _activeTargetCPUParents[parentTransIndex].name == "Moving Bicycles")
         {
             Finished = true;
             return;
@@ -247,15 +249,16 @@ public class ModelTypeController
     [SerializeField] ModelType _modelType;
     public ModelType Type { get => _modelType; }
     List<GameObject> _frontPartsList = new List<GameObject>();
-    [SerializeField] GameObject _linesObject;
+    [SerializeField] private LinesData _linesData;
+    [SerializeField] private MasksData _masksData;
     [SerializeField] GameObject _maskObjects;
-    [SerializeField]bool _isChangingShape;
-    [SerializeField]ShapeChangerParams _startParams;
-    [SerializeField]ShapeChangerParams _endParams;
+    [SerializeField] bool _isChangingShape;
+    [SerializeField] ShapeChangerParams _startParams;
+    [SerializeField] ShapeChangerParams _endParams;
     LineRenderer[] _lines;
-    public void ChangeType(CarController _playerCar)
+    public void ChangeType(CarController _car)
     {
-        var partsTf = _playerCar.GetComponentsInChildren<Transform>(true);
+        var partsTf = _car.GetComponentsInChildren<Transform>(true);
         for (int i = 0; i < partsTf.Length; i++)
         {
             if (partsTf[i].gameObject.CompareTag("FrontParts"))
@@ -290,46 +293,134 @@ public class ModelTypeController
                 ActiveControll(false, false, true);
                 break;
         }
-        if(_linesObject.activeSelf){
-            _lines=new LineRenderer[_linesObject.transform.childCount];
-            for(int i=0;i<_lines.Length;i++){
-                _lines[i]=_linesObject.transform.GetChild(i).GetComponent<LineRenderer>();
-                _lines[i].sharedMaterial.SetColor("_UnlitColor",_startParams._lineColor);
-            } 
-        }
     }
-    void ActiveControll(bool isFrontPartsActive, bool isFrameActive, bool isMaskActive)
+    void ActiveControll(bool isFrontPartsActive, bool isLineActive, bool isMaskActive)
     {
         foreach (GameObject obj in _frontPartsList)
         {
             if (obj) obj.SetActive(isFrontPartsActive);
         }
-        if (_linesObject) _linesObject.SetActive(isFrameActive);
-        if (_maskObjects) _maskObjects.SetActive(isMaskActive);
+        foreach (Transform tf in _linesData.transform)
+        {
+            if (tf) tf.gameObject.SetActive(isLineActive);
+        }
+        foreach (Transform tf in _masksData.transform)
+        {
+            if (tf) tf.gameObject.SetActive(isMaskActive);
+        }
+        if (isLineActive) LineRenderingControll(0);
+        if (isMaskActive) MaskRenderingControll(0);
     }
-    public void ShapeChangeStart(){
-        if(_isChangingShape){
-            _lines=new LineRenderer[_linesObject.transform.childCount];
-            for(int i=0;i<_lines.Length;i++){
-                _lines[i]=_linesObject.transform.GetChild(i).GetComponent<LineRenderer>();
-                _lines[i].sharedMaterial.SetColor("_UnlitColor",_startParams._lineColor);
-            } 
+    public void LineRenderingControll(float velocity)
+    {
+        if (!_linesData) return;
+        LineWidthControll(velocity);
+        LineColorControll(velocity);
+        LinePositionsControll(velocity);
+    }
+    void LineWidthControll(float velocity)
+    {
+        var lineDiffWidthList = new List<LineRenderer> { _linesData.LineFwdLD, _linesData.LineFwdLU, _linesData.LineFwdRD, _linesData.LineFwdRU };
+        var lineStartWidthList = new List<LineRenderer> { _linesData.LineUpLB, _linesData.LineUpRB };
+        var lineEndWidthList = new List<LineRenderer> { _linesData.LineRightD, _linesData.LineRightU, _linesData.LineUpLF, _linesData.LineUpRF };
+        var startWidth = Mathf.Lerp(_startParams.StartWidth, _endParams.StartWidth, VelocityInvLerp(velocity));
+        var endWidth = Mathf.Lerp(_startParams.EndWidth, _endParams.EndWidth, VelocityInvLerp(velocity));
+        foreach (var line in lineDiffWidthList)
+        {
+            line.startWidth = startWidth;
+            line.endWidth = endWidth;
+        }
+        foreach (var line in lineStartWidthList)
+        {
+            line.startWidth = line.endWidth = startWidth;
+        }
+        foreach (var line in lineEndWidthList)
+        {
+            line.startWidth = line.endWidth = endWidth;
         }
     }
-    public void ShapeChange(float velocity){
-        if(!_isChangingShape)return;
-        for(int i=0;i<_lines.Length;i++){
-            Color color=Color.Lerp(_startParams._lineColor,_endParams._lineColor,
-                (velocity-_startParams._velocity)/(_endParams._velocity-_startParams._velocity));
-        _lines[i].sharedMaterial.SetColor("_UnlitColor",color);
+    void LineColorControll(float velocity)
+    {
+        Color color = _startParams.LineColor;
+        if (_isChangingShape)
+        {
+            color = Color.Lerp(_startParams.LineColor,
+                _endParams.LineColor, VelocityInvLerp(velocity));
         }
+        _linesData.LineFwdLD.sharedMaterial.SetColor("_UnlitColor", color);
+    }
+    void LinePositionsControll(float velocity)
+    {
+        var boxsize = _startParams.BoxSize;
+        if (_isChangingShape)
+        {
+            boxsize = Vector3.Lerp(_startParams.BoxSize,
+                _endParams.BoxSize, VelocityInvLerp(velocity));
+        }
+        boxsize.x /= 2;
+        Vector3[] pos = new Vector3[8];
+        for (int i = 0; i < pos.Length; i++)
+        {
+            pos[i] = boxsize;
+        }
+        pos[4].x = pos[5].x = pos[6].x = pos[7].x = -boxsize.x;
+        pos[2].y = pos[3].y = pos[6].y = pos[7].y = 0;
+        pos[0].z = pos[2].z = pos[4].z = pos[6].z = 0;
+
+        _linesData.LineFwdRU.SetPositions(new Vector3[] { pos[0], pos[1] });
+        _linesData.LineFwdRD.SetPositions(new Vector3[] { pos[2], pos[3] });
+        _linesData.LineFwdLU.SetPositions(new Vector3[] { pos[4], pos[5] });
+        _linesData.LineFwdLD.SetPositions(new Vector3[] { pos[6], pos[7] });
+        _linesData.LineRightU.SetPositions(new Vector3[] { pos[5], pos[1] });
+        _linesData.LineRightD.SetPositions(new Vector3[] { pos[7], pos[3] });
+        _linesData.LineUpRB.SetPositions(new Vector3[] { pos[2], pos[0] });
+        _linesData.LineUpRF.SetPositions(new Vector3[] { pos[3], pos[1] });
+        _linesData.LineUpLB.SetPositions(new Vector3[] { pos[6], pos[4] });
+        _linesData.LineUpLF.SetPositions(new Vector3[] { pos[7], pos[5] });
+    }
+    public void MaskRenderingControll(float velocity)
+    {
+        if (!_masksData) return;
+        MaskSizeControll(velocity);
+        MaskPositionControll(velocity);
+    }
+    private void MaskSizeControll(float velocity)
+    {
+        var scale = _startParams.BoxSize / 10.0f;
+        if (_isChangingShape)
+        {
+            scale = Vector3.Lerp(_startParams.BoxSize, _endParams.BoxSize, VelocityInvLerp(velocity)) / 10.0f;
+        }
+        _masksData.StencilMask.localScale = scale;
+    }
+    private void MaskPositionControll(float velocity)
+    {
+        var zPos = _startParams.BoxSize.z / 2.0f;
+        if (_isChangingShape)
+        {
+            zPos = Mathf.Lerp(_startParams.BoxSize.z, _endParams.BoxSize.z, VelocityInvLerp(velocity)) / 2.0f;
+        }
+        Vector3 pos = new Vector3(0, 0, zPos);
+        _masksData.StencilMask.localPosition = pos;
+    }
+    float VelocityInvLerp(float velocity)
+    {
+        return Mathf.InverseLerp(_startParams.Velocity, _endParams.Velocity, velocity);
     }
 }
 [System.Serializable]
 public class ShapeChangerParams
 {
-    public float _velocity;
-    public Color _lineColor;
+    [SerializeField] float _velocity;
+    [SerializeField] Color _lineColor;
+    [SerializeField] float _startWidth;
+    [SerializeField] float _endWidth;
+    [SerializeField] Vector3 _boxSize = Vector3.one;
+    public float Velocity => _velocity;
+    public Color LineColor => _lineColor;
+    public float StartWidth => _startWidth;
+    public float EndWidth => _endWidth;
+    public Vector3 BoxSize => _boxSize;
 }
 [System.Serializable]
 public class CanvasController
@@ -357,9 +448,10 @@ public class CanvasController
         panel.SetActive(false);
     }
 }
+[ExecuteAlways]
 public class MainSceneDirector : MonoBehaviour
 {
-    private CarController _playerCar { get => FindAnyObjectByType<CarController>(); }
+    private CarController _car;
     [SerializeField] private FrameRateController _frameRateController;
     [SerializeField] private ExportDistance _exportDistance;
     [SerializeField] private CanvasController _canvasController;
@@ -369,37 +461,32 @@ public class MainSceneDirector : MonoBehaviour
         int level = QualitySettings.GetQualityLevel();
         Debug.Log($"Level:[{level}] name:[{QualitySettings.names[level]}]");
         Application.targetFrameRate = _frameRateController._frameRate;
+        _car = FindObjectOfType<CarController>();
 
         if (_exportDistance._isExportCsvfile)
         {
             _exportDistance.StreamWriterStart();
         }
-
-        _modelTypeController.ShapeChangeStart();
     }
-#if UNITY_EDITOR
-    //警告除去
-    private void OnValidate()
-    {
-        UnityEditor.EditorApplication.delayCall += _OnValidate;
-    }
-    void _OnValidate()
-    {
-        UnityEditor.EditorApplication.delayCall -= _OnValidate;
-        if (this == null) return;
-        _modelTypeController.ChangeType(_playerCar);
-    }
-#endif
     void Update()
     {
-        if (_exportDistance._isExportCsvfile)
+        if (Application.IsPlaying(gameObject))
         {
-            _exportDistance.SaveData(_exportDistance._updateStrArray());
+            if (_exportDistance._isExportCsvfile)
+            {
+                _exportDistance.SaveData(_exportDistance._updateStrArray());
+            }
+            _canvasController.HitAlertPanelControll(_car);
+            _canvasController.EndPanelControll(_exportDistance.Finished);
+            var velocity = _car._rigidbody.velocity.magnitude * 3.6f;
+            _modelTypeController.LineRenderingControll(velocity);
+            _modelTypeController.MaskRenderingControll(velocity);
         }
-        _canvasController.HitAlertPanelControll(_playerCar);
-        _canvasController.EndPanelControll(_exportDistance.Finished);
-
-        _modelTypeController.ShapeChange(_playerCar.m_Rigidbody.velocity.magnitude*3.6f);
+        else
+        {
+            _car = FindObjectOfType<CarController>();
+            _modelTypeController.ChangeType(_car);
+        }
     }
     void OnDrawGizmos()
     {

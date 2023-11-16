@@ -13,7 +13,7 @@ internal enum CarDriveType
 public class CarController : MonoBehaviour
 {
     [SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FrontWheelDrive;
-    [SerializeField]private bool _controllMeter;
+    [SerializeField] private bool _controllMeter;
     [SerializeField] private WheelCollider[] m_WheelColliders = new WheelCollider[4];
     [SerializeField] private GameObject[] m_WheelMeshes = new GameObject[4];
     [SerializeField] private Vector3 m_CentreOfMassOffset;
@@ -28,9 +28,9 @@ public class CarController : MonoBehaviour
     private Quaternion[] m_WheelMeshLocalRotations;
     private float m_SteerAngle;
     private float _currentTorque;
-    [NonSerialized] public Rigidbody m_Rigidbody;
+    [NonSerialized] public Rigidbody _rigidbody;
     public float BrakeInput { get; private set; }
-    public float CurrentSpeed { get { return m_Rigidbody.velocity.magnitude * 3.6f; } }
+    public float CurrentSpeed { get { return _rigidbody.velocity.magnitude * 3.6f; } }
     public float MaxSpeed { get { return m_Topspeed; } }
     public float AccelInput { get; private set; }
     public float SteeringInput { get; private set; }
@@ -58,7 +58,7 @@ public class CarController : MonoBehaviour
 
         m_WheelColliders[0].attachedRigidbody.centerOfMass = m_CentreOfMassOffset;
 
-        m_Rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
         _currentTorque = m_FullTorqueOverAllWheels;
 
         FindMeter();
@@ -113,9 +113,9 @@ public class CarController : MonoBehaviour
     //速度上限制御
     private void CapSpeed()
     {
-        float speed = m_Rigidbody.velocity.magnitude;
+        float speed = _rigidbody.velocity.magnitude;
         speed *= 3.6f;
-        if (speed > m_Topspeed) m_Rigidbody.velocity = (m_Topspeed / 3.6f) * m_Rigidbody.velocity.normalized;
+        if (speed > m_Topspeed) _rigidbody.velocity = (m_Topspeed / 3.6f) * _rigidbody.velocity.normalized;
     }
 
     private void ApplyDrive(float accel, float footbrake)
@@ -170,7 +170,7 @@ public class CarController : MonoBehaviour
     }
     private void ControllMeterNeedle()
     {
-        if(!_controllMeter)return;
+        if (!_controllMeter) return;
         if (_meterTf == null) return;
 
         Vector3 localAngle = _meterTf.eulerAngles;
