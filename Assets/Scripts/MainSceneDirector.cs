@@ -251,7 +251,6 @@ public class ModelTypeController
     List<GameObject> _frontPartsList = new List<GameObject>();
     [SerializeField] private LinesData _linesData;
     [SerializeField] private MasksData _masksData;
-    [SerializeField] GameObject _maskObjects;
     [SerializeField] bool _isChangingShape;
     [SerializeField] ShapeChangerParams _startParams;
     [SerializeField] ShapeChangerParams _endParams;
@@ -448,6 +447,28 @@ public class CanvasController
         panel.SetActive(false);
     }
 }
+[System.Serializable]
+public class DotsController
+{
+    [SerializeField] private DotsMaterialData _materialData;
+    [SerializeField] private bool _isChangingDots;
+    [SerializeField] private float _velocityMaxDots = 60;
+    public void ChangingMaterial(float velocity)
+    {
+        if (!_isChangingDots) return;
+        Material[] materials = _materialData.DotsMaterial;
+        for (int i = 0; i < materials.Length; i++)
+        {
+            Color color = Color.white;
+            float velocityUnit = _velocityMaxDots / materials.Length;
+            if (velocity < velocityUnit * i)
+            {
+                color.a = Mathf.InverseLerp(velocityUnit * (i - 1), velocityUnit * i, velocity);
+            }
+            materials[i].SetColor("_UnlitColor", color);
+        }
+    }
+}
 [ExecuteAlways]
 public class MainSceneDirector : MonoBehaviour
 {
@@ -455,6 +476,7 @@ public class MainSceneDirector : MonoBehaviour
     [SerializeField] private FrameRateController _frameRateController;
     [SerializeField] private ExportDistance _exportDistance;
     [SerializeField] private CanvasController _canvasController;
+    [SerializeField] private DotsController _dotsController;
     public ModelTypeController _modelTypeController;
     void Start()
     {
@@ -481,6 +503,7 @@ public class MainSceneDirector : MonoBehaviour
             var velocity = _car._rigidbody.velocity.magnitude * 3.6f;
             _modelTypeController.LineRenderingControll(velocity);
             _modelTypeController.MaskRenderingControll(velocity);
+            _dotsController.ChangingMaterial(velocity);
         }
         else
         {
