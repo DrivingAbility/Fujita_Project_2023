@@ -452,6 +452,7 @@ public class DotsController
 {
     [SerializeField] private DotsMaterialData _materialData;
     [SerializeField] private bool _isChangingDots;
+    [SerializeField] private float _velocity0Dots = 0;
     [SerializeField] private float _velocityMaxDots = 60;
     public void ChangingMaterial(float velocity)
     {
@@ -460,10 +461,10 @@ public class DotsController
         for (int i = 0; i < materials.Length; i++)
         {
             Color color = Color.white;
-            float velocityUnit = _velocityMaxDots / materials.Length;
-            if (velocity < velocityUnit * i)
+            float velocityUnit = (_velocityMaxDots - _velocity0Dots) / materials.Length;
+            if (velocity < velocityUnit * i + _velocity0Dots)
             {
-                color.a = Mathf.InverseLerp(velocityUnit * (i - 1), velocityUnit * i, velocity);
+                color.a = Mathf.InverseLerp(velocityUnit * (i - 1) + _velocity0Dots, velocityUnit * i + _velocity0Dots, velocity);
             }
             materials[i].SetColor("_UnlitColor", color);
         }

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [ExecuteAlways]
 public class PlayerCameraController : MonoBehaviour
 {
+    [SerializeField]PlayerInput _input;
     [SerializeField]Camera _fCamera;
     [SerializeField]Camera _rCamera;
     [SerializeField]Camera _lCamera;
