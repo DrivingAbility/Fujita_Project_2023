@@ -312,17 +312,18 @@ public class ModelTypeController
     public void LineRenderingControll(float velocity)
     {
         if (!_linesData) return;
-        LineWidthControll(velocity);
+        Vector3 boxSize=Vector3.zero;
+        LinePositionsControll(velocity, out boxSize);
+        LineWidthControll(velocity,boxSize);
         LineColorControll(velocity);
-        LinePositionsControll(velocity);
     }
-    void LineWidthControll(float velocity)
+    void LineWidthControll(float velocity,Vector3 boxSize)
     {
         var lineDiffWidthList = new List<LineRenderer> { _linesData.LineFwdLD, _linesData.LineFwdLU, _linesData.LineFwdRD, _linesData.LineFwdRU };
         var lineStartWidthList = new List<LineRenderer> { _linesData.LineUpLB, _linesData.LineUpRB };
         var lineEndWidthList = new List<LineRenderer> { _linesData.LineRightD, _linesData.LineRightU, _linesData.LineUpLF, _linesData.LineUpRF };
         var startWidth = Mathf.Lerp(_startParams.StartWidth, _endParams.StartWidth, VelocityInvLerp(velocity));
-        var endWidth = Mathf.Lerp(_startParams.EndWidth, _endParams.EndWidth, VelocityInvLerp(velocity));
+        var endWidth=Mathf.Lerp(startWidth,2.0f,Mathf.InverseLerp(0,1000,boxSize.z));
         foreach (var line in lineDiffWidthList)
         {
             line.startWidth = startWidth;
@@ -347,21 +348,21 @@ public class ModelTypeController
         }
         _linesData.LineFwdLD.sharedMaterial.SetColor("_UnlitColor", color);
     }
-    void LinePositionsControll(float velocity)
+    void LinePositionsControll(float velocity,out Vector3 boxSize)
     {
-        var boxsize = _startParams.BoxSize;
+        boxSize = _startParams.BoxSize;
         if (_isChangingShape)
         {
-            boxsize = Vector3.Lerp(_startParams.BoxSize,
+            boxSize = Vector3.Lerp(_startParams.BoxSize,
                 _endParams.BoxSize, VelocityInvLerp(velocity));
         }
-        boxsize.x /= 2;
+        boxSize.x /= 2;
         Vector3[] pos = new Vector3[8];
         for (int i = 0; i < pos.Length; i++)
         {
-            pos[i] = boxsize;
+            pos[i] = boxSize;
         }
-        pos[4].x = pos[5].x = pos[6].x = pos[7].x = -boxsize.x;
+        pos[4].x = pos[5].x = pos[6].x = pos[7].x = -boxSize.x;
         pos[2].y = pos[3].y = pos[6].y = pos[7].y = 0;
         pos[0].z = pos[2].z = pos[4].z = pos[6].z = 0;
 
@@ -412,12 +413,10 @@ public class ShapeChangerParams
     [SerializeField] float _velocity;
     [SerializeField] Color _lineColor;
     [SerializeField] float _startWidth;
-    [SerializeField] float _endWidth;
     [SerializeField] Vector3 _boxSize = Vector3.one;
     public float Velocity => _velocity;
     public Color LineColor => _lineColor;
     public float StartWidth => _startWidth;
-    public float EndWidth => _endWidth;
     public Vector3 BoxSize => _boxSize;
 }
 [System.Serializable]
