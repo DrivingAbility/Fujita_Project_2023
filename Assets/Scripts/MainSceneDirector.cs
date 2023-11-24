@@ -254,7 +254,6 @@ public class ModelTypeController
     [SerializeField] bool _isChangingShape;
     [SerializeField] ShapeChangerParams _startParams;
     [SerializeField] ShapeChangerParams _endParams;
-    LineRenderer[] _lines;
     public void ChangeType(CarController _car)
     {
         var partsTf = _car.GetComponentsInChildren<Transform>(true);
@@ -486,7 +485,7 @@ public class MainSceneDirector : MonoBehaviour
         Application.targetFrameRate = _frameRateController._frameRate;
         _car = FindObjectOfType<CarController>();
 
-        if (_exportDistance._isExportCsvfile)
+        if (_exportDistance._isExportCsvfile && Application.IsPlaying(gameObject))
         {
             _exportDistance.StreamWriterStart();
         }
@@ -511,6 +510,10 @@ public class MainSceneDirector : MonoBehaviour
             _car = FindObjectOfType<CarController>();
             _modelTypeController.ChangeType(_car);
         }
+    }
+    void OnApplicationQuit()
+    {
+        _dotsController.ChangingMaterial(float.MaxValue);
     }
     void OnDrawGizmos()
     {
