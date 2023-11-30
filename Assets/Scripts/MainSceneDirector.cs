@@ -312,18 +312,22 @@ public class ModelTypeController
     public void LineRenderingControll(float velocity)
     {
         if (!_linesData) return;
-        Vector3 boxSize=Vector3.zero;
+        Vector3 boxSize = Vector3.zero;
         LinePositionsControll(velocity, out boxSize);
-        LineWidthControll(velocity,boxSize);
+        LineWidthControll(velocity, boxSize);
         LineColorControll(velocity);
     }
-    void LineWidthControll(float velocity,Vector3 boxSize)
+    void LineWidthControll(float velocity, Vector3 boxSize)
     {
         var lineDiffWidthList = new List<LineRenderer> { _linesData.LineFwdLD, _linesData.LineFwdLU, _linesData.LineFwdRD, _linesData.LineFwdRU };
         var lineStartWidthList = new List<LineRenderer> { _linesData.LineUpLB, _linesData.LineUpRB };
         var lineEndWidthList = new List<LineRenderer> { _linesData.LineRightD, _linesData.LineRightU, _linesData.LineUpLF, _linesData.LineUpRF };
-        var startWidth = Mathf.Lerp(_startParams.StartWidth, _endParams.StartWidth, VelocityInvLerp(velocity));
-        var endWidth=Mathf.Lerp(startWidth,2.0f,Mathf.InverseLerp(0,1000,boxSize.z));
+        var startWidth = _startParams.StartWidth;
+        if (_isChangingShape)
+        {
+            startWidth = Mathf.Lerp(_startParams.StartWidth, _endParams.StartWidth, VelocityInvLerp(velocity));
+        }
+        var endWidth = Mathf.Lerp(startWidth, 2.0f, Mathf.InverseLerp(0, 1000, boxSize.z));
         foreach (var line in lineDiffWidthList)
         {
             line.startWidth = startWidth;
@@ -348,7 +352,7 @@ public class ModelTypeController
         }
         _linesData.LineFwdLD.sharedMaterial.SetColor("_UnlitColor", color);
     }
-    void LinePositionsControll(float velocity,out Vector3 boxSize)
+    void LinePositionsControll(float velocity, out Vector3 boxSize)
     {
         boxSize = _startParams.BoxSize;
         if (_isChangingShape)
