@@ -11,6 +11,7 @@ using Unity.VisualScripting;
 using UnityEngine.InputSystem.Interactions;
 using Unity.VisualScripting.Dependencies.Sqlite;
 using TMPro.EditorUtilities;
+using UnityEngine.UIElements;
 
 [System.Serializable]
 public class FrameRateController
@@ -32,7 +33,8 @@ public class ExportExcel
     {
         string[] s = new string[]
         {
-            DateTime.Now.ToLongDateString(),
+            "DateTime",
+            "UnixTime",
             "Time",
             "ΔTime",
             "Xpos",
@@ -95,7 +97,8 @@ public class ExportExcel
 
         string[] s = new string[]
         {
-            DateTime.Now.ToLongTimeString(),
+            DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss fff"),
+            GetUnixTime(DateTime.Now).ToString(_format),
             _time.ToString(_format),
             Time.deltaTime.ToString(_format),
             carPos.x.ToString(_format),
@@ -110,6 +113,10 @@ public class ExportExcel
         };
 
         return s;
+    }
+    public static double GetUnixTime(DateTime dateTime)
+    {
+        return (double)(dateTime - DateTime.UnixEpoch - new TimeSpan(9, 0, 0)).TotalSeconds;
     }
     public void SaveData(string[] strArray)
     {
