@@ -13,6 +13,7 @@ internal enum CarDriveType
 public class CarController : MonoBehaviour
 {
     [SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FrontWheelDrive;
+    [SerializeField] private bool _isActiveCollider;
     [SerializeField] private bool _controllMeter;
     [SerializeField] private WheelCollider[] m_WheelColliders = new WheelCollider[4];
     [SerializeField] private GameObject[] m_WheelMeshes = new GameObject[4];
