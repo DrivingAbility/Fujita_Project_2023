@@ -406,11 +406,13 @@ public class ModelTypeController
     private void MaskPositionControll(float velocity)
     {
         var zPos = _startParams.BoxSize.z / 2.0f;
+        var yPos = -0.06f;
         if (_isChangingShape)
         {
             zPos = Mathf.Lerp(_startParams.BoxSize.z, _endParams.BoxSize.z, VelocityInvLerp(velocity)) / 2.0f;
+            yPos = Mathf.Lerp(-0.06f, 0, VelocityInvLerp(velocity));
         }
-        Vector3 pos = new Vector3(0, 0, zPos);
+        Vector3 pos = new Vector3(0, yPos, zPos);
         _masksData.StencilMask.localPosition = pos;
     }
     float VelocityInvLerp(float velocity)
