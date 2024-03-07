@@ -406,11 +406,11 @@ public class ModelTypeController
     private void MaskPositionControll(float velocity)
     {
         var zPos = _startParams.BoxSize.z / 2.0f;
-        var yPos = -0.06f;
+        var yPos = _startParams.MaskYPos;
         if (_isChangingShape)
         {
             zPos = Mathf.Lerp(_startParams.BoxSize.z, _endParams.BoxSize.z, VelocityInvLerp(velocity)) / 2.0f;
-            yPos = Mathf.Lerp(-0.06f, 0, VelocityInvLerp(velocity));
+            yPos = Mathf.Lerp(_startParams.MaskYPos, _endParams.MaskYPos, VelocityInvLerp(velocity));
         }
         Vector3 pos = new Vector3(0, yPos, zPos);
         _masksData.StencilMask.localPosition = pos;
@@ -427,10 +427,12 @@ public class ShapeChangerParams
     [SerializeField] Color _lineColor;
     [SerializeField] float _startWidth;
     [SerializeField] Vector3 _boxSize = Vector3.one;
+    [SerializeField, Range(0.0f, 0.06f)] float _maskYPos = 0.06f;
     public float Velocity => _velocity;
     public Color LineColor => _lineColor;
     public float StartWidth => _startWidth;
     public Vector3 BoxSize => _boxSize;
+    public float MaskYPos => _maskYPos;
 }
 [System.Serializable]
 public class CanvasController
